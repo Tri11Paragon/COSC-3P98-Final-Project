@@ -56,6 +56,13 @@ build CMakeFiles/Final_Project.dir/src/main.cpp.o: CXX_COMPILER__Final_Project_D
   OBJECT_DIR = CMakeFiles/Final_Project.dir
   OBJECT_FILE_DIR = CMakeFiles/Final_Project.dir/src
 
+build CMakeFiles/Final_Project.dir/src/window/window.cpp.o: CXX_COMPILER__Final_Project_Debug /home/laptop/Documents/Brock/CS$ 3P98/Final$ Project/src/window/window.cpp || cmake_object_order_depends_target_Final_Project
+  DEP_FILE = CMakeFiles/Final_Project.dir/src/window/window.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -I"/home/laptop/Documents/Brock/CS 3P98/Final Project/include" -I/usr/include/FreeImage.h -I"/home/laptop/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include"
+  OBJECT_DIR = CMakeFiles/Final_Project.dir
+  OBJECT_FILE_DIR = CMakeFiles/Final_Project.dir/src/window
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Final_Project
@@ -64,7 +71,7 @@ build CMakeFiles/Final_Project.dir/src/main.cpp.o: CXX_COMPILER__Final_Project_D
 #############################################
 # Link the executable Final_Project
 
-build Final_Project: CXX_EXECUTABLE_LINKER__Final_Project_Debug CMakeFiles/Final_Project.dir/src/main.cpp.o | libraries/BLT/libBLT.a /usr/lib/x86_64-linux-gnu/libglut.so /usr/lib/x86_64-linux-gnu/libXi.so /usr/lib/x86_64-linux-gnu/libfreeimage.so || libraries/BLT/libBLT.a
+build Final_Project: CXX_EXECUTABLE_LINKER__Final_Project_Debug CMakeFiles/Final_Project.dir/src/main.cpp.o CMakeFiles/Final_Project.dir/src/window/window.cpp.o | libraries/BLT/libBLT.a /usr/lib/x86_64-linux-gnu/libglut.so /usr/lib/x86_64-linux-gnu/libXi.so /usr/lib/x86_64-linux-gnu/libfreeimage.so || libraries/BLT/libBLT.a
   FLAGS = -g
   LINK_LIBRARIES = libraries/BLT/libBLT.a  /usr/lib/x86_64-linux-gnu/libglut.so  /usr/lib/x86_64-linux-gnu/libXi.so  /usr/lib/x86_64-linux-gnu/libfreeimage.so
   OBJECT_DIR = CMakeFiles/Final_Project.dir
