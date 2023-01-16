@@ -14,6 +14,24 @@
 # EXTERNAL cache entries
 ########################
 
+//Value Computed by CMake
+BLT_BINARY_DIR:STATIC=/home/laptop/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT
+
+//Value Computed by CMake
+BLT_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+BLT_SOURCE_DIR:STATIC=/home/laptop/Documents/Brock/CS 3P98/Final Project/libraries/BLT
+
+//Build the BLT profiler extension
+BUILD_PROFILING:BOOL=ON
+
+//Build the BLT standard utilities.
+BUILD_STD:BOOL=ON
+
+//Build the BLT test set
+BUILD_TESTS:BOOL=OFF
+
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -221,6 +239,39 @@ Final_Project_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 Final_Project_SOURCE_DIR:STATIC=/home/laptop/Documents/Brock/CS 3P98/Final Project
 
+//Path to a file.
+FreeImageIO_INCLUDE:FILEPATH=FreeImageIO_INCLUDE-NOTFOUND
+
+//The directory containing a CMake configuration file for FreeImage.
+FreeImage_DIR:PATH=FreeImage_DIR-NOTFOUND
+
+//Path to a file.
+FreeImage_INCLUDE:FILEPATH=/usr/include/FreeImage.h
+
+//Path to a library.
+FreeImage_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libfreeimage.so
+
+//The directory containing a CMake configuration file for GLUT::GLUT.
+"GLUT::GLUT_DIR":PATH=GLUT::GLUT_DIR-NOTFOUND
+
+//Path to a file.
+GLUT_INCLUDE_DIR:PATH=/usr/include
+
+//Path to a library.
+GLUT_Xi_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libXi.so
+
+//Path to a library.
+GLUT_Xmu_LIBRARY:FILEPATH=GLUT_Xmu_LIBRARY-NOTFOUND
+
+//Path to a library.
+GLUT_glut_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libglut.so
+
+//Arguments to supply to pkg-config
+PKG_CONFIG_ARGN:STRING=
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
+
 
 ########################
 # INTERNAL cache entries
@@ -322,7 +373,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -365,6 +416,50 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding GLUT
+FIND_PACKAGE_MESSAGE_DETAILS_GLUT:INTERNAL=[/usr/lib/x86_64-linux-gnu/libglut.so][/usr/include][v()]
+GLUT_CFLAGS:INTERNAL=
+GLUT_CFLAGS_I:INTERNAL=
+GLUT_CFLAGS_OTHER:INTERNAL=
+GLUT_FOUND:INTERNAL=
+GLUT_INCLUDEDIR:INTERNAL=
+//ADVANCED property for variable: GLUT_INCLUDE_DIR
+GLUT_INCLUDE_DIR-ADVANCED:INTERNAL=1
+GLUT_LIBDIR:INTERNAL=
+GLUT_LIBS:INTERNAL=
+GLUT_LIBS_L:INTERNAL=
+GLUT_LIBS_OTHER:INTERNAL=
+GLUT_LIBS_PATHS:INTERNAL=
+GLUT_MODULE_NAME:INTERNAL=
+GLUT_PREFIX:INTERNAL=
+GLUT_STATIC_CFLAGS:INTERNAL=
+GLUT_STATIC_CFLAGS_I:INTERNAL=
+GLUT_STATIC_CFLAGS_OTHER:INTERNAL=
+GLUT_STATIC_LIBDIR:INTERNAL=
+GLUT_STATIC_LIBS:INTERNAL=
+GLUT_STATIC_LIBS_L:INTERNAL=
+GLUT_STATIC_LIBS_OTHER:INTERNAL=
+GLUT_STATIC_LIBS_PATHS:INTERNAL=
+GLUT_VERSION:INTERNAL=
+//ADVANCED property for variable: GLUT_Xi_LIBRARY
+GLUT_Xi_LIBRARY-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: GLUT_Xmu_LIBRARY
+GLUT_Xmu_LIBRARY-ADVANCED:INTERNAL=1
+GLUT_freeglut_INCLUDEDIR:INTERNAL=
+GLUT_freeglut_LIBDIR:INTERNAL=
+GLUT_freeglut_PREFIX:INTERNAL=
+GLUT_freeglut_VERSION:INTERNAL=
+GLUT_glut_INCLUDEDIR:INTERNAL=
+GLUT_glut_LIBDIR:INTERNAL=
+//ADVANCED property for variable: GLUT_glut_LIBRARY
+GLUT_glut_LIBRARY-ADVANCED:INTERNAL=1
+GLUT_glut_PREFIX:INTERNAL=
+GLUT_glut_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_ARGN
+PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //linker supports push/pop state
 _CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+__pkg_config_checked_GLUT:INTERNAL=1
 
