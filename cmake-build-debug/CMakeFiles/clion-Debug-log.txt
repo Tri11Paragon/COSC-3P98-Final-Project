@@ -1,0 +1,4 @@
+/home/laptop/Documents/clion/clion-2021.3.3/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/home/laptop/Documents/clion/clion-2021.3.3/bin/ninja/linux/ninja -DCMAKE_C_COMPILER=/usr/bin/gcc-12 -DCMAKE_CXX_COMPILER=/usr/bin/g++-12 -G Ninja -S "/home/laptop/Documents/Brock/CS 3P98/Final Project" -B "/home/laptop/Documents/Brock/CS 3P98/Final Project/cmake-build-debug"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/laptop/Documents/Brock/CS 3P98/Final Project/cmake-build-debug
