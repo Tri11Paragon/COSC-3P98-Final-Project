@@ -3,21 +3,22 @@
  * Copyright (c) Brett Terpstra 2023 All Rights Reserved
  */
 #include <window/window.h>
+#include <GL/glut.h>
 
-glut_window::glut_window() {
-
+glut_window::glut_window(int width, int height) : window(width, height) {
+    createGLUTWindow();
 }
 
 void glut_window::createWindow() {
-
+    createGLUTWindow();
 }
 
 void glut_window::destroyWindow() {
-
+    destroyGLUTWindow();
 }
 
 glut_window::~glut_window() {
-
+    destroyGLUTWindow();
 }
 
 bool glut_window::setResizeable(bool resizeEnabled) {
@@ -25,29 +26,34 @@ bool glut_window::setResizeable(bool resizeEnabled) {
 }
 
 bool glut_window::setWindowSize(int width, int height) {
-    return false;
+    m_width = width;
+    m_height = height;
+    return true;
 }
 
-int glut_window::getWidth() {
-    return 0;
+// TODO: a less hacky way of doing this.
+blt::window* currentlyActiveWindow = nullptr;
+
+void glut_window_render(){
+    if (currentlyActiveWindow != nullptr)
+        ((glut_window*)currentlyActiveWindow)->render();
 }
 
-int glut_window::getHeight() {
-    return 0;
+void glut_window::createGLUTWindow() {
+    glutInit(nullptr, nullptr);
+    glutInitWindowSize(m_width, m_height);
+    glutInitDisplayMode(GLUT_RGBA);
+    glutCreateWindow("UwU Final Project!");
+
+    currentlyActiveWindow = this;
+    glutDisplayFunc(glut_window_render);
 }
 
-bool glut_window::isKeyDown(int key) {
-    return false;
-}
-
-bool glut_window::isMouseDown(int button) {
-    return false;
-}
-
-void glut_window::registerKeyListener(std::function<(void) (bool)...> listener) {
+void glut_window::destroyGLUTWindow() {
 
 }
 
-void glut_window::registerMouseListener(std::function<(void) (bool)...> listener) {
-
+void glut_window::render() {
+    for (const auto& HelloTAThisIsAVeryLargeNameForNoGoodReasonItIsntEvenDescriptive : renderFunctions)
+        HelloTAThisIsAVeryLargeNameForNoGoodReasonItIsntEvenDescriptive(this);
 }

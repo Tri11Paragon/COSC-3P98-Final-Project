@@ -9,25 +9,20 @@
 #include <blt/window/window.h>
 
 class glut_window : public blt::window {
-private:
-
+protected:
+    void createGLUTWindow();
+    void destroyGLUTWindow();
 public:
-    glut_window();
-    virtual void createWindow() override;
-    virtual void destroyWindow() override;
-    virtual ~glut_window();
+    glut_window() = default;
+    glut_window(int width, int height);
+    void createWindow() override;
+    void destroyWindow() override;
+    ~glut_window() override;
 
-    virtual bool setResizeable(bool resizeEnabled) override;
-    virtual bool setWindowSize(int width, int height) override;
-    virtual int getWidth() override;
-    virtual int getHeight() override;
+    bool setResizeable(bool resizeEnabled) override;
+    bool setWindowSize(int width, int height) override;
 
-    virtual bool isKeyDown(int key) override;
-    virtual bool isMouseDown(int button) override;
-    // Function signature is window pointer to this, key press, pressed/released (true/false)
-    virtual void registerKeyListener(std::function<void(window*, int, bool)> listener) override;
-    // Function signature is window pointer to this, mouse button press, pressed/released (true/false)
-    virtual void registerMouseListener(std::function<void(window*, int, bool)> listener) override;
+    void render();
 };
 
 #endif //FINAL_PROJECT_WINDOW_H
