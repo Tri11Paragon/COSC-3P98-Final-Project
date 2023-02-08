@@ -1,4 +1,4 @@
-# Install script for directory: /home/laptop/Documents/Brock/CS 3P98/Final Project/libraries/BLT
+# Install script for directory: /home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

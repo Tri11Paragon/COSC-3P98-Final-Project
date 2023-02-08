@@ -1,4 +1,4 @@
-# Install script for directory: /home/laptop/Documents/Brock/CS 3P98/Final Project
+# Install script for directory: /home/brett/Documents/Brock/CS 3P98/Final Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,8 +43,10 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/laptop/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/cmake_install.cmake")
+  # Include the install script for each subdirectory.
+  include("/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/cmake_install.cmake")
+  include("/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/cmake_install.cmake")
+
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -55,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/laptop/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

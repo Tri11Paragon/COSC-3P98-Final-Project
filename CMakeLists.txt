@@ -1,7 +1,35 @@
-cmake_minimum_required(VERSION 3.24)
-project(Final_Project)
+cmake_minimum_required(VERSION 3.0)
+# emscriptem
+cmake_policy(SET CMP0015 NEW)
+project(FinalProject)
+
+option(USE_EXTRAS "Use the extra stuff I've added to this project! (Basically emscriptem)" OFF)
 
 set(CMAKE_CXX_STANDARD 17)
+
+if (USE_EXTRAS)
+    message("Using emscriptem linker and compile flags!")
+    add_definitions("-std=c++17")
+    set(CMAKE_VERBOSE_MAKEFILE on)
+else()
+    # used to debug memory related issues
+    if ((CMAKE_BUILD_TYPE MATCHES Debug))
+        if (UNIX)
+            set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address -g")
+            add_compile_options(-fsanitize=address)
+            add_link_options(-fsanitize=address)
+        endif ()
+        message("Building for Debug")
+    else ()
+        message("Building for Release")
+    endif ()
+endif()
+
+set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
+set(GLFW_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+
+add_subdirectory(libraries/glfw-3.3.8)
 
 # My Stuff
 file(GLOB_RECURSE CPP_FILES "src/*.cpp")
@@ -9,29 +37,17 @@ file(GLOB_RECURSE CPP_FILES "src/*.cpp")
 include_directories(include/)
 
 add_subdirectory(libraries/BLT)
-# External Libraries
-find_package(GLUT)
 
-if(NOT ${GLUT_FOUND})
-    message("WARNING -- If you are on linux please install the FreeGLUT lib")
-    set(GLUT_INCLUDE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}/include/glut/include")
-    set(GLUT_LIBRARIES "${CMAKE_CURRENT_SOURCE_DIR}/include/glut/lib/freeglut.lib")
+add_executable(FinalProject ${CPP_FILES})
+target_link_libraries(FinalProject PRIVATE BLT)
+target_link_libraries(FinalProject PRIVATE glfw)
+
+
+
+if (USE_EXTRAS)
+    #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file ${CMAKE_SOURCE_DIR}/assets --bind")
+    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/)
+    #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file 'assets' --bind")
+    set_target_properties(FinalProject PROPERTIES LINK_FLAGS "--preload-file 'assets'")
+    #set_target_properties(FinalProject PROPERTIES COMPILE_FLAGS "-o index.html")
 endif()
-message("Using GLUT ${GLUT_INCLUDE_DIRS} and ${GLUT_LIBRARIES}")
-
-find_library(FreeImage_LIBRARIES libfreeimage.so OR libfreeimage.a)
-find_file(FreeImage_INCLUDE FreeImage.h)
-message(${FreeImage_LIBRARIES})
-if(NOT ${FreeImage_LIBRARIES} OR NOT ${FreeImage_INCLUDE})
-    message("WARNING -- If you are on linux please install the FreeImage lib")
-    #set(FreeImage_LIBRARIES "${CMAKE_CURRENT_SOURCE_DIR}/libraries/freeimage/lib/FreeImage.lib;${CMAKE_CURRENT_SOURCE_DIR}/libraries/freeimage/lib/FreeImaged.dll")
-endif()
-message("Using FreeImage ${FreeImage_LIBRARIES} and ${FreeImage_INCLUDE}")
-
-include_directories(${GLUT_INCLUDE_DIRS})
-include_directories(${FreeImage_INCLUDE})
-
-add_executable(Final_Project ${CPP_FILES})
-target_link_libraries(Final_Project PRIVATE BLT)
-target_link_libraries(Final_Project PRIVATE ${GLUT_LIBRARIES})
-target_link_libraries(Final_Project PRIVATE ${FreeImage_LIBRARIES})

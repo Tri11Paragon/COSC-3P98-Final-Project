@@ -1,0 +1,7 @@
+hello this is a test of embedded files
+this is a new line
+hello world!
+this is also a new line
+second hello world!
+
+NEW DATA

@@ -1,0 +1,4 @@
+https://emscripten.org/docs/porting/multimedia_and_graphics/OpenGL-support.html
+https://github.com/Dav1dde/glad
+https://registry.khronos.org/webgl/specs/1.0/#6
+https://emscripten.org/docs/compiling/Building-Projects.html
