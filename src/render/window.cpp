@@ -7,7 +7,7 @@
 #include <blt/std/logging.h>
 #include <unordered_map>
 
-GLFWwindow* global_window;
+GLFWwindow* global_window = nullptr;
 std::unordered_map<int, bool> key_state{};
 // true if the key was pressed this frame.
 bool key_pressed_frame = false;
@@ -51,6 +51,7 @@ inline void createWindow(int width, int height) {
     global_window = glfwCreateWindow(width, height, "COSC 3P98 Final Project", nullptr, nullptr);
     if (!global_window) {
         BLT_FATAL("Unable to create GLFW window, see error log for more details.");
+        glfwTerminate();
         std::abort();
     }
 }
@@ -59,7 +60,24 @@ inline void createWindow(int width, int height) {
  * Uses sketchy function pointers to handle the important GLFW callbacks.
  */
 inline void initCallbacks() {
-
+    glfwSetKeyCallback(
+            global_window, [](GLFWwindow* window, int key, int scancode, int action, int mods) -> void {
+                // pressed state has GLFW_PRESS and GLFW_REPEAT. GLFW_RELEASE is used instead.
+                key_state[key] = (action != GLFW_RELEASE);
+                key_pressed_frame = true;
+            }
+    );
+    glfwSetMouseButtonCallback(
+            global_window, [](GLFWwindow* window, int button, int action, int mods) -> void {
+                mouse_state[button] = (action != GLFW_RELEASE);
+                mouse_pressed_frame = true;
+            }
+    );
+    glfwSetFramebufferSizeCallback(
+            global_window, [](GLFWwindow* window, int width, int height) -> void {
+                glViewport(0, 0, width, height);
+            }
+    );
 }
 
 /**
@@ -73,12 +91,15 @@ void fp::window::init(int width, int height) {
     createWindow(width, height);
     glfwMakeContextCurrent(global_window);
     initCallbacks();
-    
+
+#ifndef __EMSCRIPTEN__
     int version = gladLoadGLES2(glfwGetProcAddress);
     BLT_INFO("Using GLAD GL %d.%d\n", GLAD_VERSION_MAJOR(version), GLAD_VERSION_MINOR(version));
+#endif
+
 }
 
-void update(){
+void fp::window::update() {
     // reset
     mouse_pressed_frame = false;
     key_pressed_frame = false;
@@ -111,4 +132,12 @@ bool fp::window::isMousePressed(int button) {
 
 const blt::mat4x4& fp::window::getPerspectiveMatrix() {
     return perspectiveMatrix;
+}
+
+bool fp::window::mouseState() {
+    return mouse_pressed_frame;
+}
+
+bool fp::window::keyState() {
+    return key_pressed_frame;
 }

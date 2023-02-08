@@ -1,18 +1,21 @@
-#include <cstdio>
+#include <blt/std/logging.h>
+#include <render/window.h>
 
 int main() {
-    FILE *file = fopen("assets/test.txt", "rb");
-    if (!file) {
-        printf("cannot open file\n");
-        return 1;
-    }
-    while (!feof(file)) {
-        char c = fgetc(file);
-        if (c != EOF) {
-            putchar(c);
+    
+    fp::window::init();
+    
+    while(!fp::window::isCloseRequested()){
+        if (fp::window::isKeyPressed(GLFW_KEY_R)){
+            BLT_DEBUG("R Key is pressed!");
+            if (fp::window::keyState())
+                BLT_TRACE("R Key Single Press!");
         }
+        fp::window::update();
     }
-    fclose (file);
+    
+    fp::window::close();
+    
     return 0;
 }
 

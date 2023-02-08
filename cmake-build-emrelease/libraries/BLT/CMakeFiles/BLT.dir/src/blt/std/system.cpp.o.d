@@ -296,4 +296,5 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: \
   /usr/lib/llvm-14/lib/clang/14.0.6/include/stdarg.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/map.h
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/map.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h

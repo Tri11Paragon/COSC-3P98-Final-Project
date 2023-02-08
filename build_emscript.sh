@@ -1,5 +1,6 @@
 #!/bin/bash
 #mkdir cmake-build-emrelease
+rm -fr cmake-build-emrelease
 emcmake cmake -DCMAKE_BUILD_TYPE=Release -DUSE_EXTRAS=ON -S ./ -B ./cmake-build-emrelease
 cd cmake-build-emrelease
 emmake make -j 16

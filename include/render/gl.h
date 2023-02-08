@@ -7,7 +7,8 @@
 #ifndef FINALPROJECT_GL_H
 #define FINALPROJECT_GL_H
 
-#include <glad/gles2.h>
+// pulls in gl headers along with window tools
+#include <render/window.h>
 
 
 #endif //FINALPROJECT_GL_H

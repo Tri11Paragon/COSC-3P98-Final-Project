@@ -169,6 +169,54 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/render/gl.o: src/render/gl.cpp.o
+.PHONY : src/render/gl.o
+
+# target to build an object file
+src/render/gl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/gl.cpp.o
+.PHONY : src/render/gl.cpp.o
+
+src/render/gl.i: src/render/gl.cpp.i
+.PHONY : src/render/gl.i
+
+# target to preprocess a source file
+src/render/gl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/gl.cpp.i
+.PHONY : src/render/gl.cpp.i
+
+src/render/gl.s: src/render/gl.cpp.s
+.PHONY : src/render/gl.s
+
+# target to generate assembly for a file
+src/render/gl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/gl.cpp.s
+.PHONY : src/render/gl.cpp.s
+
+src/render/window.o: src/render/window.cpp.o
+.PHONY : src/render/window.o
+
+# target to build an object file
+src/render/window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/window.cpp.o
+.PHONY : src/render/window.cpp.o
+
+src/render/window.i: src/render/window.cpp.i
+.PHONY : src/render/window.i
+
+# target to preprocess a source file
+src/render/window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/window.cpp.i
+.PHONY : src/render/window.cpp.i
+
+src/render/window.s: src/render/window.cpp.s
+.PHONY : src/render/window.s
+
+# target to generate assembly for a file
+src/render/window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/window.cpp.s
+.PHONY : src/render/window.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -182,6 +230,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/render/gl.o"
+	@echo "... src/render/gl.i"
+	@echo "... src/render/gl.s"
+	@echo "... src/render/window.o"
+	@echo "... src/render/window.i"
+	@echo "... src/render/window.s"
 .PHONY : help
 
 
