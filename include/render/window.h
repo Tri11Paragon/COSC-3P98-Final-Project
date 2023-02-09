@@ -6,6 +6,11 @@
 #ifndef FINAL_PROJECT_WINDOW_H
 #define FINAL_PROJECT_WINDOW_H
 
+#ifndef FP_FAR_PLANE
+    #define FP_FAR_PLANE 1000.0f
+    #define FP_NEAR_PLANE 0.1f
+#endif
+
 // emscripten provides its own gl bindings.
 #ifndef __EMSCRIPTEN__
     #include <glad/gles2.h>
@@ -14,6 +19,11 @@
 #include <blt/std/math.h>
 
 namespace fp::window {
+    /**
+     * Handles all the init setup for creating a GLFW window.
+     * @param width width of the window
+     * @param height height of the window
+     */
     void init(int width = 1440, int height = 720);
     
     void update();
@@ -32,6 +42,8 @@ namespace fp::window {
     bool keyState();
     
     const blt::mat4x4& getPerspectiveMatrix();
+    
+    void setFOV(float new_fov);
 }
 
 #endif //FINAL_PROJECT_WINDOW_H

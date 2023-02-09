@@ -8,12 +8,15 @@
 #include <unordered_map>
 
 GLFWwindow* global_window = nullptr;
+
 std::unordered_map<int, bool> key_state{};
 // true if the key was pressed this frame.
 bool key_pressed_frame = false;
 std::unordered_map<int, bool> mouse_state{};
 bool mouse_pressed_frame = false;
+
 blt::mat4x4 perspectiveMatrix;
+float fov = 90;
 
 /**
  * GLFW error callback
@@ -22,25 +25,27 @@ blt::mat4x4 perspectiveMatrix;
  */
 void error_callback(int error, const char* description) {
     // BLT will automatically insert a \n at the end of all macro calls.
-    BLT_ERROR("Error: %s", description);
+    BLT_ERROR("Error: %s\n\n", description);
 }
 
 /**
  * Init GLFW, will exit the program if GLFW is unable to init.
  */
 inline void initGLFW() {
+    glfwSetErrorCallback(error_callback);
     if (!glfwInit()) {
-        BLT_FATAL("Failed to init GLFW. Program cannot to continue!");
+        BLT_FATAL("Failed to init GLFW. Program cannot to continue!\n\n");
+        blt::logging::flush();
         std::abort();
     }
-    glfwSetErrorCallback(error_callback);
 }
 
 /**
- * Setup window context. To enable emscriptem / webgl support GL2.0 (GLES 2.0) is preferred.
+ * Setup window context. To enable emscriptem / webgl support GL3.0 (GLES 3.0) is preferred.
  */
-inline void createContext() {
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
+inline void createContextHints() {
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API) ;
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
 }
 
@@ -52,14 +57,20 @@ inline void createWindow(int width, int height) {
     if (!global_window) {
         BLT_FATAL("Unable to create GLFW window, see error log for more details.");
         glfwTerminate();
+        blt::logging::flush();
         std::abort();
     }
+}
+
+inline void updateWindowViewport(int width, int height){
+    perspectiveMatrix = blt::perspective(fov, (float)width / (float)height, FP_FAR_PLANE, FP_NEAR_PLANE);
+    glViewport(0, 0, width, height);
 }
 
 /**
  * Uses sketchy function pointers to handle the important GLFW callbacks.
  */
-inline void initCallbacks() {
+inline void installCallbacks() {
     glfwSetKeyCallback(
             global_window, [](GLFWwindow* window, int key, int scancode, int action, int mods) -> void {
                 // pressed state has GLFW_PRESS and GLFW_REPEAT. GLFW_RELEASE is used instead.
@@ -75,28 +86,30 @@ inline void initCallbacks() {
     );
     glfwSetFramebufferSizeCallback(
             global_window, [](GLFWwindow* window, int width, int height) -> void {
-                glViewport(0, 0, width, height);
+                updateWindowViewport(width, height);
             }
     );
 }
 
-/**
- * Handles all the init setup for creating a GLFW window.
- * @param width width of the window
- * @param height height of the window
- */
+
 void fp::window::init(int width, int height) {
     initGLFW();
-    createContext();
+    createContextHints();
     createWindow(width, height);
     glfwMakeContextCurrent(global_window);
-    initCallbacks();
+    installCallbacks();
 
 #ifndef __EMSCRIPTEN__
     int version = gladLoadGLES2(glfwGetProcAddress);
     BLT_INFO("Using GLAD GL %d.%d\n", GLAD_VERSION_MAJOR(version), GLAD_VERSION_MINOR(version));
+#else
+    BLT_INFO("Using Emscripten!");
+    // we don't want to waste the web browser's resources or cause it to lockup
+    glfwSwapInterval(1);
 #endif
-
+    
+    updateWindowViewport(width, height);
+    
 }
 
 void fp::window::update() {
@@ -140,4 +153,8 @@ bool fp::window::mouseState() {
 
 bool fp::window::keyState() {
     return key_pressed_frame;
+}
+
+void fp::window::setFOV(float new_fov) {
+    fov = new_fov;
 }
