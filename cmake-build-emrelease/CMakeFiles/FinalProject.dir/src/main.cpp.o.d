@@ -272,11 +272,6 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__ranges/enable_view.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__string \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/window.h \
-  /usr/share/emscripten/cache/sysroot/include/GLFW/glfw3.h \
-  /usr/share/emscripten/cache/sysroot/include/GL/gl.h \
-  /usr/share/emscripten/cache/sysroot/include/GL/glext.h \
-  /usr/share/emscripten/cache/sysroot/include/KHR/khrplatform.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten/emscripten.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten/em_asm.h \
@@ -284,4 +279,47 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/emscripten/em_types.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten/em_js.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten/wget.h \
-  /usr/share/emscripten/cache/sysroot/include/emscripten/version.h
+  /usr/share/emscripten/cache/sysroot/include/emscripten/version.h \
+  /usr/share/emscripten/cache/sysroot/include/GLFW/glfw3.h \
+  /usr/share/emscripten/cache/sysroot/include/GL/gl.h \
+  /usr/share/emscripten/cache/sysroot/include/GL/glext.h \
+  /usr/share/emscripten/cache/sysroot/include/KHR/khrplatform.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cmath \
+  /usr/share/emscripten/cache/sysroot/include/compat/math.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/math.h \
+  /usr/share/emscripten/cache/sysroot/include/math.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/gl.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/vector \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bit_reference \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__split_buffer \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/unordered_map \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/is_transparent.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__hash_table \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__node_handle \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/optional \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/string.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/iostream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/ios \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__locale \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/mutex \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__mutex_base \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/system_error \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__errc \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cerrno \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale.h \
+  /usr/share/emscripten/cache/sysroot/include/locale.h \
+  /usr/share/emscripten/cache/sysroot/include/compat/xlocale.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/istream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/ostream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/bitset \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cstdarg \
+  /usr/share/emscripten/cache/sysroot/include/compat/stdarg.h \
+  /usr/lib/llvm-14/lib/clang/14.0.6/include/stdarg.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/sstream \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/shaders/test.frag \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/shaders/test.vert \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/camera.h

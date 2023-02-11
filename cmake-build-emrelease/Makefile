@@ -169,6 +169,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/render/camera.o: src/render/camera.cpp.o
+.PHONY : src/render/camera.o
+
+# target to build an object file
+src/render/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/camera.cpp.o
+.PHONY : src/render/camera.cpp.o
+
+src/render/camera.i: src/render/camera.cpp.i
+.PHONY : src/render/camera.i
+
+# target to preprocess a source file
+src/render/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/camera.cpp.i
+.PHONY : src/render/camera.cpp.i
+
+src/render/camera.s: src/render/camera.cpp.s
+.PHONY : src/render/camera.s
+
+# target to generate assembly for a file
+src/render/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/camera.cpp.s
+.PHONY : src/render/camera.cpp.s
+
 src/render/gl.o: src/render/gl.cpp.o
 .PHONY : src/render/gl.o
 
@@ -230,6 +254,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/render/camera.o"
+	@echo "... src/render/camera.i"
+	@echo "... src/render/camera.s"
 	@echo "... src/render/gl.o"
 	@echo "... src/render/gl.i"
 	@echo "... src/render/gl.s"

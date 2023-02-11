@@ -87,11 +87,26 @@ CMakeFiles/FinalProject.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/main.cpp.s"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/main.cpp" -o CMakeFiles/FinalProject.dir/src/main.cpp.s
 
+CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
+CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/camera.cpp
+CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProject.dir/src/render/camera.cpp.o"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/render/camera.cpp.o -MF CMakeFiles/FinalProject.dir/src/render/camera.cpp.o.d -o CMakeFiles/FinalProject.dir/src/render/camera.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/camera.cpp"
+
+CMakeFiles/FinalProject.dir/src/render/camera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/render/camera.cpp.i"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/camera.cpp" > CMakeFiles/FinalProject.dir/src/render/camera.cpp.i
+
+CMakeFiles/FinalProject.dir/src/render/camera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/render/camera.cpp.s"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/camera.cpp" -o CMakeFiles/FinalProject.dir/src/render/camera.cpp.s
+
 CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/gl.cpp
 CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FinalProject.dir/src/render/gl.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProject.dir/src/render/gl.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/render/gl.cpp.o -MF CMakeFiles/FinalProject.dir/src/render/gl.cpp.o.d -o CMakeFiles/FinalProject.dir/src/render/gl.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/gl.cpp"
 
 CMakeFiles/FinalProject.dir/src/render/gl.cpp.i: cmake_force
@@ -106,7 +121,7 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CMakeFiles/FinalProject.dir
 CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/render/window.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/window.cpp
 CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FinalProject.dir/src/render/window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProject.dir/src/render/window.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/render/window.cpp.o -MF CMakeFiles/FinalProject.dir/src/render/window.cpp.o.d -o CMakeFiles/FinalProject.dir/src/render/window.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/window.cpp"
 
 CMakeFiles/FinalProject.dir/src/render/window.cpp.i: cmake_force
@@ -120,6 +135,7 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.s: cmake_force
 # Object files for target FinalProject
 FinalProject_OBJECTS = \
 "CMakeFiles/FinalProject.dir/src/main.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/render/camera.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/gl.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/window.cpp.o"
 
@@ -127,6 +143,7 @@ FinalProject_OBJECTS = \
 FinalProject_EXTERNAL_OBJECTS =
 
 FinalProject.js: CMakeFiles/FinalProject.dir/src/main.cpp.o
+FinalProject.js: CMakeFiles/FinalProject.dir/src/render/camera.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/gl.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/window.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/build.make
@@ -134,7 +151,7 @@ FinalProject.js: libraries/BLT/libBLT.a
 FinalProject.js: CMakeFiles/FinalProject.dir/linkLibs.rsp
 FinalProject.js: CMakeFiles/FinalProject.dir/objects1
 FinalProject.js: CMakeFiles/FinalProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable FinalProject.js"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable FinalProject.js"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FinalProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

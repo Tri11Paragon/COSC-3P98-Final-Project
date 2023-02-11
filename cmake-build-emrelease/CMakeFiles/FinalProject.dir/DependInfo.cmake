@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/brett/Documents/Brock/CS 3P98/Final Project/src/main.cpp" "CMakeFiles/FinalProject.dir/src/main.cpp.o" "gcc" "CMakeFiles/FinalProject.dir/src/main.cpp.o.d"
+  "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/camera.cpp" "CMakeFiles/FinalProject.dir/src/render/camera.cpp.o" "gcc" "CMakeFiles/FinalProject.dir/src/render/camera.cpp.o.d"
   "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/gl.cpp" "CMakeFiles/FinalProject.dir/src/render/gl.cpp.o" "gcc" "CMakeFiles/FinalProject.dir/src/render/gl.cpp.o.d"
   "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/window.cpp" "CMakeFiles/FinalProject.dir/src/render/window.cpp.o" "gcc" "CMakeFiles/FinalProject.dir/src/render/window.cpp.o.d"
   )

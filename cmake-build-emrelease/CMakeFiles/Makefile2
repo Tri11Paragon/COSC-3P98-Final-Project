@@ -101,12 +101,12 @@ libraries/BLT/clean: libraries/BLT/CMakeFiles/BLT.dir/clean
 CMakeFiles/FinalProject.dir/all: libraries/BLT/CMakeFiles/BLT.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=9,10,11,12 "Built target FinalProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=10,11,12,13,14 "Built target FinalProject"
 .PHONY : CMakeFiles/FinalProject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FinalProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 12
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 14
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FinalProject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 0
 .PHONY : CMakeFiles/FinalProject.dir/rule
@@ -127,12 +127,12 @@ CMakeFiles/FinalProject.dir/clean:
 libraries/BLT/CMakeFiles/BLT.dir/all:
 	$(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/depend
 	$(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target BLT"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9 "Built target BLT"
 .PHONY : libraries/BLT/CMakeFiles/BLT.dir/all
 
 # Build rule for subdir invocation for target.
 libraries/BLT/CMakeFiles/BLT.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 8
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/BLT/CMakeFiles/BLT.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 0
 .PHONY : libraries/BLT/CMakeFiles/BLT.dir/rule

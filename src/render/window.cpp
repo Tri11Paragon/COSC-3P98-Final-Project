@@ -4,7 +4,9 @@
  * See LICENSE file for license detail
  */
 #include <render/window.h>
+#include <render/gl.h>
 #include <blt/std/logging.h>
+#include <blt/std/time.h>
 #include <unordered_map>
 
 GLFWwindow* global_window = nullptr;
@@ -17,6 +19,14 @@ bool mouse_pressed_frame = false;
 
 blt::mat4x4 perspectiveMatrix;
 float fov = 90;
+
+long lastFrame = blt::system::getCurrentTimeNanoseconds();
+long delta = 1;
+
+double mouse_dx;
+double mouse_last_x;
+double mouse_dy;
+double mouse_last_y;
 
 /**
  * GLFW error callback
@@ -63,8 +73,11 @@ inline void createWindow(int width, int height) {
 }
 
 inline void updateWindowViewport(int width, int height){
-    perspectiveMatrix = blt::perspective(fov, (float)width / (float)height, FP_FAR_PLANE, FP_NEAR_PLANE);
+    // TODO: remake the matrix implementation. The values are transposed due to a flawed implementation.
+    perspectiveMatrix = blt::perspective(fov, (float)width / (float)height, FP_NEAR_PLANE, FP_FAR_PLANE);
     glViewport(0, 0, width, height);
+    // make sure we update the global perspective matrix otherwise our rendering is going to look off!
+    fp::shader::updateProjectionMatrix(perspectiveMatrix);
 }
 
 /**
@@ -96,7 +109,10 @@ void fp::window::init(int width, int height) {
     initGLFW();
     createContextHints();
     createWindow(width, height);
+    
+    // OpenGL is single threaded. This ensures that the main thread is the one which is allowed to use it.
     glfwMakeContextCurrent(global_window);
+    
     installCallbacks();
 
 #ifndef __EMSCRIPTEN__
@@ -108,11 +124,23 @@ void fp::window::init(int width, int height) {
     glfwSwapInterval(1);
 #endif
     
+    //glfwSwapInterval(1);
+    
     updateWindowViewport(width, height);
     
 }
 
 void fp::window::update() {
+    double x_pos = 0;
+    double y_pos = 0;
+    glfwGetCursorPos(global_window, &x_pos, &y_pos);
+    
+    mouse_dx = x_pos - mouse_last_x;
+    mouse_dy = y_pos - mouse_last_y;
+    
+    mouse_last_x = x_pos;
+    mouse_last_y = y_pos;
+    
     // reset
     mouse_pressed_frame = false;
     key_pressed_frame = false;
@@ -120,6 +148,11 @@ void fp::window::update() {
     glfwSwapBuffers(global_window);
     // this will cause the key/mouse callbacks which will set the state, which is why it is important to make sure the reset occurs before this.
     glfwPollEvents();
+    
+    // keep track of how much time has passed between window refreshes
+    long currentFrame = blt::system::getCurrentTimeNanoseconds();
+    delta = currentFrame - lastFrame;
+    lastFrame = currentFrame;
 }
 
 void fp::window::close() {
@@ -157,4 +190,28 @@ bool fp::window::keyState() {
 
 void fp::window::setFOV(float new_fov) {
     fov = new_fov;
+}
+
+bool fp::window::mouseGrabbed() {
+    return glfwGetInputMode(global_window, GLFW_CURSOR) == GLFW_CURSOR_DISABLED;
+}
+
+void fp::window::mouseGrabbed(bool state) {
+    glfwSetInputMode(global_window, GLFW_CURSOR, state ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL);
+}
+
+double fp::window::getFrameDelta() {
+    return (double)delta / 1000000000.0;
+}
+
+long fp::window::getFrameDeltaRaw() {
+    return delta;
+}
+
+float fp::window::mouseDX() {
+    return (float)mouse_dx;
+}
+
+float fp::window::mouseDY() {
+    return (float)mouse_dy;
 }

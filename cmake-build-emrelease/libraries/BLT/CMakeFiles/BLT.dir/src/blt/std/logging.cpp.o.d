@@ -297,6 +297,7 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/string.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/vector \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__split_buffer \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/format.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/fstream \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/filesystem \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/stack \

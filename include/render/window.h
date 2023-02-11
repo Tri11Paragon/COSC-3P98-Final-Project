@@ -14,6 +14,9 @@
 // emscripten provides its own gl bindings.
 #ifndef __EMSCRIPTEN__
     #include <glad/gles2.h>
+#else
+    #include <emscripten.h>
+    #define GL_GLEXT_PROTOTYPES
 #endif
 #include <GLFW/glfw3.h>
 #include <blt/std/math.h>
@@ -40,6 +43,17 @@ namespace fp::window {
     
     bool mouseState();
     bool keyState();
+    
+    bool mouseGrabbed();
+    void mouseGrabbed(bool state);
+    
+    float mouseDX();
+    float mouseDY();
+    
+    // seconds
+    double getFrameDelta();
+    // nanoseconds
+    long getFrameDeltaRaw();
     
     const blt::mat4x4& getPerspectiveMatrix();
     

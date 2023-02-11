@@ -281,6 +281,7 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/math.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__node_handle \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/optional \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/logging.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/mutex \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__mutex_base \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/system_error \
@@ -305,6 +306,5 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: \
   /usr/lib/llvm-14/lib/clang/14.0.6/include/stdarg.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/logging.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/iostream \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/format.h

@@ -102,11 +102,26 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BLT.dir/src/blt/std/format.cpp.s"
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/std/format.cpp" -o CMakeFiles/BLT.dir/src/blt/std/format.cpp.s
 
+libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/flags.make
+libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/includes_CXX.rsp
+libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/src/blt/std/loader.cpp
+libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o"
+	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o -MF CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o.d -o CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/std/loader.cpp"
+
+libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BLT.dir/src/blt/std/loader.cpp.i"
+	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/std/loader.cpp" > CMakeFiles/BLT.dir/src/blt/std/loader.cpp.i
+
+libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BLT.dir/src/blt/std/loader.cpp.s"
+	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/std/loader.cpp" -o CMakeFiles/BLT.dir/src/blt/std/loader.cpp.s
+
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/flags.make
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/includes_CXX.rsp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/src/blt/std/logging.cpp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o"
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o -MF CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o.d -o CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/std/logging.cpp"
 
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.i: cmake_force
@@ -121,7 +136,7 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: libraries/BLT/CMakeFi
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/includes_CXX.rsp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/src/blt/std/system.cpp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o"
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o -MF CMakeFiles/BLT.dir/src/blt/std/system.cpp.o.d -o CMakeFiles/BLT.dir/src/blt/std/system.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/std/system.cpp"
 
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.i: cmake_force
@@ -136,7 +151,7 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: libraries/BLT
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/includes_CXX.rsp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/src/blt/profiling/profiler.cpp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o"
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o -MF CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o.d -o CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/profiling/profiler.cpp"
 
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.i: cmake_force
@@ -151,7 +166,7 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: libraries/BLT/CMakeFiles
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/includes_CXX.rsp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/src/blt/nbt/nbt.cpp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o"
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o -MF CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o.d -o CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/nbt/nbt.cpp"
 
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.i: cmake_force
@@ -166,7 +181,7 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: libraries/BLT/CMak
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/includes_CXX.rsp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/src/blt/nbt/nbt_block.cpp
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: libraries/BLT/CMakeFiles/BLT.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o"
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && /usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o -MF CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o.d -o CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/src/blt/nbt/nbt_block.cpp"
 
 libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.i: cmake_force
@@ -181,6 +196,7 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.s: cmake_force
 BLT_OBJECTS = \
 "CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o" \
 "CMakeFiles/BLT.dir/src/blt/std/format.cpp.o" \
+"CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o" \
 "CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o" \
 "CMakeFiles/BLT.dir/src/blt/std/system.cpp.o" \
 "CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o" \
@@ -192,6 +208,7 @@ BLT_EXTERNAL_OBJECTS =
 
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o
+libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o
@@ -199,7 +216,7 @@ libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/build.make
 libraries/BLT/libBLT.a: libraries/BLT/CMakeFiles/BLT.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libBLT.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libBLT.a"
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && $(CMAKE_COMMAND) -P CMakeFiles/BLT.dir/cmake_clean_target.cmake
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/libraries/BLT" && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BLT.dir/link.txt --verbose=$(VERBOSE)
 

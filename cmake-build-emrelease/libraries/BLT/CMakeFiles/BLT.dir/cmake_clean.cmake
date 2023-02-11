@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o.d"
   "CMakeFiles/BLT.dir/src/blt/std/format.cpp.o"
   "CMakeFiles/BLT.dir/src/blt/std/format.cpp.o.d"
+  "CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o"
+  "CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o.d"
   "CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o"
   "CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o.d"
   "CMakeFiles/BLT.dir/src/blt/std/system.cpp.o"

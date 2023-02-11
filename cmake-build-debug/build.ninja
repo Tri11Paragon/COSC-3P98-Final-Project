@@ -56,6 +56,13 @@ build CMakeFiles/FinalProject.dir/src/main.cpp.o: CXX_COMPILER__FinalProject_Deb
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src
 
+build CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/camera.cpp || cmake_object_order_depends_target_FinalProject
+  DEP_FILE = CMakeFiles/FinalProject.dir/src/render/camera.cpp.o.d
+  FLAGS = -fsanitize=address -g -g -fdiagnostics-color=always -fsanitize=address -std=gnu++17
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  OBJECT_DIR = CMakeFiles/FinalProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+
 build CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/gl.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/gl.cpp.o.d
   FLAGS = -fsanitize=address -g -g -fdiagnostics-color=always -fsanitize=address -std=gnu++17
@@ -78,7 +85,7 @@ build CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CXX_COMPILER__FinalPr
 #############################################
 # Link the executable FinalProject
 
-build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Debug CMakeFiles/FinalProject.dir/src/main.cpp.o CMakeFiles/FinalProject.dir/src/render/gl.cpp.o CMakeFiles/FinalProject.dir/src/render/window.cpp.o | libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a
+build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Debug CMakeFiles/FinalProject.dir/src/main.cpp.o CMakeFiles/FinalProject.dir/src/render/camera.cpp.o CMakeFiles/FinalProject.dir/src/render/gl.cpp.o CMakeFiles/FinalProject.dir/src/render/window.cpp.o | libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a
   FLAGS = -fsanitize=address -g -g
   LINK_FLAGS = -rdynamic  -fsanitize=address
   LINK_LIBRARIES = libraries/BLT/libBLT.a  libraries/glfw-3.3.8/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/libz.so  -Wl,-Bstatic  -lrt  -Wl,-Bdynamic  -lm  -ldl  -lX11
@@ -501,6 +508,13 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__B
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
 
+build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/loader.cpp || cmake_object_order_depends_target_BLT
+  DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o.d
+  FLAGS = -fsanitize=address -g -g -fdiagnostics-color=always -fsanitize=address
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
+  OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
+  OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/logging.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o.d
   FLAGS = -fsanitize=address -g -g -fdiagnostics-color=always -fsanitize=address
@@ -544,7 +558,7 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: CXX_COMPILER
 #############################################
 # Link the static library libraries/BLT/libBLT.a
 
-build libraries/BLT/libBLT.a: CXX_STATIC_LIBRARY_LINKER__BLT_Debug libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o
+build libraries/BLT/libBLT.a: CXX_STATIC_LIBRARY_LINKER__BLT_Debug libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o
   LANGUAGE_COMPILE_FLAGS = -fsanitize=address -g -g
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   POST_BUILD = :

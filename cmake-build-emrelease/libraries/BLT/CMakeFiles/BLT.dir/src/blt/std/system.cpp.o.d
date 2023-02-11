@@ -297,4 +297,8 @@ libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/map.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cmath \
+  /usr/share/emscripten/cache/sysroot/include/compat/math.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/math.h \
+  /usr/share/emscripten/cache/sysroot/include/math.h

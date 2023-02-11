@@ -253,6 +253,30 @@ src/blt/std/format.cpp.s:
 	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease" && $(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.s
 .PHONY : src/blt/std/format.cpp.s
 
+src/blt/std/loader.o: src/blt/std/loader.cpp.o
+.PHONY : src/blt/std/loader.o
+
+# target to build an object file
+src/blt/std/loader.cpp.o:
+	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease" && $(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o
+.PHONY : src/blt/std/loader.cpp.o
+
+src/blt/std/loader.i: src/blt/std/loader.cpp.i
+.PHONY : src/blt/std/loader.i
+
+# target to preprocess a source file
+src/blt/std/loader.cpp.i:
+	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease" && $(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.i
+.PHONY : src/blt/std/loader.cpp.i
+
+src/blt/std/loader.s: src/blt/std/loader.cpp.s
+.PHONY : src/blt/std/loader.s
+
+# target to generate assembly for a file
+src/blt/std/loader.cpp.s:
+	cd "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease" && $(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.s
+.PHONY : src/blt/std/loader.cpp.s
+
 src/blt/std/logging.o: src/blt/std/logging.cpp.o
 .PHONY : src/blt/std/logging.o
 
@@ -325,6 +349,9 @@ help:
 	@echo "... src/blt/std/format.o"
 	@echo "... src/blt/std/format.i"
 	@echo "... src/blt/std/format.s"
+	@echo "... src/blt/std/loader.o"
+	@echo "... src/blt/std/loader.i"
+	@echo "... src/blt/std/loader.s"
 	@echo "... src/blt/std/logging.o"
 	@echo "... src/blt/std/logging.i"
 	@echo "... src/blt/std/logging.s"

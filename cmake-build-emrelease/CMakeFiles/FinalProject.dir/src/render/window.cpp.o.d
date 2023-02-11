@@ -1,6 +1,14 @@
 CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/window.cpp \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/window.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/emscripten.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/em_asm.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/em_macros.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/em_types.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/em_js.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/wget.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/version.h \
   /usr/share/emscripten/cache/sysroot/include/GLFW/glfw3.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/stddef.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__config \
@@ -21,22 +29,45 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/initializer_list \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/cstddef \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/version \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/logging.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/string \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cmath \
+  /usr/share/emscripten/cache/sysroot/include/compat/math.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/math.h \
+  /usr/share/emscripten/cache/sysroot/include/math.h \
+  /usr/share/emscripten/cache/sysroot/include/features.h \
+  /usr/share/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/stdlib.h \
+  /usr/share/emscripten/cache/sysroot/include/stdlib.h \
+  /usr/share/emscripten/cache/sysroot/include/alloca.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/type_traits \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/limits \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__undef_macros \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/gl.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/vector \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bit_reference \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bits \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/algorithm \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__debug \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/iosfwd \
   /usr/share/emscripten/cache/sysroot/include/compat/wchar.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/wchar.h \
   /usr/share/emscripten/cache/sysroot/include/wchar.h \
-  /usr/share/emscripten/cache/sysroot/include/features.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional_base \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/binary_function.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cstring \
+  /usr/share/emscripten/cache/sysroot/include/compat/string.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/string.h \
+  /usr/share/emscripten/cache/sysroot/include/string.h \
+  /usr/share/emscripten/cache/sysroot/include/strings.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/functional \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__algorithm/search.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__algorithm/comp.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/iterator_traits.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/incrementable_traits.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/concepts \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/invoke.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/weak_result_type.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/binary_function.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/unary_function.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__undef_macros \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/type_traits \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/forward.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional_base \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/operations.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/reference_wrapper.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/addressof.h \
@@ -45,10 +76,6 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/exception \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__availability \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/cstdlib \
-  /usr/share/emscripten/cache/sysroot/include/compat/stdlib.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/stdlib.h \
-  /usr/share/emscripten/cache/sysroot/include/stdlib.h \
-  /usr/share/emscripten/cache/sysroot/include/alloca.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/new \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/typeinfo \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/cstdint \
@@ -57,7 +84,6 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/as_const.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/move.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/cmp.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/limits \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/declval.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/exchange.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/in_place.h \
@@ -69,22 +95,7 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/swap.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__utility/to_underlying.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/compare \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/wrap_iter.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/iterator_traits.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/incrementable_traits.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/concepts \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/readable_traits.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/pointer_traits.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/algorithm \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bits \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/cstring \
-  /usr/share/emscripten/cache/sysroot/include/compat/string.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/string.h \
-  /usr/share/emscripten/cache/sysroot/include/string.h \
-  /usr/share/emscripten/cache/sysroot/include/strings.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/functional \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__algorithm/search.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__algorithm/comp.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/binary_negate.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/bind_front.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/perfect_forward.h \
@@ -96,6 +107,7 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/function.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/allocator_traits.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/construct_at.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/pointer_traits.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/compressed_pair.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/shared_ptr.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/allocation_guard.h \
@@ -160,6 +172,7 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/reverse_access.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/reverse_iterator.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/size.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__iterator/wrap_iter.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/temporary_buffer.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__memory/uninitialized_algorithms.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/identity.h \
@@ -262,6 +275,17 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__algorithm/transform.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique_copy.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__algorithm/unique.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__split_buffer \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/unordered_map \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/is_transparent.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__hash_table \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__node_handle \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/optional \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/string.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/iostream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/ios \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__locale \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/string \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/cstdio \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/stdio.h \
   /usr/share/emscripten/cache/sysroot/include/stdio.h \
@@ -277,12 +301,23 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/string_view \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__ranges/enable_view.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__string \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/unordered_map \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/is_transparent.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__hash_table \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/cmath \
-  /usr/share/emscripten/cache/sysroot/include/compat/math.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/math.h \
-  /usr/share/emscripten/cache/sysroot/include/math.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__node_handle \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/optional
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/mutex \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__mutex_base \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/system_error \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__errc \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cerrno \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale.h \
+  /usr/share/emscripten/cache/sysroot/include/locale.h \
+  /usr/share/emscripten/cache/sysroot/include/compat/xlocale.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/istream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/ostream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/bitset \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cstdarg \
+  /usr/share/emscripten/cache/sysroot/include/compat/stdarg.h \
+  /usr/lib/llvm-14/lib/clang/14.0.6/include/stdarg.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/sstream \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/logging.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/time.h
