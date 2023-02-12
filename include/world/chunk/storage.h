@@ -17,7 +17,7 @@
 constexpr int CHUNK_SIZE = 32;
 const int CHUNK_SHIFT = (int)(log(CHUNK_SIZE) / log(2));
 // size that the base vertex arrays are assumed to be (per face)
-constexpr int VTX_ARR_SIZE = 12;
+constexpr int VTX_ARR_SIZE = 18;
 
 namespace fp {
     

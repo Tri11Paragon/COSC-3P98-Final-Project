@@ -90,7 +90,7 @@ void fp::camera::update() {
     if (window::isKeyPressed(GLFW_KEY_LEFT_CONTROL)){
         speed = MAX_SPEED;
     } else if (window::isKeyPressed(GLFW_KEY_LEFT_ALT))
-        speed = DEFAULT_SPEED / 2;
+        speed = DEFAULT_SPEED / 8;
     else
         speed = DEFAULT_SPEED;
     

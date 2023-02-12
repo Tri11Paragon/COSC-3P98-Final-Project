@@ -6,7 +6,7 @@
 #include <shaders/chunk.frag>
 #include <shaders/chunk.vert>
 #include "render/camera.h"
-#include "world/chunk/chunk.h"
+#include "world/chunk/world.h"
 
 
 #ifdef __EMSCRIPTEN__
@@ -16,15 +16,14 @@
 #endif
 
 fp::shader* chunk_shader;
-fp::chunk* chunk;
+fp::world* world;
 
 void loop(){
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    chunk_shader->use();
-    chunk->update();
-    chunk->render(*chunk_shader);
+    world->update();
+    world->render(*chunk_shader);
 
     if (fp::window::isKeyPressed(GLFW_KEY_R)){
         BLT_DEBUG("R Key is pressed!");
@@ -48,10 +47,10 @@ int main() {
     fp::window::init();
     
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
-    chunk = new fp::chunk();
+    world = new fp::world();
     
-    chunk->setBlock(0, 0, 0, 1);
-    chunk->setBlock(2, 2, 2, 1);
+    world->setBlock(0, 0, 0, 1);
+    world->setBlock(2, 2, 2, 1);
     
     glEnable(GL_CULL_FACE);
     glCullFace(GL_BACK);
@@ -70,7 +69,7 @@ int main() {
 #endif
 
     delete(chunk_shader);
-    delete(chunk);
+    delete(world);
     
     fp::window::close();
     
