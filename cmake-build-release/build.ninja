@@ -55,6 +55,8 @@ build CMakeFiles/FinalProject.dir/src/main.cpp.o: CXX_COMPILER__FinalProject_Rel
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/camera.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/camera.cpp.o.d
@@ -62,6 +64,8 @@ build CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CXX_COMPILER__FinalPr
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/gl.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/gl.cpp.o.d
@@ -69,6 +73,8 @@ build CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CXX_COMPILER__FinalProjec
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/window.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/window.cpp.o.d
@@ -76,6 +82,35 @@ build CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CXX_COMPILER__FinalPr
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
+
+build CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/chunk/chunk.cpp || cmake_object_order_depends_target_FinalProject
+  DEP_FILE = CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  OBJECT_DIR = CMakeFiles/FinalProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
+
+build CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/chunk/storage.cpp || cmake_object_order_depends_target_FinalProject
+  DEP_FILE = CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  OBJECT_DIR = CMakeFiles/FinalProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
+
+build CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/registry.cpp || cmake_object_order_depends_target_FinalProject
+  DEP_FILE = CMakeFiles/FinalProject.dir/src/world/registry.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  OBJECT_DIR = CMakeFiles/FinalProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 
 # =============================================================================
@@ -85,15 +120,16 @@ build CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CXX_COMPILER__FinalPr
 #############################################
 # Link the executable FinalProject
 
-build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Release CMakeFiles/FinalProject.dir/src/main.cpp.o CMakeFiles/FinalProject.dir/src/render/camera.cpp.o CMakeFiles/FinalProject.dir/src/render/gl.cpp.o CMakeFiles/FinalProject.dir/src/render/window.cpp.o | libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a
+build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Release CMakeFiles/FinalProject.dir/src/main.cpp.o CMakeFiles/FinalProject.dir/src/render/camera.cpp.o CMakeFiles/FinalProject.dir/src/render/gl.cpp.o CMakeFiles/FinalProject.dir/src/render/window.cpp.o CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o CMakeFiles/FinalProject.dir/src/world/registry.cpp.o | libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/BLT/libBLT.a libraries/glfw-3.3.8/src/libglfw3.a
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = libraries/BLT/libBLT.a  libraries/glfw-3.3.8/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/libz.so  -Wl,-Bstatic  -lrt  -Wl,-Bdynamic  -lm  -ldl  -lX11
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
   TARGET_FILE = FinalProject
-  TARGET_PDB = FinalProject.dbg
+  TARGET_PDB = FinalProject.pdb
 
 
 #############################################
@@ -270,6 +306,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -278,6 +316,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Re
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -286,6 +326,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_R
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -294,6 +336,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -302,6 +346,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -310,6 +356,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/x11_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -318,6 +366,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glf
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/x11_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -326,6 +376,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/x11_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -334,6 +386,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__g
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -342,6 +396,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/posix_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -350,6 +406,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__g
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/posix_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -358,6 +416,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glx_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -366,6 +426,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -374,6 +436,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -382,6 +446,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILE
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/linux_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -390,6 +456,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILE
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 
 # =============================================================================
@@ -404,8 +472,9 @@ build libraries/glfw-3.3.8/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Release
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_FILE = libraries/glfw-3.3.8/src/libglfw3.a
-  TARGET_PDB = glfw3.a.dbg
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 
 #############################################
@@ -500,6 +569,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o: CXX_COMPILE
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/format.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o.d
@@ -507,6 +578,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__B
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/loader.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o.d
@@ -514,6 +587,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: CXX_COMPILER__B
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/logging.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o.d
@@ -521,6 +596,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/system.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o.d
@@ -528,6 +605,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: CXX_COMPILER__B
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/profiling/profiler.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o.d
@@ -535,6 +614,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: CXX_COM
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/nbt/nbt.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o.d
@@ -542,6 +623,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: CXX_COMPILER__BLT_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/nbt/nbt_block.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o.d
@@ -549,6 +632,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: CXX_COMPILER
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 
 # =============================================================================
@@ -563,8 +648,9 @@ build libraries/BLT/libBLT.a: CXX_STATIC_LIBRARY_LINKER__BLT_Release libraries/B
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
   TARGET_FILE = libraries/BLT/libBLT.a
-  TARGET_PDB = BLT.a.dbg
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 
 #############################################
@@ -689,14 +775,14 @@ build libraries/glfw-3.3.8/src/all: phony libraries/glfw-3.3.8/src/libglfw3.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCCompilerABI.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystem.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################

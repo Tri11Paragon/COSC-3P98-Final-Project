@@ -3,9 +3,10 @@
 #include <render/gl.h>
 #include <memory>
 
-#include <shaders/test.frag>
-#include <shaders/test.vert>
+#include <shaders/chunk.frag>
+#include <shaders/chunk.vert>
 #include "render/camera.h"
+#include "world/chunk/chunk.h"
 
 
 #ifdef __EMSCRIPTEN__
@@ -14,31 +15,17 @@
     #define EGL_EGLEXT_PROTOTYPES
 #endif
 
-const float scale = 1;
-
-float vertices[] = {
-        0.5f  * scale,  0.5f  * scale, -2.0f,  // top right
-        0.5f  * scale, -0.5f  * scale, -2.0f,  // bottom right
-        -0.5f * scale, -0.5f * scale, -2.0f,  // bottom left
-        -0.5f * scale,  0.5f * scale, -2.0f   // top left
-};
-unsigned int indices[] = {  // note that we start from 0!
-        0, 1, 3,   // first triangle
-        1, 2, 3    // second triangle
-};
-
-fp::shader* activeShader;
-fp::VAO* activeVAO;
+fp::shader* chunk_shader;
+fp::chunk* chunk;
 
 void loop(){
     glClearColor(1.0, 1.0, 1.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT);
     
-    activeShader->use();
-    activeVAO->bind();
-    glEnableVertexAttribArray(0);
-    glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, nullptr);
-    glDisableVertexAttribArray(0);
+    chunk_shader->use();
+    chunk->update();
+    chunk->render(*chunk_shader);
+
     if (fp::window::isKeyPressed(GLFW_KEY_R)){
         BLT_DEBUG("R Key is pressed!");
         if (fp::window::keyState())
@@ -49,16 +36,25 @@ void loop(){
 }
 
 int main() {
+    auto logging_properties = blt::logging::LOG_PROPERTIES{true, true, true, "./"};
+    logging_properties.m_logFullPath = true;
+    
 #ifdef __EMSCRIPTEN__
-    blt::logging::init(blt::logging::LOG_PROPERTIES{false, true, false, "./"});
+    logging_properties = blt::logging::LOG_PROPERTIES{false, true, false, "./"};
 #endif
+    
+    blt::logging::init(logging_properties);
     
     fp::window::init();
     
-    activeShader = new fp::shader(shader_test_vert, shader_test_frag);
-    activeVAO = new fp::VAO();
-    activeVAO->bindVBO(new fp::VBO{fp::ARRAY_BUFFER, vertices, sizeof(vertices)}, 0, 3);
-    activeVAO->bindElementVBO(new fp::VBO{fp::ELEMENT_BUFFER, indices, sizeof(indices)});
+    chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
+    chunk = new fp::chunk();
+    
+    chunk->setBlock(0, 0, 0, 1);
+    chunk->setBlock(2, 2, 2, 1);
+    
+    glEnable(GL_CULL_FACE);
+    glCullFace(GL_BACK);
 
 #ifdef __EMSCRIPTEN__
     /*
@@ -73,8 +69,8 @@ int main() {
         loop();
 #endif
 
-    delete(activeShader);
-    delete(activeVAO);
+    delete(chunk_shader);
+    delete(chunk);
     
     fp::window::close();
     

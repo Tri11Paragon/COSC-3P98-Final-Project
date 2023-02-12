@@ -7,7 +7,7 @@
 19	685	1675834610617266094	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/vulkan.c.o	7ac098ea2e755b71
 2	377	1675835240591243670	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/window.c.o	a716fdf6afcb3ac2
 19	807	1675834610745269744	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_init.c.o	7a310a4749a2e05
-0	98	1676136878911679092	build.ninja	190f84590f6ee728
+0	98	1676224079279616938	build.ninja	190f84590f6ee728
 2	434	1675915441258513581	libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o	342a5daa6ca9681d
 18	706	1675834610629266436	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/init.c.o	6051295f860fb367
 948	1087	1676069680836445373	libraries/BLT/libBLT.a	163b10f2e7f6635
@@ -34,3 +34,15 @@
 2	316	1675881681815231506	libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o	ac1bd7bf33d73c31
 1	798	1676096311636683630	CMakeFiles/FinalProject.dir/src/render/gl.cpp.o	d59ba6eec5836ace
 706	883	1675834610809271567	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/linux_joystick.c.o	afc8940b6e7eeae1
+2	20	1676232077903790563	CMakeFiles/FinalProject.dir/src/world/registry.cpp.o	1550caaa717d6c77
+2	421	1676232078307801473	libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o	d9d07699ecf3c7f6
+2	490	1676232078375803310	CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o	c62e5c67ebfa06d
+1	668	1676232078555808170	CMakeFiles/FinalProject.dir/src/render/camera.cpp.o	7f43512660c0023
+2	768	1676232078655810871	CMakeFiles/FinalProject.dir/src/render/window.cpp.o	aa0f847cb87c783c
+2	849	1676232078735813031	CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o	c2a1c71b30b93ca7
+1	858	1676232078743813246	CMakeFiles/FinalProject.dir/src/main.cpp.o	460fff588e5870a1
+1	1057	1676232078943818647	CMakeFiles/FinalProject.dir/src/render/gl.cpp.o	d59ba6eec5836ace
+2	1098	1676232078983819728	libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o	f6cc949795fe632a
+2	1099	1676232078983819728	libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o	13e8110c601a4029
+1099	1278	1676232079155824369	libraries/BLT/libBLT.a	163b10f2e7f6635
+1278	1376	1676232079259827178	FinalProject	907f0360f99b8435

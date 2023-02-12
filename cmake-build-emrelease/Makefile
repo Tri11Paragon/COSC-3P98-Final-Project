@@ -241,6 +241,78 @@ src/render/window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/window.cpp.s
 .PHONY : src/render/window.cpp.s
 
+src/world/chunk/chunk.o: src/world/chunk/chunk.cpp.o
+.PHONY : src/world/chunk/chunk.o
+
+# target to build an object file
+src/world/chunk/chunk.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o
+.PHONY : src/world/chunk/chunk.cpp.o
+
+src/world/chunk/chunk.i: src/world/chunk/chunk.cpp.i
+.PHONY : src/world/chunk/chunk.i
+
+# target to preprocess a source file
+src/world/chunk/chunk.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.i
+.PHONY : src/world/chunk/chunk.cpp.i
+
+src/world/chunk/chunk.s: src/world/chunk/chunk.cpp.s
+.PHONY : src/world/chunk/chunk.s
+
+# target to generate assembly for a file
+src/world/chunk/chunk.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.s
+.PHONY : src/world/chunk/chunk.cpp.s
+
+src/world/chunk/storage.o: src/world/chunk/storage.cpp.o
+.PHONY : src/world/chunk/storage.o
+
+# target to build an object file
+src/world/chunk/storage.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o
+.PHONY : src/world/chunk/storage.cpp.o
+
+src/world/chunk/storage.i: src/world/chunk/storage.cpp.i
+.PHONY : src/world/chunk/storage.i
+
+# target to preprocess a source file
+src/world/chunk/storage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.i
+.PHONY : src/world/chunk/storage.cpp.i
+
+src/world/chunk/storage.s: src/world/chunk/storage.cpp.s
+.PHONY : src/world/chunk/storage.s
+
+# target to generate assembly for a file
+src/world/chunk/storage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.s
+.PHONY : src/world/chunk/storage.cpp.s
+
+src/world/registry.o: src/world/registry.cpp.o
+.PHONY : src/world/registry.o
+
+# target to build an object file
+src/world/registry.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/registry.cpp.o
+.PHONY : src/world/registry.cpp.o
+
+src/world/registry.i: src/world/registry.cpp.i
+.PHONY : src/world/registry.i
+
+# target to preprocess a source file
+src/world/registry.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/registry.cpp.i
+.PHONY : src/world/registry.cpp.i
+
+src/world/registry.s: src/world/registry.cpp.s
+.PHONY : src/world/registry.s
+
+# target to generate assembly for a file
+src/world/registry.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/registry.cpp.s
+.PHONY : src/world/registry.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -263,6 +335,15 @@ help:
 	@echo "... src/render/window.o"
 	@echo "... src/render/window.i"
 	@echo "... src/render/window.s"
+	@echo "... src/world/chunk/chunk.o"
+	@echo "... src/world/chunk/chunk.i"
+	@echo "... src/world/chunk/chunk.s"
+	@echo "... src/world/chunk/storage.o"
+	@echo "... src/world/chunk/storage.i"
+	@echo "... src/world/chunk/storage.s"
+	@echo "... src/world/registry.o"
+	@echo "... src/world/registry.i"
+	@echo "... src/world/registry.s"
 .PHONY : help
 
 

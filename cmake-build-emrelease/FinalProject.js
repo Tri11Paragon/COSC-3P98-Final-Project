@@ -196,7 +196,7 @@ Module['FS_createPath']("/", "assets", true, true);
     }
 
     }
-    loadPackage({"files": [{"filename": "/assets/test.txt", "start": 0, "end": 124}], "remote_package_size": 124, "package_uuid": "979b92ba-fe18-4fbb-9481-94f4f165f270"});
+    loadPackage({"files": [{"filename": "/assets/test.txt", "start": 0, "end": 124}], "remote_package_size": 124, "package_uuid": "c37e6452-71f0-45f2-a39b-28f17f95edfe"});
 
   })();
 
@@ -5866,6 +5866,8 @@ var ASM_CONSTS = {
       return id;
     }
 
+  function _glCullFace(x0) { GLctx['cullFace'](x0) }
+
   function _glDeleteBuffers(n, buffers) {
       for (var i = 0; i < n; i++) {
         var id = HEAP32[(((buffers)+(i*4))>>2)];
@@ -5928,6 +5930,8 @@ var ASM_CONSTS = {
       GLctx.drawElements(mode, count, type, indices);
   
     }
+
+  function _glEnable(x0) { GLctx['enable'](x0) }
 
   function _glEnableVertexAttribArray(index) {
       GLctx.enableVertexAttribArray(index);
@@ -6926,10 +6930,6 @@ var ASM_CONSTS = {
       return prevcbfun;
     }
 
-  function _glfwSetInputMode(winid, mode, value) {
-      GLFW.setInputMode(winid, mode, value);
-    }
-
   function _glfwSetKeyCallback(winid, cbfun) {
       return GLFW.setKeyCallback(winid, cbfun);
     }
@@ -7676,6 +7676,7 @@ var asmLibraryArg = {
   "glCompileShader": _glCompileShader,
   "glCreateProgram": _glCreateProgram,
   "glCreateShader": _glCreateShader,
+  "glCullFace": _glCullFace,
   "glDeleteBuffers": _glDeleteBuffers,
   "glDeleteProgram": _glDeleteProgram,
   "glDeleteShader": _glDeleteShader,
@@ -7683,6 +7684,7 @@ var asmLibraryArg = {
   "glDetachShader": _glDetachShader,
   "glDisableVertexAttribArray": _glDisableVertexAttribArray,
   "glDrawElements": _glDrawElements,
+  "glEnable": _glEnable,
   "glEnableVertexAttribArray": _glEnableVertexAttribArray,
   "glGenBuffers": _glGenBuffers,
   "glGenVertexArrays": _glGenVertexArrays,
@@ -7707,7 +7709,6 @@ var asmLibraryArg = {
   "glfwPollEvents": _glfwPollEvents,
   "glfwSetErrorCallback": _glfwSetErrorCallback,
   "glfwSetFramebufferSizeCallback": _glfwSetFramebufferSizeCallback,
-  "glfwSetInputMode": _glfwSetInputMode,
   "glfwSetKeyCallback": _glfwSetKeyCallback,
   "glfwSetMouseButtonCallback": _glfwSetMouseButtonCallback,
   "glfwSwapBuffers": _glfwSwapBuffers,

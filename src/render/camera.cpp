@@ -20,8 +20,12 @@ float speed = 0;
 float rotation_speed = 3;
 
 void updateCursorGrabbedState(){
+#ifndef __EMSCRIPTEN__
     if (fp::window::isKeyPressed(GLFW_KEY_ESCAPE) && fp::window::keyState())
         fp::window::mouseGrabbed(!fp::window::mouseGrabbed());
+#else
+    //fp::window::mouseGrabbed(true);
+#endif
 }
 
 void updateCameraRotation(){

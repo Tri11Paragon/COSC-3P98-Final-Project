@@ -57,8 +57,8 @@ namespace fp {
     }
     
     VAO::~VAO() {
-        for (VBO* vbo : VBOs)
-            delete (vbo);
+        for (auto& vbo : VBOs)
+            delete (vbo.second);
         glDeleteVertexArrays(1, &vaoID);
     }
     
@@ -67,17 +67,19 @@ namespace fp {
         vbo->bind();
         
         glVertexAttribPointer(
-                attribute_number, coordinate_size, type, GL_FALSE, stride < 0 ? int(coordinate_size * sizeof(float)) : stride, (void*) offset
+                attribute_number, coordinate_size, type, GL_FALSE, stride <= 0 ? 0 : stride, (void*) offset
         );
         glEnableVertexAttribArray(attribute_number);
         
-        VBOs.push_back(vbo);
+        // since attribute number must be unique we can use it to reference the VBO if we need to update it.
+        VBOs.insert({attribute_number, vbo});
     }
     
     void VAO::bindElementVBO(VBO* vbo) {
         bind();
         vbo->bind();
-        VBOs.push_back(vbo);
+        // since each VBO will only have one element buffer we can use -1 to as a constant location
+        VBOs.insert({-1, vbo});
     }
     
     

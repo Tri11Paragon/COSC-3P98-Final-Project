@@ -44,10 +44,31 @@ namespace fp {
         }
         
         template<typename T>
-        VBO(vbo_type type, std::vector<T> data, vbo_mem_type mem_type = STATIC): type(type), mem_type(mem_type) {
+        VBO(vbo_type type, std::vector<T>& data, vbo_mem_type mem_type = STATIC): type(type), mem_type(mem_type) {
             glGenBuffers(1, &vboID);
             bind();
-            glBufferData(type, data.size(), data.data(), mem_type);
+            size = data.size() * sizeof(float);
+            glBufferData(type, size, data.data(), mem_type);
+            //glBufferSubData(type, 0, )
+        }
+        
+        inline void update(void* new_data, int data_size) {
+            bind();
+            // optimization technique is to not reallocate the memory on the GPU if the new buffer size is not larger than our current buffer
+            //if (data_size <= size){
+                // we can do this as long as we overwrite from the beginning. Since the new draw call will only use of to size of the allocated buffer
+                // to do all its drawing, the extra space unused can be ignored and saved for future use.
+            //    glBufferSubData(type, 0, data_size, new_data);
+            //} else
+                glBufferData(type, data_size, new_data, mem_type);
+            data = new_data;
+            size = data_size;
+            glBindBuffer(type, 0);
+        }
+        
+        template<typename T>
+        inline void update(std::vector<T>& new_data) {
+            update(new_data.data(), new_data.size() * sizeof(T));
         }
         
         inline void bind() const {
@@ -62,7 +83,8 @@ namespace fp {
     class VAO {
         private:
             GLuint vaoID = 0;
-            std::vector<VBO*> VBOs;
+            // -1 will contain indices VBO
+            std::unordered_map<int, VBO*> VBOs;
         public:
             VAO();
             
@@ -80,13 +102,17 @@ namespace fp {
              * @param stride stride will automatically be calculated using coordinate size (4 bytes is assumed!)
              * @param offset offset into the data that this attribute is stored. Allows for weaving of data
              */
-            void bindVBO(VBO* vbo, int attribute_number, int coordinate_size, GLenum type = GL_FLOAT, int stride = -1, long offset = 0);
+            void bindVBO(VBO* vbo, int attribute_number, int coordinate_size, GLenum type = GL_FLOAT, int stride = 0, long offset = 0);
             
             /**
              * Binds the VBO as if it was the element buffer (indices). Note: calling this more than once is not supported.
              * @param vbo vbo to use
              */
             void bindElementVBO(VBO* vbo);
+            
+            inline VBO* getVBO(int attribute_number) {
+                return VBOs[attribute_number];
+            }
             
             inline void bind() const {
                 glBindVertexArray(vaoID);
