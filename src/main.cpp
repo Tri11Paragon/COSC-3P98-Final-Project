@@ -20,16 +20,11 @@ fp::world* world;
 
 void loop(){
     glClearColor(1.0, 1.0, 1.0, 1.0);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     world->update();
     world->render(*chunk_shader);
-
-    if (fp::window::isKeyPressed(GLFW_KEY_R)){
-        BLT_DEBUG("R Key is pressed!");
-        if (fp::window::keyState())
-            BLT_TRACE("R Key Single Press!");
-    }
+    
     fp::camera::update();
     fp::window::update();
 }
@@ -49,8 +44,11 @@ int main() {
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
     world = new fp::world();
     
-    world->setBlock(0, 0, 0, 1);
-    world->setBlock(2, 2, 2, 1);
+    world->setBlock({0, 0, 0}, 1);
+    world->setBlock({2, 2, 2}, 1);
+    world->setBlock({-2, 2, 2}, 1);
+    world->setBlock({-2, 2, -2}, 1);
+    world->setBlock({2, 2, -2}, 1);
     
     glEnable(GL_CULL_FACE);
     glCullFace(GL_BACK);

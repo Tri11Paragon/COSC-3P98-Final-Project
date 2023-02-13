@@ -1,1 +1,1 @@
-/usr/bin/em++ -g -sMAX_WEBGL_VERSION=2 -s ASSERTIONS=1 -sUSE_GLFW=3 --preload-file 'assets' @CMakeFiles/FinalProject.dir/objects1 -o FinalProject.js @CMakeFiles/FinalProject.dir/linkLibs.rsp
+/usr/bin/em++ -g -sMAX_WEBGL_VERSION=2 -s ASSERTIONS=1 -sUSE_GLFW=3 -sFULL_ES3 --preload-file 'assets' @CMakeFiles/FinalProject.dir/objects1 -o FinalProject.js @CMakeFiles/FinalProject.dir/linkLibs.rsp

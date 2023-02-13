@@ -9,6 +9,11 @@
 #include <blt/std/time.h>
 #include <unordered_map>
 
+#ifdef __EMSCRIPTEN__
+    #include <emscripten.h>
+    #include <emscripten/html5.h>
+#endif
+
 GLFWwindow* global_window = nullptr;
 
 std::unordered_map<int, bool> key_state{};
@@ -27,6 +32,15 @@ double mouse_dx;
 double mouse_last_x;
 double mouse_dy;
 double mouse_last_y;
+
+#ifdef __EMSCRIPTEN__
+    EM_BOOL on_pointerlockchange(int eventType, const EmscriptenPointerlockChangeEvent *event, void *userData) {
+        BLT_TRACE("Emscripten pointer lock event status %d", event->isActive);
+        glfwSetInputMode(global_window, GLFW_CURSOR, event->isActive ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL);
+        return 0;
+    }
+#endif
+
 
 /**
  * GLFW error callback
@@ -119,6 +133,7 @@ void fp::window::init(int width, int height) {
     int version = gladLoadGLES2(glfwGetProcAddress);
     BLT_INFO("Using GLAD GL %d.%d\n", GLAD_VERSION_MAJOR(version), GLAD_VERSION_MINOR(version));
 #else
+    emscripten_set_pointerlockchange_callback(EMSCRIPTEN_EVENT_TARGET_WINDOW, NULL, 0, on_pointerlockchange);
     BLT_INFO("Using Emscripten!");
     // we don't want to waste the web browser's resources or cause it to lockup
     glfwSwapInterval(1);

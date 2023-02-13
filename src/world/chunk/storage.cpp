@@ -79,6 +79,6 @@ const float* face_decode[] = {
         z_negative_vertices
 };
 
-void fp::mesh_storage::addFace(fp::face face, float x, float y, float z) {
-    add_and_translate(face_decode[face], x, y, z);
+void fp::mesh_storage::addFace(fp::face face, const block_pos& pos) {
+    add_and_translate(face_decode[face], pos);
 }

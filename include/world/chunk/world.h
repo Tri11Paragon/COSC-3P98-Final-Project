@@ -13,10 +13,6 @@
 
 namespace fp {
     
-    struct ChunkPos {
-        int x, y, z;
-    };
-    
     namespace _static {
         /**
          * Converts from world coord to chunk-internal coords
@@ -26,6 +22,10 @@ namespace fp {
         static inline int world_to_internal(int coord) {
             auto val = coord % CHUNK_SIZE;
             return val < 0 ? CHUNK_SIZE + val : val;
+        }
+    
+        static inline block_pos world_to_internal(const block_pos& coord) {
+            return {world_to_internal(coord.x), world_to_internal(coord.y), world_to_internal(coord.z)};
         }
         
         /**
@@ -57,21 +57,9 @@ namespace fp {
             return (int) (ucoord);
         }
         
-        // std::unordered_map requires a type. As a result the functions are encapsulated.
-        struct ChunkPosHash {
-            inline size_t operator()(const ChunkPos& pos) const {
-                size_t p1 = std::hash<int>()(pos.x);
-                size_t p2 = std::hash<int>()(pos.y);
-                size_t p3 = std::hash<int>()(pos.z);
-                return (p1 ^ (p2 << 1)) ^ p3;
-            }
-        };
-        
-        struct ChunkPosEquality {
-            inline bool operator()(const ChunkPos& p1, const ChunkPos& p2) const {
-                return p1.x == p2.x && p1.y == p2.y && p1.z == p2.z;
-            }
-        };
+        static inline chunk_pos world_to_chunk(const block_pos& pos){
+            return {world_to_chunk(pos.x), world_to_chunk(pos.y), world_to_chunk(pos.z)};
+        }
         
     }
     
@@ -80,12 +68,12 @@ namespace fp {
             block_storage* storage;
             mesh_storage* mesh = nullptr;
             VAO* chunk_vao;
-            ChunkPos pos;
-            
-            unsigned char dirtiness = 0;
+            chunk_pos pos;
+        
+            chunk_status dirtiness = OKAY;
             unsigned long render_size = 0;
         public:
-            explicit chunk(ChunkPos pos): pos(pos) {
+            explicit chunk(chunk_pos pos): pos(pos) {
                 storage = new block_storage();
                 chunk_vao = new VAO();
                 // using indices uses:
@@ -102,44 +90,46 @@ namespace fp {
             ~chunk() {
                 delete storage;
                 delete chunk_vao;
+                delete mesh;
             }
     };
     
     class world {
         private:
-            std::unordered_map<ChunkPos, chunk*, _static::ChunkPosHash, _static::ChunkPosEquality> chunk_storage;
+            std::unordered_map<chunk_pos, chunk*, _static::chunk_pos_hash, _static::chunk_pos_equality> chunk_storage;
         protected:
-            mesh_storage* generateChunkMesh(chunk* chunk);
+            void generateChunkMesh(chunk* chunk);
             
-            chunk* getChunk(int x, int y, int z) {
-                return chunk_storage.at(ChunkPos{_static::world_to_chunk(x), _static::world_to_chunk(y), _static::world_to_chunk(z)});
+            inline void insertChunk(chunk* chunk){
+                chunk_storage.insert({chunk->pos, chunk});
+            }
+            
+            inline chunk* getChunk(const block_pos& pos) {
+                return chunk_storage.at(_static::world_to_chunk(pos));
             }
         
         public:
             world() {
-                chunk_storage.insert({{0, 0, 0}, new chunk({0, 0, 0})});
+                insertChunk(new chunk({0, 0, 0}));
+                insertChunk(new chunk({-1, 0, 0}));
+                insertChunk(new chunk({0, 0, -1}));
+                insertChunk(new chunk({-1, 0, -1}));
             }
             
             void update();
             
             void render(fp::shader& shader);
             
-            inline void setBlock(int x, int y, int z, char blockID) {
-                auto c = getChunk(x, y, z);
+            inline void setBlock(const block_pos& pos, char blockID) {
+                auto c = getChunk(pos);
                 // mark the chunk for a mesh update
-                c->dirtiness = 2;
-                c->storage->set(_static::world_to_internal(x), _static::world_to_internal(y), _static::world_to_internal(z), blockID);
+                c->dirtiness = FULL_MESH;
+                c->storage->set(_static::world_to_internal(pos), blockID);
             }
             
-            inline void setBlock(float x, float y, float z, char blockID) { setBlock((int) x, (int) y, (int) z, blockID); }
-            
-            inline char getBlock(int x, int y, int z) {
-                auto c = getChunk(x, y, z);
-                return c->storage->get(x, y, z);
-            }
-            
-            inline char getBlock(float x, float y, float z) {
-                return getBlock((int) x, (int) y, (int) z);
+            inline char getBlock(const block_pos& pos) {
+                auto c = getChunk(pos);
+                return c->storage->get(_static::world_to_internal(pos));
             }
             
             ~world() {

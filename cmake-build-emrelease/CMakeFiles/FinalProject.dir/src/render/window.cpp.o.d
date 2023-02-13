@@ -320,4 +320,8 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/sstream \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/logging.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/time.h
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/time.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/html5.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/eventloop.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/console.h \
+  /usr/share/emscripten/cache/sysroot/include/emscripten/html5_webgl.h

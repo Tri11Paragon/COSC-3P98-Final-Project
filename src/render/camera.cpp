@@ -127,5 +127,7 @@ void fp::camera::update() {
     position[1] += (float)(dy * window::getFrameDelta());
     position[2] += (float)(dz * window::getFrameDelta());
     
+//    BLT_TRACE("Pos: %f, %f, %f", position[0], position[1], position[2]);
+    
     updateViewMatrix();
 }

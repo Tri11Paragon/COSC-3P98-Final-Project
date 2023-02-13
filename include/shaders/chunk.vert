@@ -6,6 +6,8 @@ precision mediump float;
 
 layout (location = 0) in vec3 vertex;
 
+uniform mat4 translation;
+
 layout (std140) uniform StandardMatrices
 {
     mat4 projection;
@@ -15,7 +17,7 @@ layout (std140) uniform StandardMatrices
 };
 
 void main()  {
-    gl_Position = projection * view * vec4(vertex.x, vertex.y, vertex.z, 1.0);
+    gl_Position = projection * view * translation * vec4(vertex.x, vertex.y, vertex.z, 1.0);
 }
 
 ")";

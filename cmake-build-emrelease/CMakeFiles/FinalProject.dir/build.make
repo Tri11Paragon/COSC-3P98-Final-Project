@@ -132,26 +132,11 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/render/window.cpp.s"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/window.cpp" -o CMakeFiles/FinalProject.dir/src/render/window.cpp.s
 
-CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o: CMakeFiles/FinalProject.dir/flags.make
-CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
-CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/world/chunk/chunk.cpp
-CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o"
-	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o -MF CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o.d -o CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/chunk.cpp"
-
-CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.i"
-	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/chunk.cpp" > CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.i
-
-CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.s"
-	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/chunk.cpp" -o CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.s
-
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/world/chunk/storage.cpp
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o -MF CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o.d -o CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/storage.cpp"
 
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.i: cmake_force
@@ -161,6 +146,21 @@ CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.i: cmake_force
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.s"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/storage.cpp" -o CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.s
+
+CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
+CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/world/chunk/world.cpp
+CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o -MF CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o.d -o CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/world.cpp"
+
+CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.i"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/world.cpp" > CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.i
+
+CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.s"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/world.cpp" -o CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.s
 
 CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
@@ -183,8 +183,8 @@ FinalProject_OBJECTS = \
 "CMakeFiles/FinalProject.dir/src/render/camera.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/gl.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/window.cpp.o" \
-"CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/world/registry.cpp.o"
 
 # External object files for target FinalProject
@@ -194,8 +194,8 @@ FinalProject.js: CMakeFiles/FinalProject.dir/src/main.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/camera.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/gl.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/window.cpp.o
-FinalProject.js: CMakeFiles/FinalProject.dir/src/world/chunk/chunk.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o
+FinalProject.js: CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/world/registry.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/build.make
 FinalProject.js: libraries/BLT/libBLT.a

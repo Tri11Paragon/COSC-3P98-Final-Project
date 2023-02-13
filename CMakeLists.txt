@@ -48,7 +48,7 @@ if (USE_EXTRAS)
     #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file ${CMAKE_SOURCE_DIR}/assets --bind")
     file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/)
     #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file 'assets' --bind")
-    set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-sMAX_WEBGL_VERSION=2 -s ASSERTIONS=1 -sUSE_GLFW=3 --preload-file 'assets'")
+    set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-sMAX_WEBGL_VERSION=2 -s ASSERTIONS=1 -sUSE_GLFW=3 -sFULL_ES3 --preload-file 'assets'")
     # these flags will be set by cmake automatically based on build type
     #set_target_properties(FinalProject PROPERTIES COMPILE_FLAGS "-O3")
     #set_target_properties(FinalProject PROPERTIES COMPILE_FLAGS "-g")
