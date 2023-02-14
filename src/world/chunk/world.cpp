@@ -9,9 +9,9 @@ void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
     // checks to outside the bounds of the chunk should not have faces added. this will be handled by the partial mesh!
     bool outside = false;
     
-    for (int i = 1; i < CHUNK_SIZE - 1; i++) {
-        for (int j = 1; j < CHUNK_SIZE - 1; j++) {
-            for (int k = 1; k < CHUNK_SIZE - 1; k++) {
+    for (int i = 0; i < CHUNK_SIZE; i++) {
+        for (int j = 0; j < CHUNK_SIZE; j++) {
+            for (int k = 0; k < CHUNK_SIZE; k++) {
                 auto block = chunk->storage->get({i, j, k});
                 // opaque visibility is always 0. Non-zero values (true) are what we care about since opaque blocks are completely hidden
                 if (!fp::registry::get(block).visibility) {
@@ -46,7 +46,6 @@ inline void checkEdgeFaces(
 }
 
 void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
-    BLT_TRACE("NOPE");
     // don't try to regen the chunk mesh unless there is a chance all neighbours are not null
     if (chunk->status != chunk_update_status::NEIGHBOUR_CREATE)
         return;
@@ -54,7 +53,6 @@ void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
     chunk_neighbours neighbours{};
     getNeighbours(chunk->pos, neighbours);
     
-    BLT_TRACE("GOODBYE");
     
     // if none of the neighbours exist we cannot continue!
     for (auto* neighbour : neighbours.neighbours) {
@@ -75,8 +73,6 @@ void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
         }
     }
     
-    BLT_TRACE("HELLO");
-    
     chunk->status = NONE;
     chunk->dirtiness = REFRESH;
 }
@@ -91,8 +87,6 @@ void fp::world::generateChunkMesh(fp::chunk* chunk) {
     if (chunk->dirtiness == PARTIAL_MESH) { // partial chunk mesh (had null neighbours)
         generateEdgeMesh(chunk->mesh, chunk);
     }
-    
-    chunk->dirtiness = REFRESH;
 }
 
 void fp::world::update() {
@@ -114,14 +108,18 @@ void fp::world::render(fp::shader& shader) {
         
         if (chunk->dirtiness == REFRESH) {
             auto& vertices = chunk->mesh->getVertices();
+            auto& indices = chunk->mesh->getIndices();
+            
+            // 11436 vert, 137,232 bytes
             
             BLT_INFO("Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%d, %d) bytes!",
                      chunk->pos.x, chunk->pos.y, chunk->pos.z,
-                     vertices.size(), 0, vertices.size() * sizeof(float), 0 * sizeof(unsigned int));
+                     vertices.size(), indices.size(), vertices.size() * sizeof(vertex), indices.size() * sizeof(unsigned int));
             
             // upload the new vertices to the GPU
             chunk->chunk_vao->getVBO(0)->update(vertices);
-            chunk->render_size = vertices.size() / 3;
+            chunk->chunk_vao->getVBO(-1)->update(indices);
+            chunk->render_size = indices.size();
             
             // delete the memory from the CPU.
             delete (chunk->mesh);
@@ -135,7 +133,8 @@ void fp::world::render(fp::shader& shader) {
             shader.setMatrix("translation", translation);
             chunk->chunk_vao->bind();
             glEnableVertexAttribArray(0);
-            glDrawArrays(GL_TRIANGLES, 0, (int) chunk->render_size);
+            //glDrawArrays(GL_TRIANGLES, 0, (int) chunk->render_size);
+            glDrawElements(GL_TRIANGLES, (int)chunk->render_size, GL_UNSIGNED_INT, nullptr);
             glDisableVertexAttribArray(0);
         }
     }

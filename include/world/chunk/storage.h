@@ -12,6 +12,7 @@
 #include "blt/std/logging.h"
 #include <world/chunk/typedefs.h>
 #include <world/registry.h>
+#include <unordered_map>
 
 // contains storage classes for block IDs inside chunks plus eventual lookup of block states
 
@@ -51,25 +52,23 @@ namespace fp {
     
     class mesh_storage {
         private:
-            std::vector<float> vertices;
-            inline void add_and_translate(const float* array, const block_pos& pos) {
-                // since a chunk mesh contains all the faces for all the blocks inside the chunk
-                // we can add the translated values of predefined "unit" faces. This is for the simple "fast" chunk mesh generator.
-                for (int i = 0; i < VTX_ARR_SIZE; i+=3){
-                    auto new_x = array[i] + (float)pos.x;
-                    auto new_y = array[i + 1] + (float)pos.y;
-                    auto new_z = array[i + 2] + (float)pos.z;
-//                    BLT_TRACE("Creating translated vertex {%f, %f, %f} from array position [%d, %d, %d]", new_x, new_y, new_z, i, i + 1, i + 2);
-                    vertices.push_back(new_x);
-                    vertices.push_back(new_y);
-                    vertices.push_back(new_z);
-                }
-            }
+            std::unordered_map<vertex, unsigned int, _static::vertex_hash, _static::vertex_equality> created_vertices_index;
+            std::vector<vertex> vertices;
+            std::vector<unsigned int> indices;
         public:
+            /**
+             * since a chunk mesh contains all the faces for all the blocks inside the chunk
+             * we can add the translated values of predefined "unit" faces. This is for the simple "fast" chunk mesh generator.
+             * @param face the direction the face is facing to be added to the mesh.
+             * @param pos position of the face
+             */
             void addFace(face face, const block_pos& pos);
             
-            inline std::vector<float>& getVertices() {
+            inline std::vector<vertex>& getVertices() {
                 return vertices;
+            }
+            inline std::vector<unsigned int>& getIndices() {
+                return indices;
             }
     };
     

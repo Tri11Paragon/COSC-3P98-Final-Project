@@ -45,8 +45,10 @@ int main() {
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
     world = new fp::world();
     
+    world->setBlock({0,0,0}, 1);
+    
     for (int i = 1; i < CHUNK_SIZE; i++)
-        for (int j = 0; j < 3; j++)
+        for (int j = 0; j < 2; j++)
             for (int k = 5; k < CHUNK_SIZE; k++)
                 world->setBlock({i,j,k}, 1);
     world->setBlock({-2, 2, 2}, 1);

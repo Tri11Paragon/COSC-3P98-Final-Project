@@ -327,4 +327,5 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/camera.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/chunk/world.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/chunk/storage.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/chunk/typedefs.h
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/chunk/typedefs.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/registry.h

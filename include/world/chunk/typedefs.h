@@ -11,7 +11,9 @@
 constexpr int CHUNK_SIZE = 32;
 const int CHUNK_SHIFT = (int)(log(CHUNK_SIZE) / log(2));
 // size that the base vertex arrays are assumed to be (per face)
-constexpr int VTX_ARR_SIZE = 18;
+constexpr int VTX_ARR_SIZE = 4;
+
+constexpr float EPSILON = 0.0001f;
 
 namespace fp {
     
@@ -52,6 +54,13 @@ namespace fp {
         block_pos(float x, float y, float z): block_pos(int(x), int(y), int(z)) {}
     };
     
+    // to ensure this is a POD we define the vertex as a C-struct. This allows us to store one large vertex array and pass that to the GPU
+    // instead of sending arrays for the positions, UVs, normals, etc.
+    // since OpenGL allows us to specify attributes based on offsets from the same VBO.
+    typedef struct {
+        float x, y, z;
+    } vertex;
+    
     namespace _static {
     
         // std::unordered_map requires a type. As a result the functions are encapsulated.
@@ -64,10 +73,28 @@ namespace fp {
             }
         };
     
+        struct vertex_hash {
+            inline size_t operator()(const vertex& pos) const {
+                size_t p1 = std::hash<float>()(pos.x);
+                size_t p2 = std::hash<float>()(pos.y);
+                size_t p3 = std::hash<float>()(pos.z);
+                return (p1 ^ (p2 << 1)) ^ p3;
+            }
+        };
+    
         struct chunk_pos_equality {
             inline bool operator()(const chunk_pos& p1, const chunk_pos& p2) const {
                 return p1.x == p2.x && p1.y == p2.y && p1.z == p2.z;
             }
+        };
+    
+        struct vertex_equality {
+            inline bool operator()(const vertex& p1, const vertex& p2) const {
+                return p1.x >= p2.x - EPSILON && p1.x <= p2.x + EPSILON && p1.y >= p2.y - EPSILON && p1.y <= p2.y + EPSILON && p1.z >= p2.z - EPSILON && p1.z <= p2.z + EPSILON;
+            }
+//            inline bool operator()(const vertex& p1, const vertex& p2) const {
+//                return p1.x == p2.x && p1.y == p2.y && p1.z == p2.z;
+//            }
         };
         
     }
