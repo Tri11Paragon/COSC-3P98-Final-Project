@@ -5,30 +5,75 @@
  */
 #include <world/chunk/world.h>
 
-void fp::world::generateChunkMesh(fp::chunk* chunk) {
-    auto* meshStorage = new mesh_storage;
+void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
+    // checks to outside the bounds of the chunk should not have faces added. this will be handled by the partial mesh!
+    bool outside = false;
     
-    if (chunk->dirtiness == FULL_MESH) { // full chunk mesh
-        for (int i = 0; i < CHUNK_SIZE; i++) {
-            for (int j = 0; j < CHUNK_SIZE; j++) {
-                for (int k = 0; k < CHUNK_SIZE; k++) {
-                    auto block = chunk->storage->get({i, j, k});
-                    if (block != 0) {
-                        meshStorage->addFace(X_NEG, {i, j, k});
-                        meshStorage->addFace(X_POS, {i, j, k});
-                        meshStorage->addFace(Y_NEG, {i, j, k});
-                        meshStorage->addFace(Y_POS, {i, j, k});
-                        meshStorage->addFace(Z_NEG, {i, j, k});
-                        meshStorage->addFace(Z_POS, {i, j, k});
-                    }
+    for (int i = 1; i < CHUNK_SIZE-1; i++) {
+        for (int j = 1; j < CHUNK_SIZE-1; j++) {
+            for (int k = 1; k < CHUNK_SIZE-1; k++) {
+                auto block = chunk->storage->get({i, j, k});
+                // opaque visibility is always 0. Non-zero values (true) are what we care about since opaque blocks are completely hidden
+                if (!fp::registry::get(block).visibility) {
+                    if (fp::registry::get(chunk->storage->getBounded(outside, {i-1, j, k})).visibility && !outside)
+                        mesh->addFace(X_NEG, {i, j, k});
+                    if (fp::registry::get(chunk->storage->getBounded(outside, {i+1, j, k})).visibility && !outside)
+                        mesh->addFace(X_POS, {i, j, k});
+                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j-1, k})).visibility && !outside)
+                        mesh->addFace(Y_NEG, {i, j, k});
+                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j+1, k})).visibility && !outside)
+                        mesh->addFace(Y_POS, {i, j, k});
+                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j, k-1})).visibility && !outside)
+                        mesh->addFace(Z_NEG, {i, j, k});
+                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j, k+1})).visibility && !outside)
+                        mesh->addFace(Z_POS, {i, j, k});
                 }
             }
         }
-    } else if (chunk->dirtiness == PARTIAL_MESH){ // partial chunk mesh (had null edges)
-    
     }
     
-    chunk->mesh = meshStorage;
+    chunk->dirtiness = PARTIAL_MESH;
+}
+
+void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
+    // don't try to regen the chunk mesh unless there is a chance all neighbours are not null
+    if (chunk->status != chunk_update_status::NEIGHBOUR_CREATE)
+        return;
+    
+    chunk_neighbours neighbours {};
+    getNeighbours(chunk->pos, neighbours);
+    
+    // if none of the neighbours exist we cannot continue!
+    for (auto* neighbour : neighbours.neighbours){
+        if (!neighbour)
+            return;
+    }
+
+    for (int i = 0; i < CHUNK_SIZE; i++){
+        for (int j = 0; j < CHUNK_SIZE; j++){
+            auto block = chunk->storage->get({0, i, j});
+            if (!fp::registry::get(block).visibility) {
+                auto neighbour = neighbours[X_NEG]->storage->get({CHUNK_SIZE-1, i, j});
+                if (fp::registry::get(neighbour).visibility)
+                    mesh->addFace(X_NEG, {0, i, j});
+            }
+        }
+    }
+    
+    chunk->status = NONE;
+    chunk->dirtiness = REFRESH;
+}
+
+void fp::world::generateChunkMesh(fp::chunk* chunk) {
+    if (chunk->mesh == nullptr)
+        chunk->mesh = new mesh_storage;
+    
+    if (chunk->dirtiness == FULL_MESH) { // full chunk mesh
+        generateFullMesh(chunk->mesh, chunk);
+    } else if (chunk->dirtiness == PARTIAL_MESH){ // partial chunk mesh (had null neighbours)
+        generateEdgeMesh(chunk->mesh, chunk);
+    }
+
     chunk->dirtiness = REFRESH;
 }
 
@@ -42,6 +87,9 @@ void fp::world::render(fp::shader& shader) {
     for (const auto& chunk_pair : chunk_storage) {
         auto chunk = chunk_pair.second;
     
+        if (chunk == nullptr)
+            continue;
+        
         if (chunk->dirtiness > REFRESH){
             generateChunkMesh(chunk);
         }
@@ -55,7 +103,7 @@ void fp::world::render(fp::shader& shader) {
     
             // upload the new vertices to the GPU
             chunk->chunk_vao->getVBO(0)->update(vertices);
-            chunk->render_size = vertices.size();
+            chunk->render_size = vertices.size() / 3;
     
             // delete the memory from the CPU.
             delete(chunk->mesh);
@@ -69,7 +117,6 @@ void fp::world::render(fp::shader& shader) {
             shader.setMatrix("translation", translation);
             chunk->chunk_vao->bind();
             glEnableVertexAttribArray(0);
-            //glDrawElements(GL_TRIANGLES, render_size, GL_UNSIGNED_INT, nullptr);
             glDrawArrays(GL_TRIANGLES, 0, (int)chunk->render_size);
             glDisableVertexAttribArray(0);
         }

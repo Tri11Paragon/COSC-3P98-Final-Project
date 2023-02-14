@@ -272,6 +272,9 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__ranges/enable_view.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__string \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/window.h \
+  /usr/share/emscripten/cache/sysroot/include/GLES2/gl2.h \
+  /usr/share/emscripten/cache/sysroot/include/GLES2/gl2platform.h \
+  /usr/share/emscripten/cache/sysroot/include/KHR/khrplatform.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten/emscripten.h \
   /usr/share/emscripten/cache/sysroot/include/emscripten/em_asm.h \
@@ -283,7 +286,6 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/GLFW/glfw3.h \
   /usr/share/emscripten/cache/sysroot/include/GL/gl.h \
   /usr/share/emscripten/cache/sysroot/include/GL/glext.h \
-  /usr/share/emscripten/cache/sysroot/include/KHR/khrplatform.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/cmath \
   /usr/share/emscripten/cache/sysroot/include/compat/math.h \

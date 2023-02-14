@@ -11,6 +11,7 @@
 #include <vector>
 #include "blt/std/logging.h"
 #include <world/chunk/typedefs.h>
+#include <world/registry.h>
 
 // contains storage classes for block IDs inside chunks plus eventual lookup of block states
 
@@ -18,23 +19,32 @@ namespace fp {
     
     class block_storage {
         private:
-            char* blocks;
+            block_type* blocks;
         public:
             block_storage() {
-                blocks = new char[CHUNK_SIZE * CHUNK_SIZE * CHUNK_SIZE];
+                blocks = new unsigned char[CHUNK_SIZE * CHUNK_SIZE * CHUNK_SIZE];
                 for (int i = 0; i < CHUNK_SIZE * CHUNK_SIZE * CHUNK_SIZE; i++)
-                    blocks[i] = 0;
+                    blocks[i] = fp::registry::AIR;
             }
             
             ~block_storage() {
                 delete[] blocks;
             }
             
-            [[nodiscard]] inline char get(const block_pos& pos) const {
+            [[nodiscard]] inline block_type get(const block_pos& pos) const {
                 return blocks[pos.z * CHUNK_SIZE * CHUNK_SIZE + pos.y * CHUNK_SIZE + pos.x];
             }
             
-            inline void set(const block_pos& pos, char blockID) {
+            [[nodiscard]] inline block_type getBounded(bool& outside, const block_pos& pos) const {
+                if (pos.x < 0 || pos.x >= CHUNK_SIZE || pos.y < 0 || pos.y >= CHUNK_SIZE || pos.z < 0 || pos.z >= CHUNK_SIZE) {
+                    outside = true;
+                    return fp::registry::AIR;
+                }
+                outside = false;
+                return get(pos);
+            }
+            
+            inline void set(const block_pos& pos, block_type blockID) {
                 blocks[pos.z * CHUNK_SIZE * CHUNK_SIZE + pos.y * CHUNK_SIZE + pos.x] = blockID;
             }
     };
@@ -49,7 +59,7 @@ namespace fp {
                     auto new_x = array[i] + (float)pos.x;
                     auto new_y = array[i + 1] + (float)pos.y;
                     auto new_z = array[i + 2] + (float)pos.z;
-                    BLT_TRACE("Creating translated vertex {%f, %f, %f} from array position [%d, %d, %d]", new_x, new_y, new_z, i, i + 1, i + 2);
+//                    BLT_TRACE("Creating translated vertex {%f, %f, %f} from array position [%d, %d, %d]", new_x, new_y, new_z, i, i + 1, i + 2);
                     vertices.push_back(new_x);
                     vertices.push_back(new_y);
                     vertices.push_back(new_z);

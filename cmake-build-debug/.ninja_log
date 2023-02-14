@@ -8,7 +8,7 @@
 19	685	1675834610617266094	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/vulkan.c.o	7ac098ea2e755b71
 2	377	1675835240591243670	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/window.c.o	a716fdf6afcb3ac2
 19	807	1675834610745269744	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_init.c.o	7a310a4749a2e05
-0	98	1676321976951230956	build.ninja	190f84590f6ee728
+0	98	1676326264824686580	build.ninja	190f84590f6ee728
 2	434	1675915441258513581	libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o	342a5daa6ca9681d
 18	706	1675834610629266436	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/init.c.o	6051295f860fb367
 1099	1278	1676232079155824369	libraries/BLT/libBLT.a	163b10f2e7f6635
@@ -38,3 +38,13 @@
 2	316	1675881681815231506	libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o	ac1bd7bf33d73c31
 1	1057	1676232078943818647	CMakeFiles/FinalProject.dir/src/render/gl.cpp.o	d59ba6eec5836ace
 706	883	1675834610809271567	libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/linux_joystick.c.o	afc8940b6e7eeae1
+1	433	1676342795367607759	CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o	c62e5c67ebfa06d
+1	670	1676342795599614016	CMakeFiles/FinalProject.dir/src/render/camera.cpp.o	7f43512660c0023
+1	802	1676342795731617574	CMakeFiles/FinalProject.dir/src/main.cpp.o	460fff588e5870a1
+1	813	1676342795743617899	CMakeFiles/FinalProject.dir/src/render/window.cpp.o	aa0f847cb87c783c
+1	1014	1676342795943623289	CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o	c71aa549750c4a5
+1	1096	1676342796027625557	CMakeFiles/FinalProject.dir/src/render/gl.cpp.o	d59ba6eec5836ace
+1096	1207	1676342796135628469	FinalProject	1d2a6005b7208ba1
+1	909	1676342906630613400	libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o	13e8110c601a4029
+909	1200	1676342906918621193	libraries/BLT/libBLT.a	163b10f2e7f6635
+1200	1288	1676342907010623684	FinalProject	1d2a6005b7208ba1

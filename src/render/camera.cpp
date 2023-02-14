@@ -23,8 +23,6 @@ void updateCursorGrabbedState(){
 #ifndef __EMSCRIPTEN__
     if (fp::window::isKeyPressed(GLFW_KEY_ESCAPE) && fp::window::keyState())
         fp::window::mouseGrabbed(!fp::window::mouseGrabbed());
-#else
-    //fp::window::mouseGrabbed(true);
 #endif
 }
 

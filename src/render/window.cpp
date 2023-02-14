@@ -36,7 +36,8 @@ double mouse_last_y;
 #ifdef __EMSCRIPTEN__
     EM_BOOL on_pointerlockchange(int eventType, const EmscriptenPointerlockChangeEvent *event, void *userData) {
         BLT_TRACE("Emscripten pointer lock event status %d", event->isActive);
-        glfwSetInputMode(global_window, GLFW_CURSOR, event->isActive ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL);
+        if (event->isActive != fp::window::mouseGrabbed())
+            glfwSetInputMode(global_window, GLFW_CURSOR, event->isActive ? GLFW_CURSOR_DISABLED : GLFW_CURSOR_NORMAL);
         return 0;
     }
 #endif

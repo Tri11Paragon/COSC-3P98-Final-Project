@@ -23,7 +23,7 @@ namespace fp {
             auto val = coord % CHUNK_SIZE;
             return val < 0 ? CHUNK_SIZE + val : val;
         }
-    
+        
         static inline block_pos world_to_internal(const block_pos& coord) {
             return {world_to_internal(coord.x), world_to_internal(coord.y), world_to_internal(coord.z)};
         }
@@ -57,7 +57,7 @@ namespace fp {
             return (int) (ucoord);
         }
         
-        static inline chunk_pos world_to_chunk(const block_pos& pos){
+        static inline chunk_pos world_to_chunk(const block_pos& pos) {
             return {world_to_chunk(pos.x), world_to_chunk(pos.y), world_to_chunk(pos.z)};
         }
         
@@ -69,8 +69,9 @@ namespace fp {
             mesh_storage* mesh = nullptr;
             VAO* chunk_vao;
             chunk_pos pos;
-        
-            chunk_status dirtiness = OKAY;
+            
+            chunk_mesh_status dirtiness = OKAY;
+            chunk_update_status status = NONE;
             unsigned long render_size = 0;
         public:
             explicit chunk(chunk_pos pos): pos(pos) {
@@ -94,14 +95,50 @@ namespace fp {
             }
     };
     
+    struct chunk_neighbours {
+        fp::chunk* neighbours[6];
+        
+        inline chunk*& operator[](int i) {
+            return neighbours[i];
+        }
+    };
+    
     class world {
         private:
             std::unordered_map<chunk_pos, chunk*, _static::chunk_pos_hash, _static::chunk_pos_equality> chunk_storage;
         protected:
+            void generateFullMesh(mesh_storage* mesh, chunk* chunk);
+            
+            void generateEdgeMesh(mesh_storage* mesh, chunk* chunk);
+            
             void generateChunkMesh(chunk* chunk);
             
-            inline void insertChunk(chunk* chunk){
+            inline void getNeighbours(const chunk_pos& pos, chunk_neighbours& neighbours) {
+                neighbours[X_POS] = getChunk(chunk_pos{pos.x + 1, pos.y, pos.z});
+                neighbours[X_NEG] = getChunk(chunk_pos{pos.x - 1, pos.y, pos.z});
+                neighbours[Y_POS] = getChunk(chunk_pos{pos.x, pos.y + 1, pos.z});
+                neighbours[Y_NEG] = getChunk(chunk_pos{pos.x, pos.y - 1, pos.z});
+                neighbours[Z_POS] = getChunk(chunk_pos{pos.x, pos.y, pos.z + 1});
+                neighbours[Z_NEG] = getChunk(chunk_pos{pos.x, pos.y, pos.z - 1});
+            }
+            
+            inline void insertChunk(chunk* chunk) {
                 chunk_storage.insert({chunk->pos, chunk});
+                
+                chunk_neighbours chunkNeighbours{};
+                getNeighbours(chunk->pos, chunkNeighbours);
+                
+                for (auto* p : chunkNeighbours.neighbours){
+                    if (p)
+                        p->status = NEIGHBOUR_CREATE;
+                }
+            }
+            
+            inline chunk* getChunk(const chunk_pos& pos){
+                const auto map_pos = chunk_storage.find(pos);
+                if (map_pos == chunk_storage.end())
+                    return nullptr;
+                return map_pos->second;
             }
             
             inline chunk* getChunk(const block_pos& pos) {
@@ -111,6 +148,10 @@ namespace fp {
         public:
             world() {
                 insertChunk(new chunk({0, 0, 0}));
+                insertChunk(new chunk({0, 1, 0}));
+                insertChunk(new chunk({0, -1, 0}));
+                insertChunk(new chunk({1, 0, 0}));
+                insertChunk(new chunk({0, 0, 1}));
                 insertChunk(new chunk({-1, 0, 0}));
                 insertChunk(new chunk({0, 0, -1}));
                 insertChunk(new chunk({-1, 0, -1}));
@@ -120,15 +161,20 @@ namespace fp {
             
             void render(fp::shader& shader);
             
-            inline void setBlock(const block_pos& pos, char blockID) {
+            inline bool setBlock(const block_pos& pos, block_type blockID) {
                 auto c = getChunk(pos);
+                if (!c)
+                    return false;
                 // mark the chunk for a mesh update
                 c->dirtiness = FULL_MESH;
                 c->storage->set(_static::world_to_internal(pos), blockID);
+                return true;
             }
             
-            inline char getBlock(const block_pos& pos) {
+            inline block_type getBlock(const block_pos& pos) {
                 auto c = getChunk(pos);
+                if (!c)
+                    return fp::registry::AIR;
                 return c->storage->get(_static::world_to_internal(pos));
             }
             

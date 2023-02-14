@@ -24,7 +24,7 @@ namespace fp {
         Z_NEG = 5,
     };
     
-    enum chunk_status {
+    enum chunk_mesh_status {
         // chunk is okay and needs no special action
         OKAY = 0,
         // chunk needs its VAO updated with the newest mesh
@@ -33,6 +33,11 @@ namespace fp {
         PARTIAL_MESH = 2,
         // chunk needs a complete re-mesh.
         FULL_MESH = 3
+    };
+    
+    enum chunk_update_status {
+        NONE = 0,
+        NEIGHBOUR_CREATE = 1,
     };
     
     struct chunk_pos {

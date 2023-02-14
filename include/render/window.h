@@ -15,8 +15,10 @@
 #ifndef __EMSCRIPTEN__
     #include <glad/gles2.h>
 #else
+    #include <GLES2/gl2.h>
     #include <emscripten.h>
     #define GL_GLEXT_PROTOTYPES
+    #define EGL_EGLEXT_PROTOTYPES
 #endif
 #include <GLFW/glfw3.h>
 #include <blt/std/math.h>
