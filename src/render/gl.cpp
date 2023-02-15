@@ -16,6 +16,7 @@ namespace fp::_static {
     bool matricesUBOCreated = false;
     unsigned int matricesUBO = 0;
     blt::mat4x4 projectionMatrix {};
+    blt::mat4x4 orthographicMatrix {};
     blt::mat4x4 viewMatrix {};
     
     inline void createMatricesUBO(){
@@ -23,8 +24,8 @@ namespace fp::_static {
             return;
         glGenBuffers(1, &matricesUBO);
         glBindBuffer(GL_UNIFORM_BUFFER, matricesUBO);
-        // 3 matrices stored [Perspective (64), View (64), pvm (64)]
-        glBufferData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4) * 3, nullptr, GL_STATIC_DRAW);
+        // 3 matrices stored [Perspective (64), View (64), pvm (64), ortho(64)]
+        glBufferData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4) * 4, nullptr, GL_STATIC_DRAW);
         glBindBuffer(GL_UNIFORM_BUFFER, 0);
     
         // set the main matrices UBO to be in position 0. This will always be reserved for this purpose.
@@ -47,6 +48,15 @@ namespace fp::_static {
         // since writing both at the same time is faster than binding a whole separate buffer. (Remember this gets ran once per frame!)
         glBufferSubData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4), sizeof(blt::mat4x4), viewMatrix.ptr());
         glBufferSubData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4) * 2, sizeof(blt::mat4x4), pvm.ptr());
+        glBindBuffer(GL_UNIFORM_BUFFER, 0);
+    }
+    
+    inline void updateOrthoUBO(){
+        // the UBO will have been created by now since the perspective matrix is updated on window creation.
+        glBindBuffer(GL_UNIFORM_BUFFER, matricesUBO);
+        // by writing as offsets into one single buffer we can avoid overwriting the perspective matrix, and save us two more buffers
+        // since writing both at the same time is faster than binding a whole separate buffer. (Remember this gets ran once per frame!)
+        glBufferSubData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4) * 3, sizeof(blt::mat4x4), orthographicMatrix.ptr());
         glBindBuffer(GL_UNIFORM_BUFFER, 0);
     }
 }
@@ -218,5 +228,10 @@ namespace fp {
     void shader::updateViewMatrix(const blt::mat4x4& viewMatrix) {
         fp::_static::viewMatrix = viewMatrix;
         fp::_static::updateViewUBO();
+    }
+    
+    void shader::updateOrthographicMatrix(const blt::mat4x4& orthoMatrix) {
+        fp::_static::orthographicMatrix = orthoMatrix;
+        fp::_static::updateOrthoUBO();
     }
 }

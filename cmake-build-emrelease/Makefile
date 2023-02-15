@@ -68,6 +68,26 @@ CMAKE_BINARY_DIR = "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-buil
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target package
+package: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
+	/usr/bin/cpack --config ./CPackConfig.cmake
+.PHONY : package
+
+# Special rule for the target package
+package/fast: package
+.PHONY : package/fast
+
+# Special rule for the target package_source
+package_source:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/cmake-build-emrelease/CPackSourceConfig.cmake
+.PHONY : package_source
+
+# Special rule for the target package_source
+package_source/fast: package_source
+.PHONY : package_source/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -87,6 +107,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\" \"headers\" \"pkgconfig\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -144,6 +209,19 @@ BLT: cmake_check_build_system
 BLT/fast:
 	$(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/build
 .PHONY : BLT/fast
+
+#=============================================================================
+# Target rules for targets named freetype
+
+# Build rule for target.
+freetype: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freetype
+.PHONY : freetype
+
+# fast build rule for target.
+freetype/fast:
+	$(MAKE) $(MAKESILENT) -f libraries/freetype-2.13.0/CMakeFiles/freetype.dir/build.make libraries/freetype-2.13.0/CMakeFiles/freetype.dir/build
+.PHONY : freetype/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -216,6 +294,30 @@ src/render/gl.s: src/render/gl.cpp.s
 src/render/gl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/gl.cpp.s
 .PHONY : src/render/gl.cpp.s
+
+src/render/ui/text.o: src/render/ui/text.cpp.o
+.PHONY : src/render/ui/text.o
+
+# target to build an object file
+src/render/ui/text.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o
+.PHONY : src/render/ui/text.cpp.o
+
+src/render/ui/text.i: src/render/ui/text.cpp.i
+.PHONY : src/render/ui/text.i
+
+# target to preprocess a source file
+src/render/ui/text.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.i
+.PHONY : src/render/ui/text.cpp.i
+
+src/render/ui/text.s: src/render/ui/text.cpp.s
+.PHONY : src/render/ui/text.s
+
+# target to generate assembly for a file
+src/render/ui/text.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.s
+.PHONY : src/render/ui/text.cpp.s
 
 src/render/window.o: src/render/window.cpp.o
 .PHONY : src/render/window.o
@@ -320,9 +422,16 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
+	@echo "... package"
+	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... BLT"
 	@echo "... FinalProject"
+	@echo "... freetype"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
@@ -332,6 +441,9 @@ help:
 	@echo "... src/render/gl.o"
 	@echo "... src/render/gl.i"
 	@echo "... src/render/gl.s"
+	@echo "... src/render/ui/text.o"
+	@echo "... src/render/ui/text.i"
+	@echo "... src/render/ui/text.s"
 	@echo "... src/render/window.o"
 	@echo "... src/render/window.i"
 	@echo "... src/render/window.s"

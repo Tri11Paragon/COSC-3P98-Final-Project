@@ -4,8 +4,10 @@
  * See LICENSE file for license detail
  */
 #include <world/chunk/world.h>
+#include <blt/profiling/profiler.h>
 
 void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
+    BLT_START_INTERVAL("Chunk Generator", "Full Mesh");
     // checks to outside the bounds of the chunk should not have faces added. this will be handled by the partial mesh!
     bool outside = false;
     
@@ -33,6 +35,7 @@ void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
     }
     
     chunk->dirtiness = PARTIAL_MESH;
+    BLT_END_INTERVAL("Chunk Generator", "Full Mesh");
 }
 
 inline void checkEdgeFaces(
@@ -46,6 +49,7 @@ inline void checkEdgeFaces(
 }
 
 void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
+    BLT_START_INTERVAL("Chunk Generator", "Edge Mesh");
     // don't try to regen the chunk mesh unless there is a chance all neighbours are not null
     if (chunk->status != chunk_update_status::NEIGHBOUR_CREATE)
         return;
@@ -75,6 +79,7 @@ void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
     
     chunk->status = NONE;
     chunk->dirtiness = REFRESH;
+    BLT_END_INTERVAL("Chunk Generator", "Edge Mesh");
 }
 
 void fp::world::generateChunkMesh(fp::chunk* chunk) {
@@ -103,7 +108,9 @@ void fp::world::render(fp::shader& shader) {
             continue;
         
         if (chunk->dirtiness > REFRESH) {
+            BLT_START_INTERVAL("Chunk Generator", "Mesh");
             generateChunkMesh(chunk);
+            BLT_END_INTERVAL("Chunk Generator", "Mesh");
         }
         
         if (chunk->dirtiness == REFRESH) {

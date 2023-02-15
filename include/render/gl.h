@@ -222,6 +222,7 @@ namespace fp {
             }
             
             static void updateProjectionMatrix(const blt::mat4x4& projectionMatrix);
+            static void updateOrthographicMatrix(const blt::mat4x4& orthoMatrix);
             static void updateViewMatrix(const blt::mat4x4& viewMatrix);
             
             ~shader();

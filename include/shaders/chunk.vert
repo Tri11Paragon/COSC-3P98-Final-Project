@@ -14,6 +14,8 @@ layout (std140) uniform StandardMatrices
     mat4 view;
     // projection view matrix
     mat4 pvm;
+    // orthographic projection matrix
+    mat4 orthographic;
 };
 
 void main()  {

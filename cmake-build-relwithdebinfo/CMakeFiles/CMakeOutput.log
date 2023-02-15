@@ -507,3 +507,19 @@ Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/ninja c
 
 
 
+Determining if the include file unistd.h exists passed with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-relwithdebinfo/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/ninja cmTC_9b359 && [1/2] Building C object CMakeFiles/cmTC_9b359.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_9b359
+
+
+
+Determining if the include file fcntl.h exists passed with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-relwithdebinfo/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/ninja cmTC_4d55d && [1/2] Building C object CMakeFiles/cmTC_4d55d.dir/CheckIncludeFile.c.o
+[2/2] Linking C executable cmTC_4d55d
+
+
+

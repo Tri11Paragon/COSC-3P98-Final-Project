@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/FinalProject.dir/src/render/camera.cpp.o.d"
   "CMakeFiles/FinalProject.dir/src/render/gl.cpp.o"
   "CMakeFiles/FinalProject.dir/src/render/gl.cpp.o.d"
+  "CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o"
+  "CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o.d"
   "CMakeFiles/FinalProject.dir/src/render/window.cpp.o"
   "CMakeFiles/FinalProject.dir/src/render/window.cpp.o.d"
   "CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o"

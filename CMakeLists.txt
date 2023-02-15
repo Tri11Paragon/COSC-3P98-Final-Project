@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 if (USE_EXTRAS)
     message("Using emscriptem linker and compile flags!")
-    add_definitions("-std=c++17")
+    #add_definitions("-std=c++17")
     set(CMAKE_VERBOSE_MAKEFILE on)
 else()
     # used to debug memory related issues
@@ -40,9 +40,11 @@ file(GLOB_RECURSE CPP_FILES "src/*.cpp")
 include_directories(include/)
 
 add_subdirectory(libraries/BLT)
+add_subdirectory(libraries/freetype-2.13.0)
 
 add_executable(FinalProject ${CPP_FILES})
 target_link_libraries(FinalProject PRIVATE BLT)
+target_link_libraries(FinalProject PRIVATE freetype)
 
 if (USE_EXTRAS)
     #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file ${CMAKE_SOURCE_DIR}/assets --bind")

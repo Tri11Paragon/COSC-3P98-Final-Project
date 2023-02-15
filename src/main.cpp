@@ -1,4 +1,5 @@
 #include <blt/std/logging.h>
+#include <blt/profiling/profiler.h>
 #include <render/window.h>
 #include <render/gl.h>
 #include <memory>
@@ -70,6 +71,8 @@ int main() {
     while(!fp::window::isCloseRequested())
         loop();
 #endif
+    
+    BLT_PRINT_ORDERED("Chunk Generator", blt::logging::TRACE, true, true);
 
     delete(chunk_shader);
     delete(world);

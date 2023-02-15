@@ -46,6 +46,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/cmake_install.cmake")
   include("/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/cmake_install.cmake")
+  include("/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/cmake_install.cmake")
 
 endif()
 

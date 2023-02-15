@@ -271,6 +271,20 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/string_view \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__ranges/enable_view.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__string \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/profiling/profiler.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/queue.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/vector \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bit_reference \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__split_buffer \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/unordered_map \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/is_transparent.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__hash_table \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cmath \
+  /usr/share/emscripten/cache/sysroot/include/compat/math.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/math.h \
+  /usr/share/emscripten/cache/sysroot/include/math.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__node_handle \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/optional \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/window.h \
   /usr/share/emscripten/cache/sysroot/include/GLES2/gl2.h \
   /usr/share/emscripten/cache/sysroot/include/GLES2/gl2platform.h \
@@ -287,19 +301,7 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/GL/gl.h \
   /usr/share/emscripten/cache/sysroot/include/GL/glext.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/cmath \
-  /usr/share/emscripten/cache/sysroot/include/compat/math.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/math.h \
-  /usr/share/emscripten/cache/sysroot/include/math.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/gl.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/vector \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bit_reference \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__split_buffer \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/unordered_map \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__functional/is_transparent.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__hash_table \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__node_handle \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/optional \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/string.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/iostream \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/ios \

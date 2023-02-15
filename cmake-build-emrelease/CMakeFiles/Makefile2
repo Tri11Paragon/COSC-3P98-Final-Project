@@ -68,15 +68,18 @@ CMAKE_BINARY_DIR = "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-buil
 # The main recursive "all" target.
 all: CMakeFiles/FinalProject.dir/all
 all: libraries/BLT/all
+all: libraries/freetype-2.13.0/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: libraries/BLT/preinstall
+preinstall: libraries/freetype-2.13.0/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/FinalProject.dir/clean
 clean: libraries/BLT/clean
+clean: libraries/freetype-2.13.0/clean
 .PHONY : clean
 
 #=============================================================================
@@ -95,18 +98,34 @@ libraries/BLT/clean: libraries/BLT/CMakeFiles/BLT.dir/clean
 .PHONY : libraries/BLT/clean
 
 #=============================================================================
+# Directory level rules for directory libraries/freetype-2.13.0
+
+# Recursive "all" directory target.
+libraries/freetype-2.13.0/all: libraries/freetype-2.13.0/CMakeFiles/freetype.dir/all
+.PHONY : libraries/freetype-2.13.0/all
+
+# Recursive "preinstall" directory target.
+libraries/freetype-2.13.0/preinstall:
+.PHONY : libraries/freetype-2.13.0/preinstall
+
+# Recursive "clean" directory target.
+libraries/freetype-2.13.0/clean: libraries/freetype-2.13.0/CMakeFiles/freetype.dir/clean
+.PHONY : libraries/freetype-2.13.0/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/FinalProject.dir
 
 # All Build rule for target.
+CMakeFiles/FinalProject.dir/all: libraries/freetype-2.13.0/CMakeFiles/freetype.dir/all
 CMakeFiles/FinalProject.dir/all: libraries/BLT/CMakeFiles/BLT.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=10,11,12,13,14,15,16,17 "Built target FinalProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=10,11,12,13,14,15,16,17,18 "Built target FinalProject"
 .PHONY : CMakeFiles/FinalProject.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FinalProject.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 17
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 61
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FinalProject.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 0
 .PHONY : CMakeFiles/FinalProject.dir/rule
@@ -145,6 +164,32 @@ BLT: libraries/BLT/CMakeFiles/BLT.dir/rule
 libraries/BLT/CMakeFiles/BLT.dir/clean:
 	$(MAKE) $(MAKESILENT) -f libraries/BLT/CMakeFiles/BLT.dir/build.make libraries/BLT/CMakeFiles/BLT.dir/clean
 .PHONY : libraries/BLT/CMakeFiles/BLT.dir/clean
+
+#=============================================================================
+# Target rules for target libraries/freetype-2.13.0/CMakeFiles/freetype.dir
+
+# All Build rule for target.
+libraries/freetype-2.13.0/CMakeFiles/freetype.dir/all:
+	$(MAKE) $(MAKESILENT) -f libraries/freetype-2.13.0/CMakeFiles/freetype.dir/build.make libraries/freetype-2.13.0/CMakeFiles/freetype.dir/depend
+	$(MAKE) $(MAKESILENT) -f libraries/freetype-2.13.0/CMakeFiles/freetype.dir/build.make libraries/freetype-2.13.0/CMakeFiles/freetype.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61 "Built target freetype"
+.PHONY : libraries/freetype-2.13.0/CMakeFiles/freetype.dir/all
+
+# Build rule for subdir invocation for target.
+libraries/freetype-2.13.0/CMakeFiles/freetype.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 43
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libraries/freetype-2.13.0/CMakeFiles/freetype.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" 0
+.PHONY : libraries/freetype-2.13.0/CMakeFiles/freetype.dir/rule
+
+# Convenience name for target.
+freetype: libraries/freetype-2.13.0/CMakeFiles/freetype.dir/rule
+.PHONY : freetype
+
+# clean rule for target.
+libraries/freetype-2.13.0/CMakeFiles/freetype.dir/clean:
+	$(MAKE) $(MAKESILENT) -f libraries/freetype-2.13.0/CMakeFiles/freetype.dir/build.make libraries/freetype-2.13.0/CMakeFiles/freetype.dir/clean
+.PHONY : libraries/freetype-2.13.0/CMakeFiles/freetype.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

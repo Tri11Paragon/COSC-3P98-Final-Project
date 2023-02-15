@@ -23,6 +23,7 @@ std::unordered_map<int, bool> mouse_state{};
 bool mouse_pressed_frame = false;
 
 blt::mat4x4 perspectiveMatrix;
+blt::mat4x4 orthographicMatrix;
 float fov = 90;
 
 long lastFrame = blt::system::getCurrentTimeNanoseconds();
@@ -93,6 +94,7 @@ inline void updateWindowViewport(int width, int height){
     glViewport(0, 0, width, height);
     // make sure we update the global perspective matrix otherwise our rendering is going to look off!
     fp::shader::updateProjectionMatrix(perspectiveMatrix);
+    fp::shader::updateOrthographicMatrix(orthographicMatrix);
 }
 
 /**

@@ -108,7 +108,7 @@ namespace fp {
         private:
             std::unordered_map<chunk_pos, chunk*, _static::chunk_pos_hash, _static::chunk_pos_equality> chunk_storage;
         protected:
-            void generateFullMesh(mesh_storage* mesh, chunk* chunk);
+            static void generateFullMesh(mesh_storage* mesh, chunk* chunk);
             
             void generateEdgeMesh(mesh_storage* mesh, chunk* chunk);
             
