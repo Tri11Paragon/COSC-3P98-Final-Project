@@ -111,8 +111,9 @@ void fp::world::render(fp::shader& shader) {
             auto& indices = chunk->mesh->getIndices();
             
             // 11436 vert, 137,232 bytes
+            // 1908 vert, 11436 indices, 22896 + 45744 = 68,640 bytes
             
-            BLT_INFO("Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%d, %d) bytes!",
+            BLT_DEBUG("Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%d, %d) bytes!",
                      chunk->pos.x, chunk->pos.y, chunk->pos.z,
                      vertices.size(), indices.size(), vertices.size() * sizeof(vertex), indices.size() * sizeof(unsigned int));
             
@@ -133,7 +134,6 @@ void fp::world::render(fp::shader& shader) {
             shader.setMatrix("translation", translation);
             chunk->chunk_vao->bind();
             glEnableVertexAttribArray(0);
-            //glDrawArrays(GL_TRIANGLES, 0, (int) chunk->render_size);
             glDrawElements(GL_TRIANGLES, (int)chunk->render_size, GL_UNSIGNED_INT, nullptr);
             glDisableVertexAttribArray(0);
         }
