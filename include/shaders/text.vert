@@ -8,6 +8,8 @@ layout (location = 0) in vec4 vertex;
 
 out vec2 texture_coords;
 
+uniform mat4 translation;
+
 layout (std140) uniform StandardMatrices
 {
     mat4 projection;
@@ -19,8 +21,8 @@ layout (std140) uniform StandardMatrices
 };
 
 void main()  {
-    gl_Position = orthographic * vec4(vertex.xy, 0.0, 1.0);
-    texture_coords = vertex.wz;
+    gl_Position = orthographic * translation * vec4(vertex.xy, 0.0, 1.0);
+    texture_coords = vertex.zw;
 }
 
 ")";

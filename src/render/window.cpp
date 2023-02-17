@@ -91,6 +91,7 @@ inline void createWindow(int width, int height) {
 inline void updateWindowViewport(int width, int height){
     // TODO: remake the matrix implementation. The values are transposed due to a flawed implementation.
     perspectiveMatrix = blt::perspective(fov, (float)width / (float)height, FP_NEAR_PLANE, FP_FAR_PLANE);
+    orthographicMatrix = blt::ortho(0, (float)width, 0, (float)height, -5, 5);
     glViewport(0, 0, width, height);
     // make sure we update the global perspective matrix otherwise our rendering is going to look off!
     fp::shader::updateProjectionMatrix(perspectiveMatrix);

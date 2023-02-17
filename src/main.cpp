@@ -2,6 +2,8 @@
 #include <blt/profiling/profiler.h>
 #include <render/window.h>
 #include <render/gl.h>
+#include <render/ui/text.h>
+#include <render/ui/debug.h>
 #include <memory>
 
 #include <shaders/chunk.frag>
@@ -27,6 +29,8 @@ void loop(){
     world->render(*chunk_shader);
     
     fp::camera::update();
+    fp::debug::render();
+    fp::text::render();
     fp::window::update();
 }
 
@@ -41,6 +45,7 @@ int main() {
     blt::logging::init(logging_properties);
     
     fp::window::init();
+    fp::text::init();
     fp::registry::registerDefaultBlocks();
     
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
@@ -77,6 +82,7 @@ int main() {
     delete(chunk_shader);
     delete(world);
     
+    fp::text::destroy();
     fp::window::close();
     
     return 0;

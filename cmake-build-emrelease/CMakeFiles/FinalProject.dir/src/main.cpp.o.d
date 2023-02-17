@@ -324,6 +324,7 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/sstream \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/ui/text.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/shaders/chunk.frag \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/shaders/chunk.vert \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/camera.h \

@@ -7,7 +7,6 @@
 #include <render/gl.h>
 #include <blt/std/math.h>
 #include <cmath>
-#include <blt/std/loader.h>
 #include "util/math.h"
 
 blt::vec3 position;

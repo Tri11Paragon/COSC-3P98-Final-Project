@@ -46,9 +46,10 @@ add_executable(FinalProject ${CPP_FILES})
 target_link_libraries(FinalProject PRIVATE BLT)
 target_link_libraries(FinalProject PRIVATE freetype)
 
+file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/)
+
 if (USE_EXTRAS)
     #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file ${CMAKE_SOURCE_DIR}/assets --bind")
-    file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/)
     #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file 'assets' --bind")
     set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-sMAX_WEBGL_VERSION=2 -s ASSERTIONS=1 -sUSE_GLFW=3 --preload-file 'assets'")
     # these flags will be set by cmake automatically based on build type
