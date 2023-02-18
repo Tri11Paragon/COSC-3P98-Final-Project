@@ -10,6 +10,7 @@
 #include <shaders/chunk.vert>
 #include "render/camera.h"
 #include "world/chunk/world.h"
+#include "util/settings.h"
 
 
 #ifdef __EMSCRIPTEN__
@@ -43,6 +44,7 @@ int main() {
 #endif
     
     blt::logging::init(logging_properties);
+    fp::settings::load("settings.txt");
     
     fp::window::init();
     fp::text::init();
@@ -84,6 +86,7 @@ int main() {
     
     fp::text::destroy();
     fp::window::close();
+    fp::settings::save("settings.txt");
     
     return 0;
 }
