@@ -14,6 +14,7 @@ std::unordered_map<std::string, std::string> properties;
 // will be overwritten if the file has something different.
 void write_default_values(){
     properties["TEXTURE_SIZE"] = std::to_string(32);
+    properties["MIPMAP_LEVELS"] = std::to_string(3);
 }
 
 void fp::settings::load(const std::string& file) {
