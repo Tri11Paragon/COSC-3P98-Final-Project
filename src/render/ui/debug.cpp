@@ -6,7 +6,7 @@
 #include <render/ui/debug.h>
 #include <render/ui/text.h>
 #include <render/window.h>
-#include <blt/std/math.h>
+#include <blt/math/averages.h>
 
 namespace fp::debug {
     const float spacing = 5;

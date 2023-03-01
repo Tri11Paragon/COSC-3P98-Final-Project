@@ -29,6 +29,8 @@ void loop(){
     world->update();
     world->render(*chunk_shader);
     
+    fp::text::drawText("Hello There", 0, 0, fp::text::FONT_18, {0,0,0, 1.0});
+    
     fp::camera::update();
     fp::debug::render();
     fp::text::render();
@@ -49,6 +51,7 @@ int main() {
     fp::window::init();
     fp::text::init();
     fp::registry::registerDefaultBlocks();
+    fp::registry::registerDefaultTextures();
     
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
     world = new fp::world();

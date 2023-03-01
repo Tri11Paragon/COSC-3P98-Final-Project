@@ -11,7 +11,7 @@
 #include <render/window.h>
 #include <vector>
 #include <unordered_map>
-#include <blt/std/math.h>
+#include <blt/math/math.h>
 #include <blt/std/string.h>
 #include <string>
 

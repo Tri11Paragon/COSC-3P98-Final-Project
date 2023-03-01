@@ -31,8 +31,8 @@ namespace fp::texture {
              */
             explicit file_texture(const std::string& path, const std::string& name = ""): m_Name(name.empty() ? path : name), m_Path(path) {}
             
-            static file_texture* load(file_texture* texture) {
-                stbi_load(texture->m_Path.c_str(), &texture->width, &texture->height, &texture->channels, 4);
+            static file_texture* load(file_texture*& texture) {
+                texture->m_Data = stbi_load(texture->m_Path.c_str(), &texture->width, &texture->height, &texture->channels, 0);
                 return texture;
             }
             
@@ -51,10 +51,24 @@ namespace fp::texture {
                 texture->m_Data = output_Data;
                 texture->width = target_width;
                 texture->height = target_height;
+                
+                return texture;
             }
             
             unsigned char* data() {
                 return m_Data;
+            }
+            
+            [[nodiscard]] int getChannels() const {
+                return channels;
+            }
+            
+            [[nodiscard]] int getWidth() const {
+                return width;
+            }
+            
+            [[nodiscard]] int getHeight() const {
+                return height;
             }
             
             [[nodiscard]] const std::string& getName() {
@@ -77,6 +91,7 @@ namespace fp::texture {
                     m_width(width), m_height(height), textureBindType(bind_type), textureColorMode(color_mode) {
                 glGenTextures(1, &textureID);
             }
+        
         public:
             void bind() const {
                 glBindTexture(textureBindType, textureID);
@@ -119,12 +134,21 @@ namespace fp::texture {
                 glTexStorage2D(textureBindType, std::stoi(fp::settings::get("MIPMAP_LEVELS")), colorMode, width, height);
             }
             
-            void upload(void* data, int level = 0, int x_offset = 0, int y_offset = 0, int sub_width = -1, int sub_height = -1) const {
+            void upload(
+                    void* data, GLint dataColorMode = GL_RGBA, int level = 0, int x_offset = 0, int y_offset = 0, int sub_width = -1,
+                    int sub_height = -1
+            ) const {
                 if (sub_width < 0)
                     sub_width = m_width;
                 if (sub_height < 0)
                     sub_height = m_height;
-                glTexSubImage2D(textureBindType, level, x_offset, y_offset, sub_width, sub_height, textureColorMode, GL_UNSIGNED_BYTE, data);
+                bind();
+                glTexSubImage2D(textureBindType, level, x_offset, y_offset, sub_width, sub_height, dataColorMode, GL_UNSIGNED_BYTE, data);
+                unbind();
+            }
+            
+            void upload(file_texture* texture) const {
+                upload(texture->data(), texture->getChannels() == 4 ? GL_RGBA : GL_RGB);
             }
     };
     
@@ -137,24 +161,31 @@ namespace fp::texture {
                 bind();
                 glTexStorage3D(textureBindType, std::stoi(fp::settings::get("MIPMAP_LEVELS")), colorMode, width, height, layers);
             }
-        
-            void upload(void* data, int index, int level = 0, int x_offset = 0, int y_offset = 0, int sub_width = -1, int sub_height = -1) const {
+            
+            void upload(
+                    void* data, int index, GLint dataColorMode = GL_RGBA, int level = 0, int x_offset = 0, int y_offset = 0, int sub_width = -1,
+                    int sub_height = -1
+            ) const {
                 if (sub_width < 0)
                     sub_width = m_width;
                 if (sub_height < 0)
                     sub_height = m_height;
-                glTexSubImage3D(textureBindType, level, x_offset, y_offset, index, sub_width, sub_height, 1, textureColorMode, GL_UNSIGNED_BYTE, data);
+                bind();
+                glTexSubImage3D(textureBindType, level, x_offset, y_offset, index, sub_width, sub_height, 1, dataColorMode, GL_UNSIGNED_BYTE, data);
+                unbind();
             }
     };
+    
+    typedef int texture_index;
     
     class palette {
         private:
             union negDInt {
-                int i = -1;
+                texture_index i = -1;
             };
             // as of GL3.0 this limit is 256. (4.5 extends it to 2048.)
             static constexpr int MAX_ARRAY_LAYERS = 256;
-        
+            
             gl_texture2D_array* texture_array = nullptr;
             
             std::unordered_map<std::string, negDInt> textureIndices;
@@ -166,17 +197,14 @@ namespace fp::texture {
             void generateGLTexture() {
                 delete texture_array;
                 auto texture_size = std::stoi(fp::settings::get("TEXTURE_SIZE"));
-                texture_array = new gl_texture2D_array(texture_size, texture_size, (int)textures.size());
+                texture_array = new gl_texture2D_array(texture_size, texture_size, (int) textures.size());
                 for (const auto t : textures)
-                    texture_array->upload(t->data(), textureIndices[t->getName()].i);
+                    texture_array->upload(t->data(), textureIndices[t->getName()].i, t->getChannels() == 4 ? GL_RGBA : GL_RGB);
                 texture_array->setDefaults();
                 texture_array->generateMipmaps();
             }
             
             void registerTexture(file_texture* texture) {
-                auto texture_size = std::stoi(fp::settings::get("TEXTURE_SIZE"));
-                texture = file_texture::resize(texture, texture_size, texture_size);
-                
                 textureIndices[texture->getName()].i = (int) textures.size();
                 textures.push_back(texture);
             }
@@ -184,8 +212,8 @@ namespace fp::texture {
             bool hasTexture(const std::string& name) {
                 return textureIndices[name].i >= 0;
             }
-            
-            int getTexture(const std::string& name) {
+        
+            texture_index getTexture(const std::string& name) {
                 return textureIndices[name].i;
             }
             

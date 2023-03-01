@@ -5,7 +5,7 @@
  */
 #include <render/camera.h>
 #include <render/gl.h>
-#include <blt/std/math.h>
+#include <blt/math/math.h>
 #include <cmath>
 #include "util/math.h"
 
@@ -73,9 +73,9 @@ void updateViewMatrix(){
     viewMatrix.m23(float(z.w()));
     
     // view matrix are inverted, dot product to simulate translate matrix multiplication
-    viewMatrix.m03(-float(blt::vec<4>::dot(x, blt::vec<4>{position.x(), position.y(), position.z(), 0})));
-    viewMatrix.m13(-float(blt::vec<4>::dot(y, blt::vec<4>{position.x(), position.y(), position.z(), 0})));
-    viewMatrix.m23(-float(blt::vec<4>::dot(z, blt::vec<4>{position.x(), position.y(), position.z(), 0})));
+    viewMatrix.m03(-float(blt::vec<float, 4>::dot(x, blt::vec<float, 4>{position.x(), position.y(), position.z(), 0})));
+    viewMatrix.m13(-float(blt::vec<float, 4>::dot(y, blt::vec<float, 4>{position.x(), position.y(), position.z(), 0})));
+    viewMatrix.m23(-float(blt::vec<float, 4>::dot(z, blt::vec<float, 4>{position.x(), position.y(), position.z(), 0})));
     viewMatrix.m33(1);
     
     fp::shader::updateViewMatrix(viewMatrix);

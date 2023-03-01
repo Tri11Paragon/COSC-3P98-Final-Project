@@ -21,7 +21,7 @@
     #define EGL_EGLEXT_PROTOTYPES
 #endif
 #include <GLFW/glfw3.h>
-#include <blt/std/math.h>
+#include <blt/math/math.h>
 
 namespace fp::window {
     /**

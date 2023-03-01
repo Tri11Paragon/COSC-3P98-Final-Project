@@ -7,7 +7,7 @@
 #ifndef FINALPROJECT_TEXT_H
 #define FINALPROJECT_TEXT_H
 
-#include <blt/std/math.h>
+#include <blt/math/math.h>
 #include <string>
 
 namespace fp::text {

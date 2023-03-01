@@ -7,7 +7,7 @@
 #ifndef FINALPROJECT_STORAGE_H
 #define FINALPROJECT_STORAGE_H
 
-#include <blt/std/math.h>
+#include <blt/math/math.h>
 #include <vector>
 #include "blt/std/logging.h"
 #include <world/chunk/typedefs.h>
