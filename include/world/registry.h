@@ -47,8 +47,9 @@ namespace fp::registry {
     void registerBlock(block_type id, block_properties properties);
     void registerTexture(texture::file_texture* texture);
     
-    void setupThreads(int count = 8);
-    void generatePalette();
+    void textureInit();
+    void setupTextureLoaderThreads(int count = 8);
+    void generateTexturePalette();
     
     block_properties get(block_type id);
     unsigned int getTextureID(const std::string& name);
@@ -64,7 +65,7 @@ namespace fp::registry {
     }
     
     inline void registerDefaultTextures() {
-        setupThreads();
+        textureInit();
         
         registerTexture(new texture::file_texture{"assets/textures/1676004600027876.jpg", "Stone"});
         registerTexture(new texture::file_texture{"assets/textures/1668750351593692.jpg", "Dirt"});
@@ -73,8 +74,9 @@ namespace fp::registry {
         registerTexture(new texture::file_texture{"assets/textures/1603422678312.jpg", "Loser"});
         registerTexture(new texture::file_texture{"assets/textures/1592244663459.png", "Frog"});
         registerTexture(new texture::file_texture{"assets/textures/1592234267606.png", "Explode"});
-        
-        generatePalette();
+    
+        setupTextureLoaderThreads();
+        generateTexturePalette();
     }
     
 }

@@ -160,6 +160,7 @@ namespace fp::texture {
                     gl_texture(width, height, GL_TEXTURE_2D_ARRAY, colorMode), m_layers(layers) {
                 bind();
                 glTexStorage3D(textureBindType, std::stoi(fp::settings::get("MIPMAP_LEVELS")), colorMode, width, height, layers);
+                BLT_DEBUG("Creating 2D Texture Array with ID: %d", textureID);
             }
             
             void upload(
@@ -198,8 +199,11 @@ namespace fp::texture {
                 delete texture_array;
                 auto texture_size = std::stoi(fp::settings::get("TEXTURE_SIZE"));
                 texture_array = new gl_texture2D_array(texture_size, texture_size, (int) textures.size());
-                for (const auto t : textures)
+                texture_array->bind();
+                for (const auto t : textures) {
                     texture_array->upload(t->data(), textureIndices[t->getName()].i, t->getChannels() == 4 ? GL_RGBA : GL_RGB);
+                    BLT_TRACE("Loaded texture %s", t->getName().c_str());
+                }
                 texture_array->setDefaults();
                 texture_array->generateMipmaps();
             }

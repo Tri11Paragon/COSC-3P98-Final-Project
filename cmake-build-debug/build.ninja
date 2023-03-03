@@ -55,6 +55,8 @@ build CMakeFiles/FinalProject.dir/src/main.cpp.o: CXX_COMPILER__FinalProject_Deb
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/camera.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/camera.cpp.o.d
@@ -62,6 +64,8 @@ build CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CXX_COMPILER__FinalPr
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/gl.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/gl.cpp.o.d
@@ -69,6 +73,8 @@ build CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CXX_COMPILER__FinalProjec
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/textures.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/textures.cpp.o.d
@@ -76,6 +82,8 @@ build CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: CXX_COMPILER__Final
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/ui/debug.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o.d
@@ -83,6 +91,8 @@ build CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o: CXX_COMPILER__Final
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render/ui
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/ui/text.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o.d
@@ -90,6 +100,8 @@ build CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o: CXX_COMPILER__FinalP
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render/ui
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/window.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/window.cpp.o.d
@@ -97,6 +109,8 @@ build CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CXX_COMPILER__FinalPr
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/util/settings.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/util/settings.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/util/settings.cpp.o.d
@@ -104,6 +118,8 @@ build CMakeFiles/FinalProject.dir/src/util/settings.cpp.o: CXX_COMPILER__FinalPr
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/util
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/chunk/storage.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o.d
@@ -111,6 +127,8 @@ build CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CXX_COMPILER__F
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/chunk/world.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o.d
@@ -118,6 +136,8 @@ build CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CXX_COMPILER__Fin
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 build CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CXX_COMPILER__FinalProject_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/registry.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/world/registry.cpp.o.d
@@ -125,6 +145,8 @@ build CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CXX_COMPILER__FinalP
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
+  TARGET_PDB = FinalProject.pdb
 
 
 # =============================================================================
@@ -141,8 +163,9 @@ build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Debug CMakeFiles/FinalPr
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = CMakeFiles/FinalProject.dir/
   TARGET_FILE = FinalProject
-  TARGET_PDB = FinalProject.dbg
+  TARGET_PDB = FinalProject.pdb
 
 
 #############################################
@@ -367,6 +390,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/context.c.o: C_COMPILER__glfw
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -375,6 +400,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/init.c.o: C_COMPILER__glfw_De
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -383,6 +410,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/input.c.o: C_COMPILER__glfw_D
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -391,6 +420,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/monitor.c.o: C_COMPILER__glfw
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -399,6 +430,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/vulkan.c.o: C_COMPILER__glfw_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -407,6 +440,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/window.c.o: C_COMPILER__glfw_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/x11_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -415,6 +450,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_init.c.o: C_COMPILER__glf
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/x11_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -423,6 +460,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_monitor.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/x11_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -431,6 +470,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/x11_window.c.o: C_COMPILER__g
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/xkb_unicode.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -439,6 +480,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/xkb_unicode.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/posix_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -447,6 +490,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_time.c.o: C_COMPILER__g
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/posix_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -455,6 +500,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/posix_thread.c.o: C_COMPILER_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glx_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -463,6 +510,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glx_context.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -471,6 +520,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/egl_context.c.o: C_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -479,6 +530,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/osmesa_context.c.o: C_COMPILE
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILER__glfw_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/linux_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -D_GLFW_USE_CONFIG_H
@@ -487,6 +540,8 @@ build libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/linux_joystick.c.o: C_COMPILE
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/src" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/glfw-3.3.8/src"
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   OBJECT_FILE_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 
 # =============================================================================
@@ -501,8 +556,9 @@ build libraries/glfw-3.3.8/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug l
   OBJECT_DIR = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = libraries/glfw-3.3.8/src/CMakeFiles/glfw.dir/glfw.pdb
   TARGET_FILE = libraries/glfw-3.3.8/src/libglfw3.a
-  TARGET_PDB = glfw3.a.dbg
+  TARGET_PDB = libraries/glfw-3.3.8/src/libglfw3.pdb
 
 
 #############################################
@@ -621,6 +677,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o: CXX_COMPILE
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/format.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o.d
@@ -628,6 +686,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__B
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/loader.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o.d
@@ -635,6 +695,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: CXX_COMPILER__B
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/logging.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o.d
@@ -642,6 +704,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/system.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o.d
@@ -649,6 +713,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: CXX_COMPILER__B
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/profiling/profiler.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o.d
@@ -656,6 +722,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: CXX_COM
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/nbt/nbt.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o.d
@@ -663,6 +731,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: CXX_COMPILER__BLT_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: CXX_COMPILER__BLT_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/nbt/nbt_block.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o.d
@@ -670,6 +740,8 @@ build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: CXX_COMPILER
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 
 # =============================================================================
@@ -684,8 +756,9 @@ build libraries/BLT/libBLT.a: CXX_STATIC_LIBRARY_LINKER__BLT_Debug libraries/BLT
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = libraries/BLT/CMakeFiles/BLT.dir/BLT.pdb
   TARGET_FILE = libraries/BLT/libBLT.a
-  TARGET_PDB = BLT.a.dbg
+  TARGET_PDB = libraries/BLT/libBLT.pdb
 
 
 #############################################
@@ -797,6 +870,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/autofit/autofit.c.o:
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/autofit
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbase.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftbase.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -805,6 +880,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbase.c.o: C_C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbbox.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftbbox.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -813,6 +890,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbbox.c.o: C_C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbdf.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftbdf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -821,6 +900,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbdf.c.o: C_CO
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftbitmap.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -829,6 +910,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftcid.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftcid.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -837,6 +920,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftcid.c.o: C_CO
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftfstype.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftfstype.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -845,6 +930,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftfstype.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgasp.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftgasp.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -853,6 +940,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgasp.c.o: C_C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftglyph.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftglyph.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -861,6 +950,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftglyph.c.o: C_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgxval.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftgxval.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -869,6 +960,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgxval.c.o: C_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftinit.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftinit.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -877,6 +970,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftinit.c.o: C_C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftmm.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftmm.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -885,6 +980,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftmm.c.o: C_COM
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftotval.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftotval.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -893,6 +990,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftotval.c.o: C_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpatent.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftpatent.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -901,6 +1000,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpatent.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpfr.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftpfr.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -909,6 +1010,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpfr.c.o: C_CO
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftstroke.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftstroke.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -917,6 +1020,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftstroke.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftsynth.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftsynth.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -925,6 +1030,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftsynth.c.o: C_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/fttype1.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/fttype1.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -933,6 +1040,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/fttype1.c.o: C_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftwinfnt.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -941,6 +1050,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bdf/bdf.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/bdf/bdf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -949,6 +1060,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bdf/bdf.c.o: C_COMPI
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bdf
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/bzip2/ftbzip2.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -957,6 +1070,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bzip2
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cache/ftcache.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/cache/ftcache.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -965,6 +1080,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cache/ftcache.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cache
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cff/cff.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/cff/cff.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -973,6 +1090,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cff/cff.c.o: C_COMPI
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cff
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cid/type1cid.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/cid/type1cid.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -981,6 +1100,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cid/type1cid.c.o: C_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cid
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/gzip/ftgzip.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -989,6 +1110,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o: C_C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/gzip
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/lzw/ftlzw.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -997,6 +1120,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o: C_COM
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/lzw
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pcf/pcf.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/pcf/pcf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1005,6 +1130,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pcf/pcf.c.o: C_COMPI
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pcf
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pfr/pfr.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/pfr/pfr.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1013,6 +1140,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pfr/pfr.c.o: C_COMPI
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pfr
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psaux/psaux.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/psaux/psaux.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1021,6 +1150,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psaux/psaux.c.o: C_C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psaux
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/pshinter/pshinter.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1029,6 +1160,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pshinter
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psnames/psnames.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/psnames/psnames.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1037,6 +1170,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psnames/psnames.c.o:
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psnames
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/raster/raster.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/raster/raster.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1045,6 +1180,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/raster/raster.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/raster
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sdf/sdf.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/sdf/sdf.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1053,6 +1190,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sdf/sdf.c.o: C_COMPI
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sdf
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/sfnt/sfnt.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1061,6 +1200,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o: C_COM
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sfnt
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/smooth/smooth.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/smooth/smooth.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1069,6 +1210,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/smooth/smooth.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/smooth
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/svg/svg.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/svg/svg.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1077,6 +1220,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/svg/svg.c.o: C_COMPI
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/svg
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/truetype/truetype.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/truetype/truetype.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1085,6 +1230,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/truetype/truetype.c.
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/truetype
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type1/type1.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/type1/type1.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1093,6 +1240,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type1/type1.c.o: C_C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type1
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type42/type42.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/type42/type42.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1101,6 +1250,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type42/type42.c.o: C
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type42
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/winfonts/winfnt.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1109,6 +1260,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o:
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/winfonts
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/unix/ftsystem.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1117,6 +1270,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/builds/unix
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftdebug.c.o: C_COMPILER__freetype_Debug /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/src/base/ftdebug.c || cmake_object_order_depends_target_freetype
   DEFINES = -DFT2_BUILD_LIBRARY
@@ -1125,6 +1280,8 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftdebug.c.o: C_
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 
 # =============================================================================
@@ -1139,8 +1296,9 @@ build libraries/freetype-2.13.0/libfreetyped.a: C_STATIC_LIBRARY_LINKER__freetyp
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   POST_BUILD = :
   PRE_LINK = :
+  TARGET_COMPILE_PDB = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/freetype.pdb
   TARGET_FILE = libraries/freetype-2.13.0/libfreetyped.a
-  TARGET_PDB = freetyped.a.dbg
+  TARGET_PDB = libraries/freetype-2.13.0/libfreetyped.pdb
 
 
 #############################################
@@ -1300,14 +1458,14 @@ build libraries/glfw-3.3.8/src/all: phony libraries/glfw-3.3.8/src/libglfw3.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindBrotliDec.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindHarfBuzz.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPack.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPackComponent.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindBZip2.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPNG.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindBrotliDec.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindHarfBuzz.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCCompilerABI.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystem.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPack.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPackComponent.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckFunctionExists.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckIncludeFile.c.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindBZip2.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPNG.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindBrotliDec.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindHarfBuzz.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPack.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPackComponent.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindBZip2.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPNG.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+build /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/include/blt/config.h.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindBrotliDec.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/freetype-2.13.0/builds/cmake/FindHarfBuzz.cmake /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/cmake_uninstall.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/CMakeLists.txt /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3.pc.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw3Config.cmake.in /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/glfw-3.3.8/src/glfw_config.h.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/BasicConfigVersion-SameMajorVersion.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCCompilerABI.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXCompiler.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXCompilerABI.cpp /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeCompilerIdDetection.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDependentOption.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompileFeatures.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompilerABI.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineCompilerId.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeDetermineSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeFindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakePackageConfigHelpers.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeParseImplicitIncludeInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeParseImplicitLinkInfo.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeParseLibraryArchitecture.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystem.cmake.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeTestCCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeTestCXXCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CMakeTestCompilerCommon.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPack.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CPackComponent.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckCSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckFunctionExists.c /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckFunctionExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckIncludeFile.c.in /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckIncludeFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/CheckLibraryExists.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/ADSP-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/ARMCC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/ARMClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/AppleClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Borland-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Cray-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GHS-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU-FindBinUtils.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/HP-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IAR-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Intel-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/LCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/MSVC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/NVHPC-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/PGI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/PathScale-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SCO-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/TI-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/Watcom-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XL-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/zOS-C-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindBZip2.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFontconfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindFreetype.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPNG.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageHandleStandardArgs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPackageMessage.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindPkgConfig.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindThreads.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindX11.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/FindZLIB.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/GNUInstallDirs.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Internal/CheckSourceCompiles.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Internal/FeatureTesting.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-Determine-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-C.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU-CXX.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux-GNU.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/Linux.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/SelectLibraryConfigurations.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Modules/WriteBasicConfigVersionFile.cmake /opt/netbrains/clion/clion-2022.1.3/bin/cmake/linux/x64/share/cmake-3.24/Templates/CPackConfig.cmake.in CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
 
 
 #############################################
