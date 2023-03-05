@@ -128,3 +128,11 @@ void fp::camera::update() {
     
     updateViewMatrix();
 }
+
+const blt::vec3& fp::camera::getPosition() {
+    return position;
+}
+
+const blt::vec3& fp::camera::getRotation() {
+    return rotation;
+}

@@ -10,6 +10,7 @@
 #include <world/chunk/storage.h>
 #include <render/gl.h>
 #include <unordered_map>
+#include "blt/profiling/profiler.h"
 
 namespace fp {
     
@@ -64,7 +65,7 @@ namespace fp {
     }
     
     struct chunk {
-        public:
+        private:
             block_storage* storage;
             mesh_storage* mesh = nullptr;
             VAO* chunk_vao;
@@ -77,20 +78,107 @@ namespace fp {
             explicit chunk(chunk_pos pos): pos(pos) {
                 storage = new block_storage();
                 chunk_vao = new VAO();
-                // using indices uses:
-                // 12 faces * 4 vertex * 3 float * 4 bytes + 12 faces * 6 indices * 4 bytes = 864 bytes for vertex + index
-                
-                // using only vertices:
-                // 12 faces * 6 vertex * 3 floats * 4 bytes = 864 bytes.
-                
-                // since they both use the same amount of memory we will only store the vertices and draw with drawArrays, since it is less complex.
-                // set up the VBOs which will be later updated when the mesh is generated.
                 auto vbo = new VBO(ARRAY_BUFFER, nullptr, 0);
-                auto data_size = 3 * sizeof(float) + 2 * sizeof(float) + 1 * sizeof(float);
+                auto data_size = 3 * sizeof(float) + 3 * sizeof(float);
                 chunk_vao->bindVBO(vbo, 0, 3, GL_FLOAT, (int)data_size, 0);
-                chunk_vao->bindVBO(vbo, 1, 2, GL_FLOAT, (int)data_size, 3 * sizeof(float), true);
-                chunk_vao->bindVBO(vbo, 2, 1, GL_FLOAT, (int)data_size, 3 * sizeof(float) + 2 * sizeof(float), true);
+                chunk_vao->bindVBO(vbo, 1, 3, GL_FLOAT, (int)data_size, 3 * sizeof(float), true);
                 chunk_vao->bindElementVBO(new VBO(ELEMENT_BUFFER, nullptr, 0));
+            }
+            
+            inline void render(shader& shader){
+                if (render_size > 0) {
+                    blt::mat4x4 translation{};
+                    translation.translate((float) pos.x * CHUNK_SIZE,
+                                          (float) pos.y * CHUNK_SIZE,
+                                          (float) pos.z * CHUNK_SIZE
+                    );
+                    shader.setMatrix("translation", translation);
+                    // bind the chunk's VAO
+                    chunk_vao->bind();
+                    // despite binding the element buffer at creation time, this is required.
+                    chunk_vao->getVBO(-1)->bind();
+                    glEnableVertexAttribArray(0);
+                    glEnableVertexAttribArray(1);
+                    glEnableVertexAttribArray(2);
+                    glDrawElements(GL_TRIANGLES, (int) render_size, GL_UNSIGNED_INT, nullptr);
+                    glDisableVertexAttribArray(2);
+                    glDisableVertexAttribArray(1);
+                    glDisableVertexAttribArray(0);
+                }
+            }
+        
+            inline void updateChunkMesh(){
+                auto& vertices = mesh->getVertices();
+                auto& indices = mesh->getIndices();
+                
+                BLT_DEBUG(
+                        "Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%d, %d) bytes!",
+                        pos.x, pos.y, pos.z,
+                        vertices.size(), indices.size(), vertices.size() * sizeof(vertex),
+                        indices.size() * sizeof(unsigned int));
+                
+                // upload the new vertices to the GPU
+                chunk_vao->getVBO(0)->update(vertices);
+                chunk_vao->getVBO(-1)->update(indices);
+                render_size = indices.size();
+            
+                // delete the local chunk mesh memory, since we no longer need to store it.
+                delete (mesh);
+                mesh = nullptr;
+                markDone();
+            }
+            
+            /**
+             * Mark the chunk as completely dirty and in need of a full check refresh
+             */
+            inline void markDirty(){
+                dirtiness = FULL_MESH;
+            }
+            
+            /**
+             * Partial mesh update has been completed, we are now waiting on the edge chunks to be
+             * generated before continuing to generate the chunk edge mesh
+             */
+            inline void markPartialComplete() {
+                dirtiness = PARTIAL_MESH;
+            }
+            
+            /**
+             * Full chunk mesh is now completely generated and waiting on uploading to the GPU
+             */
+            inline void markComplete(){
+                dirtiness = REFRESH;
+            }
+            
+            /**
+             * Mesh uploading complete, chunk meshing is now done and inactive
+             */
+            inline void markDone(){
+                dirtiness = OKAY;
+            }
+        
+            [[nodiscard]] inline block_storage*& getBlockStorage() {
+                return storage;
+            }
+        
+            [[nodiscard]] inline mesh_storage*& getMeshStorage(){
+                return mesh;
+            }
+        
+            [[nodiscard]] inline VAO*& getVAO(){
+                return chunk_vao;
+            }
+        
+            [[nodiscard]] inline chunk_pos getPos() const {
+                return pos;
+            }
+        
+            [[nodiscard]] inline chunk_mesh_status getDirtiness() const {
+                return dirtiness;
+            }
+        
+            [[nodiscard]] inline chunk_update_status& getStatus() {
+                return status;
             }
             
             ~chunk() {
@@ -118,6 +206,8 @@ namespace fp {
             
             void generateChunkMesh(chunk* chunk);
             
+            static chunk* generateChunk(const chunk_pos& pos);
+            
             inline void getNeighbours(const chunk_pos& pos, chunk_neighbours& neighbours) {
                 neighbours[X_POS] = getChunk(chunk_pos{pos.x + 1, pos.y, pos.z});
                 neighbours[X_NEG] = getChunk(chunk_pos{pos.x - 1, pos.y, pos.z});
@@ -128,14 +218,14 @@ namespace fp {
             }
             
             inline void insertChunk(chunk* chunk) {
-                chunk_storage.insert({chunk->pos, chunk});
+                chunk_storage.insert({chunk->getPos(), chunk});
                 
                 chunk_neighbours chunkNeighbours{};
-                getNeighbours(chunk->pos, chunkNeighbours);
+                getNeighbours(chunk->getPos(), chunkNeighbours);
                 
                 for (auto* p : chunkNeighbours.neighbours){
                     if (p)
-                        p->status = NEIGHBOUR_CREATE;
+                        p->getStatus() = NEIGHBOUR_CREATE;
                 }
             }
             
@@ -147,20 +237,11 @@ namespace fp {
             }
             
             inline chunk* getChunk(const block_pos& pos) {
-                return chunk_storage.at(_static::world_to_chunk(pos));
+                return chunk_storage[_static::world_to_chunk(pos)];
             }
         
         public:
-            world() {
-                insertChunk(new chunk({0, 0, 0}));
-                insertChunk(new chunk({0, 1, 0}));
-                insertChunk(new chunk({0, -1, 0}));
-                insertChunk(new chunk({1, 0, 0}));
-                insertChunk(new chunk({0, 0, 1}));
-                insertChunk(new chunk({-1, 0, 0}));
-                insertChunk(new chunk({0, 0, -1}));
-                insertChunk(new chunk({-1, 0, -1}));
-            }
+            world() = default;
             
             void update();
             
@@ -171,8 +252,8 @@ namespace fp {
                 if (!c)
                     return false;
                 // mark the chunk for a mesh update
-                c->dirtiness = FULL_MESH;
-                c->storage->set(_static::world_to_internal(pos), blockID);
+                c->markDirty();
+                c->getBlockStorage()->set(_static::world_to_internal(pos), blockID);
                 return true;
             }
             
@@ -180,10 +261,12 @@ namespace fp {
                 auto c = getChunk(pos);
                 if (!c)
                     return fp::registry::AIR;
-                return c->storage->get(_static::world_to_internal(pos));
+                return c->getBlockStorage()->get(_static::world_to_internal(pos));
             }
             
             ~world() {
+                BLT_PRINT_PROFILE("Chunk Mesh", blt::logging::TRACE, true);
+                BLT_PRINT_PROFILE("Chunk Generate", blt::logging::TRACE, true);
                 for (auto& chunk : chunk_storage)
                     delete (chunk.second);
             }

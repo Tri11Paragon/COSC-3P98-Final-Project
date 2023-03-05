@@ -36,13 +36,11 @@ namespace fp {
                 return blocks[pos.z * CHUNK_SIZE * CHUNK_SIZE + pos.y * CHUNK_SIZE + pos.x];
             }
             
-            [[nodiscard]] inline block_type getBounded(bool& outside, const block_pos& pos) const {
+            [[nodiscard]] inline bool checkBlockVisibility(const block_pos& pos) const {
                 if (pos.x < 0 || pos.x >= CHUNK_SIZE || pos.y < 0 || pos.y >= CHUNK_SIZE || pos.z < 0 || pos.z >= CHUNK_SIZE) {
-                    outside = true;
-                    return fp::registry::AIR;
+                    return false;
                 }
-                outside = false;
-                return get(pos);
+                return fp::registry::get(get(pos)).visibility <= fp::registry::TRANSPARENT_TEXTURE;
             }
             
             inline void set(const block_pos& pos, block_type blockID) {

@@ -11,6 +11,7 @@
 #include "render/camera.h"
 #include "world/chunk/world.h"
 #include "util/settings.h"
+#include <util/math.h>
 
 
 #ifdef __EMSCRIPTEN__
@@ -56,25 +57,19 @@ int main() {
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
     world = new fp::world();
     
-    //world->setBlock({0,0,0}, 1);
+    world->setBlock({0,0,0}, fp::registry::STONE);
     
-    for (int i = 1; i < CHUNK_SIZE; i++)
-        for (int j = 0; j < 2; j++)
-            for (int k = 5; k < CHUNK_SIZE; k++)
-                world->setBlock({i,j,k}, fp::registry::STONE);
-    
-    for (int i = 1; i < CHUNK_SIZE; i++)
-        for (int j = 10; j < 15; j++)
-            for (int k = 5; k < CHUNK_SIZE; k++)
-                world->setBlock({i,j,k}, fp::registry::DIRT);
-    
-    for (int i = 1; i < CHUNK_SIZE; i++)
-        for (int j = 24; j < 26; j++)
-            for (int k = 5; k < CHUNK_SIZE; k++)
-                world->setBlock({i,j,k}, fp::registry::COBBLE);
-    world->setBlock({-2, 2, 2}, 1);
-    world->setBlock({-2, 2, -2}, 1);
-    world->setBlock({2, 2, -2}, 1);
+    for (int i = 0; i < CHUNK_SIZE; i++) {
+        for (int j = 0; j < CHUNK_SIZE; j++) {
+            for (int k = 0; k < CHUNK_SIZE; k++) {
+                world->setBlock({i, j, k}, (int)(stb_perlin_fbm_noise3(i / 8.0, j / 8.0, k / 8.0, 2.0, 0.5, 6) > 0.5 ? fp::registry::STONE : fp::registry::AIR));
+            }
+        }
+    }
+    world->setBlock({-2, 2, 2}, fp::registry::STONE);
+    world->setBlock({-2, 2, -2}, fp::registry::STONE);
+    world->setBlock({-5, 6, -5}, fp::registry::COBBLE);
+    world->setBlock({2, 2, -2}, fp::registry::STONE);
     
     glEnable(GL_CULL_FACE);
     glEnable(GL_DEPTH_TEST);
@@ -92,8 +87,6 @@ int main() {
     while(!fp::window::isCloseRequested())
         loop();
 #endif
-    
-    BLT_PRINT_PROFILE("Chunk Generator", blt::logging::TRACE, true);
 
     delete(chunk_shader);
     delete(world);

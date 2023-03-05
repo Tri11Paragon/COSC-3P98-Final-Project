@@ -8,6 +8,9 @@
 #define FINALPROJECT_MATH_H
 
 #include <cmath>
+#include <stb/stb_perlin.h>
+#include <blt/math/math.h>
+#include <blt/std/logging.h>
 
 static inline float degreesToRadian(float deg) {
     return deg * (float)M_PI / 180.0f;

@@ -47,22 +47,28 @@ namespace fp::registry {
     constexpr block_type GRASS = 4;
     
     void registerBlock(block_type id, block_properties properties);
+    
     void registerTexture(texture::file_texture* texture);
     
     void textureInit();
+    
     void setupTextureLoaderThreads(int count = 8);
+    
     void generateTexturePalette();
+    
     void cleanup();
     
     block_properties& get(block_type id);
+    
     unsigned int getTextureID();
+    
     texture::texture_index getTextureIndex(const std::string& name);
     
     
     /**
      * Registers all the default blocks used by the engine
      */
-    inline void registerDefaultBlocks(){
+    inline void registerDefaultBlocks() {
         registerBlock(AIR, {TRANSPARENT});
         registerBlock(STONE, {OPAQUE, "Stone"});
         registerBlock(DIRT, {OPAQUE, "Dolph"});
@@ -79,7 +85,7 @@ namespace fp::registry {
         registerTexture(new texture::file_texture{"assets/textures/1603422678312.jpg", "Loser"});
         registerTexture(new texture::file_texture{"assets/textures/1592244663459.png", "Frog"});
         registerTexture(new texture::file_texture{"assets/textures/1592234267606.png", "Explode"});
-    
+        
         setupTextureLoaderThreads();
         generateTexturePalette();
     }

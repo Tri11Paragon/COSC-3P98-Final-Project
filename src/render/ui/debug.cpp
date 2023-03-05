@@ -14,7 +14,7 @@ namespace fp::debug {
     bool enabled = false;
     
     // Yes. I made this only for this.
-    blt::averagizer_o_matic<double, 256> fps_average{60.0};
+    blt::averagizer_o_matic<double, 16> fps_average{60.0};
     
     void drawAndIncrement(const std::string& text, float x, float& pos, text::font_size size = fp::text::FONT_14) {
         auto text_size = fp::text::getTextSize(text, size);

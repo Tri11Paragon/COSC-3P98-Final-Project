@@ -32,12 +32,11 @@ namespace fp {
     
     struct VBO {
         GLuint vboID = 0;
-        void* data = nullptr;
         int size = 0;
         vbo_type type = ARRAY_BUFFER;
         vbo_mem_type mem_type = STATIC;
         
-        VBO(vbo_type type, void* data, int size, vbo_mem_type mem_type = STATIC): type(type), data(data), size(size), mem_type(mem_type) {
+        VBO(vbo_type type, void* data, int size, vbo_mem_type mem_type = STATIC): type(type), size(size), mem_type(mem_type) {
             glGenBuffers(1, &vboID);
             bind();
             glBufferData(type, size, data, mem_type);
@@ -55,13 +54,12 @@ namespace fp {
         inline void update(void* new_data, int data_size) {
             bind();
             // optimization technique is to not reallocate the memory on the GPU if the new buffer size is not larger than our current buffer
-            if (data_size <= size){
+            //if (data_size <= size){
                 // we can do this as long as we overwrite from the beginning. Since the new draw call will only use of to size of the allocated buffer
                 // to do all its drawing, the extra space unused can be ignored and saved for future use.
-                glBufferSubData(type, 0, data_size, new_data);
-            } else
+            //    glBufferSubData(type, 0, data_size, new_data);
+            //} else
                 glBufferData(type, data_size, new_data, mem_type);
-            data = new_data;
             size = data_size;
             glBindBuffer(type, 0);
         }

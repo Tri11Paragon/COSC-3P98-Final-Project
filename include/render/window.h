@@ -56,6 +56,8 @@ namespace fp::window {
     double getFrameDelta();
     // nanoseconds
     long getFrameDeltaRaw();
+    // nanoseconds, from current time not last frame
+    long getCurrentDelta();
     
     const blt::mat4x4& getPerspectiveMatrix();
     

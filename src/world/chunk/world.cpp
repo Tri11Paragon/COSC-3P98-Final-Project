@@ -5,60 +5,70 @@
  */
 #include <world/chunk/world.h>
 #include <blt/profiling/profiler.h>
+#include <blt/std/queue.h>
+#include <queue>
+#include <render/camera.h>
+#include "stb/stb_perlin.h"
 
 void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
-    BLT_START_INTERVAL("Chunk Generator", "Full Mesh");
+    BLT_START_INTERVAL("Chunk Mesh", "Full Mesh");
     // checks to outside the bounds of the chunk should not have faces added. this will be handled by the partial mesh!
     bool outside = false;
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
             for (int k = 0; k < CHUNK_SIZE; k++) {
-                auto& block = fp::registry::get(chunk->storage->get({i, j, k}));
+                auto*& storage = chunk->getBlockStorage();
+                
+                auto& block = fp::registry::get(storage->get({i, j, k}));
+                
                 auto texture_index = fp::registry::getTextureIndex(block.textureName);
+                
                 // The main chunk mesh can handle opaque and transparent textures. (Transparency will be discarded)
                 if (block.visibility <= registry::TRANSPARENT_TEXTURE) {
-                    if (fp::registry::get(chunk->storage->getBounded(outside, {i - 1, j, k})).visibility && !outside)
+                    if (!storage->checkBlockVisibility({i - 1, j, k}))
                         mesh->addFace(X_NEG, {i, j, k}, texture_index);
-                    if (fp::registry::get(chunk->storage->getBounded(outside, {i + 1, j, k})).visibility && !outside)
+                    if (!storage->checkBlockVisibility({i + 1, j, k}))
                         mesh->addFace(X_POS, {i, j, k}, texture_index);
-                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j - 1, k})).visibility && !outside)
+                    if (!storage->checkBlockVisibility({i, j - 1, k}))
                         mesh->addFace(Y_NEG, {i, j, k}, texture_index);
-                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j + 1, k})).visibility && !outside)
+                    if (!storage->checkBlockVisibility({i, j + 1, k}))
                         mesh->addFace(Y_POS, {i, j, k}, texture_index);
-                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j, k - 1})).visibility && !outside)
+                    if (!storage->checkBlockVisibility({i, j, k - 1}))
                         mesh->addFace(Z_NEG, {i, j, k}, texture_index);
-                    if (fp::registry::get(chunk->storage->getBounded(outside, {i, j, k + 1})).visibility && !outside)
+                    if (!storage->checkBlockVisibility({i, j, k + 1}))
                         mesh->addFace(Z_POS, {i, j, k}, texture_index);
                 }
             }
         }
     }
     
-    chunk->dirtiness = PARTIAL_MESH;
-    BLT_END_INTERVAL("Chunk Generator", "Full Mesh");
+    chunk->markPartialComplete();
+    BLT_END_INTERVAL("Chunk Mesh", "Full Mesh");
 }
 
 inline void checkEdgeFaces(
-        fp::mesh_storage* mesh, fp::chunk* chunk, fp::chunk* neighbour, fp::face face, const fp::block_pos& pos, const fp::block_pos& neighbour_pos
+        fp::mesh_storage* mesh, fp::chunk* chunk, fp::chunk* neighbour, fp::face face,
+        const fp::block_pos& pos, const fp::block_pos& neighbour_pos
 ) {
-    auto& block = fp::registry::get(chunk->storage->get(pos));
+    auto*& storage = chunk->getBlockStorage();
+    auto& block = fp::registry::get(storage->get(pos));
     auto texture_index = fp::registry::getTextureIndex(block.textureName);
     
     if (block.visibility <= fp::registry::TRANSPARENT_TEXTURE) {
-        if (fp::registry::get(neighbour->storage->get(neighbour_pos)).visibility)
+        if (fp::registry::get(storage->get(neighbour_pos)).visibility)
             mesh->addFace(face, pos, texture_index);
     }
 }
 
 void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
-    BLT_START_INTERVAL("Chunk Generator", "Edge Mesh");
+    BLT_START_INTERVAL("Chunk Mesh", "Edge Mesh");
     // don't try to regen the chunk mesh unless there is a chance all neighbours are not null
-    if (chunk->status != chunk_update_status::NEIGHBOUR_CREATE)
+    if (chunk->getStatus() != chunk_update_status::NEIGHBOUR_CREATE)
         return;
     
     chunk_neighbours neighbours{};
-    getNeighbours(chunk->pos, neighbours);
+    getNeighbours(chunk->getPos(), neighbours);
     
     
     // if none of the neighbours exist we cannot continue!
@@ -69,36 +79,61 @@ void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
-            checkEdgeFaces(mesh, chunk, neighbours[X_NEG], X_NEG, {0, i, j}, {CHUNK_SIZE - 1, i, j});
-            checkEdgeFaces(mesh, chunk, neighbours[X_POS], X_POS, {CHUNK_SIZE-1, i, j}, {0, i, j});
-    
-            checkEdgeFaces(mesh, chunk, neighbours[Y_NEG], Y_NEG, {i, 0, j}, {i, CHUNK_SIZE - 1, j});
-            checkEdgeFaces(mesh, chunk, neighbours[Y_POS], Y_POS, {i, CHUNK_SIZE-1, j}, {i, 0, j});
-    
-            checkEdgeFaces(mesh, chunk, neighbours[Z_NEG], Z_NEG, {i, j, 0}, {i, j, CHUNK_SIZE - 1});
-            checkEdgeFaces(mesh, chunk, neighbours[Z_POS], Z_POS, {i, j, CHUNK_SIZE-1}, {i, j, 0});
+            checkEdgeFaces(
+                    mesh, chunk, neighbours[X_NEG], X_NEG, {0, i, j}, {CHUNK_SIZE - 1, i, j}
+            );
+            checkEdgeFaces(
+                    mesh, chunk, neighbours[X_POS], X_POS, {CHUNK_SIZE - 1, i, j}, {0, i, j}
+            );
+            
+            checkEdgeFaces(
+                    mesh, chunk, neighbours[Y_NEG], Y_NEG, {i, 0, j}, {i, CHUNK_SIZE - 1, j}
+            );
+            checkEdgeFaces(
+                    mesh, chunk, neighbours[Y_POS], Y_POS, {i, CHUNK_SIZE - 1, j}, {i, 0, j}
+            );
+            
+            checkEdgeFaces(
+                    mesh, chunk, neighbours[Z_NEG], Z_NEG, {i, j, 0}, {i, j, CHUNK_SIZE - 1}
+            );
+            checkEdgeFaces(
+                    mesh, chunk, neighbours[Z_POS], Z_POS, {i, j, CHUNK_SIZE - 1}, {i, j, 0}
+            );
         }
     }
     
-    chunk->status = NONE;
-    chunk->dirtiness = REFRESH;
-    BLT_END_INTERVAL("Chunk Generator", "Edge Mesh");
+    chunk->getStatus() = NONE;
+    chunk->markComplete();
+    BLT_END_INTERVAL("Chunk Mesh", "Edge Mesh");
 }
 
 void fp::world::generateChunkMesh(fp::chunk* chunk) {
-    if (chunk->mesh == nullptr)
-        chunk->mesh = new mesh_storage;
+    if (chunk->getMeshStorage() == nullptr)
+        chunk->getMeshStorage() = new mesh_storage;
     
-    if (chunk->dirtiness == FULL_MESH) { // full chunk mesh
-        generateFullMesh(chunk->mesh, chunk);
+    if (chunk->getDirtiness() == FULL_MESH) { // full chunk mesh
+        generateFullMesh(chunk->getMeshStorage(), chunk);
     }
-    if (chunk->dirtiness == PARTIAL_MESH) { // partial chunk mesh (had null neighbours)
-        generateEdgeMesh(chunk->mesh, chunk);
+    if (chunk->getDirtiness() == PARTIAL_MESH) { // partial chunk mesh (had null neighbours)
+        generateEdgeMesh(chunk->getMeshStorage(), chunk);
     }
 }
 
-void fp::world::update() {
+std::queue<fp::chunk_pos> chunks_to_generate{};
 
+void fp::world::update() {
+    auto target_delta = 1000000000 / std::stoi(fp::settings::get("FPS"));
+    
+    while (fp::window::getCurrentDelta() < target_delta) {
+        if (chunks_to_generate.empty())
+            break;
+        const auto& front = chunks_to_generate.front();
+        
+        insertChunk(generateChunk(front));
+        
+        chunks_to_generate.pop();
+    }
+    
 }
 
 void fp::world::render(fp::shader& shader) {
@@ -107,48 +142,67 @@ void fp::world::render(fp::shader& shader) {
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D_ARRAY, fp::registry::getTextureID());
     
-    for (const auto& chunk_pair : chunk_storage) {
-        auto chunk = chunk_pair.second;
-        
-        if (chunk == nullptr)
-            continue;
-        
-        if (chunk->dirtiness > REFRESH) {
-            BLT_START_INTERVAL("Chunk Generator", "Mesh");
-            generateChunkMesh(chunk);
-            BLT_END_INTERVAL("Chunk Generator", "Mesh");
-        }
-        
-        if (chunk->dirtiness == REFRESH) {
-            auto& vertices = chunk->mesh->getVertices();
-            auto& indices = chunk->mesh->getIndices();
-            
-            // 11436 vert, 137,232 bytes
-            // 1908 vert, 11436 indices, 22896 + 45744 = 68,640 bytes
-            
-            BLT_DEBUG("Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%d, %d) bytes!",
-                     chunk->pos.x, chunk->pos.y, chunk->pos.z,
-                     vertices.size(), indices.size(), vertices.size() * sizeof(vertex), indices.size() * sizeof(unsigned int));
-            
-            // upload the new vertices to the GPU
-            chunk->chunk_vao->getVBO(0)->update(vertices);
-            chunk->chunk_vao->getVBO(-1)->update(indices);
-            chunk->render_size = indices.size();
-            
-            // delete the memory from the CPU.
-            delete (chunk->mesh);
-            chunk->mesh = nullptr;
-            chunk->dirtiness = OKAY;
-        }
-        
-        if (chunk->render_size > 0) {
-            blt::mat4x4 translation{};
-            translation.translate((float) chunk->pos.x * CHUNK_SIZE, (float) chunk->pos.y * CHUNK_SIZE, (float) chunk->pos.z * CHUNK_SIZE);
-            shader.setMatrix("translation", translation);
-            chunk->chunk_vao->bind();
-            glEnableVertexAttribArray(0);
-            glDrawElements(GL_TRIANGLES, (int)chunk->render_size, GL_UNSIGNED_INT, nullptr);
-            glDisableVertexAttribArray(0);
+    auto view_distance = std::stoi(fp::settings::get("VIEW_DISTANCE")) / 2;
+    
+    for (int i = -view_distance; i <= view_distance; i++) {
+        for (int j = -view_distance; j <= view_distance; j++) {
+            for (int k = -view_distance; k <= view_distance; k++) {
+                // get the chunks around the player's camera
+                const auto& pos = fp::camera::getPosition();
+                int x = (int) pos.x();
+                int y = (int) pos.y();
+                int z = (int) pos.z();
+                auto camera_chunk_pos = fp::_static::world_to_chunk({x, y, z});
+                auto adjusted_chunk_pos = chunk_pos{camera_chunk_pos.x + i, // chunk x
+                                                    camera_chunk_pos.y + j, // chunk y
+                                                    camera_chunk_pos.z + k}; // chunk z
+                // generate chunk if it doesn't exist
+                auto* chunk = this->getChunk(adjusted_chunk_pos);
+                if (!chunk) {
+                    chunks_to_generate.push(adjusted_chunk_pos);
+                    continue;
+                }
+    
+                // check for mesh updates
+                if (chunk->getDirtiness() > REFRESH) {
+                    BLT_START_INTERVAL("Chunk Mesh", "Mesh");
+                    generateChunkMesh(chunk);
+                    BLT_END_INTERVAL("Chunk Mesh", "Mesh");
+                } else if (chunk->getDirtiness() == REFRESH) {
+                    // 11436 vert, 137,232 bytes
+                    // 1908 vert, 11436 indices, 22896 + 45744 = 68,640 bytes
+                    chunk->updateChunkMesh();
+                }
+    
+                chunk->render(shader);
+            }
         }
     }
+}
+
+fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
+    BLT_START_INTERVAL("Chunk Generate", "Instantiate");
+    auto* c = new chunk(pos);
+    block_storage*& storage = c->getBlockStorage();
+    
+    for (int i = 0; i < CHUNK_SIZE; i++) {
+        for (int j = 0; j < CHUNK_SIZE; j++) {
+            for (int k = 0; k < CHUNK_SIZE; k++) {
+                auto block_x = pos.x + i;
+                auto block_y = pos.y + j;
+                auto block_z = pos.z + k;
+                storage->set(
+                        {i, j, k},
+                        (int) (stb_perlin_fbm_noise3(block_x / 8.0, block_y / 8.0,
+                                                     block_z / 8.0, 2.0, 0.5, 6
+                        ) > 0.5 ? fp::registry::STONE : fp::registry::AIR));
+            }
+        }
+    }
+    
+    c->markDirty();
+    
+    BLT_END_INTERVAL("Chunk Generate", "Instantiate");
+    
+    return c;
 }

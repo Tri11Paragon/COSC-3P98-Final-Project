@@ -11,6 +11,8 @@
 
 namespace fp::camera {
     void update();
+    const blt::vec3& getPosition();
+    const blt::vec3& getRotation();
 }
 
 #endif //FINALPROJECT_CAMERA_H

@@ -234,3 +234,8 @@ float fp::window::mouseDX() {
 float fp::window::mouseDY() {
     return (float)mouse_dy;
 }
+
+long fp::window::getCurrentDelta() {
+    long currentFrame = blt::system::getCurrentTimeNanoseconds();
+    return currentFrame - lastFrame;
+}

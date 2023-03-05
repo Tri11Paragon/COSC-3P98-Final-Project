@@ -14,6 +14,8 @@ std::unordered_map<std::string, std::string> properties;
 // will be overwritten if the file has something different.
 void write_default_values(){
     properties["TEXTURE_SIZE"] = std::to_string(128);
+    properties["FPS"] = std::to_string(60);
+    properties["VIEW_DISTANCE"] = std::to_string(12);
 }
 
 void fp::settings::load(const std::string& file) {
@@ -24,10 +26,13 @@ void fp::settings::load(const std::string& file) {
     try {
         auto lines = blt::fs::getLinesFromFile(file);
         for (const auto& line : lines) {
+            // don't try to load empty lines
+            if (line.empty())
+                continue;
             auto split_line = blt::string::split(line, "=");
         
             if (split_line.size() < 2) {
-                BLT_WARN("Unable to load line '%s' due to incomplete property (property = value)");
+                BLT_WARN("Unable to load line '%s' due to incomplete property (property = value)", line.c_str());
                 continue;
             }
         
