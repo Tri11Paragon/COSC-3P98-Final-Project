@@ -32,7 +32,7 @@ void fp::registry::registerBlock(fp::block_type id, fp::registry::block_properti
     blocks[id] = std::move(properties);
 }
 
-fp::registry::block_properties fp::registry::get(fp::block_type id) {
+fp::registry::block_properties& fp::registry::get(fp::block_type id) {
     return blocks.at(id);
 }
 

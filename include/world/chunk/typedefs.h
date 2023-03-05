@@ -60,6 +60,7 @@ namespace fp {
     typedef struct {
         float x, y, z;
         float u, v;
+        float index;
     } vertex;
     
     namespace _static {
@@ -96,7 +97,7 @@ namespace fp {
         struct vertex_equality {
             inline bool operator()(const vertex& p1, const vertex& p2) const {
                 return f_equal(p1.x, p2.x) && f_equal(p1.y, p2.y) && f_equal(p1.z, p2.z) &&
-                       f_equal(p1.u, p2.u) && f_equal(p1.v, p2.v);
+                       f_equal(p1.u, p2.u) && f_equal(p1.v, p2.v) && p1.index == p2.index;
             }
         };
         

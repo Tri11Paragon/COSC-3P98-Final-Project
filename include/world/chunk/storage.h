@@ -62,7 +62,7 @@ namespace fp {
              * @param face the direction the face is facing to be added to the mesh.
              * @param pos position of the face
              */
-            void addFace(face face, const block_pos& pos);
+            void addFace(face face, const block_pos& pos, unsigned char texture_index);
             
             inline std::vector<vertex>& getVertices() {
                 return vertices;

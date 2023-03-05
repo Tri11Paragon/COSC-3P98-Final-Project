@@ -86,9 +86,10 @@ namespace fp {
                 // since they both use the same amount of memory we will only store the vertices and draw with drawArrays, since it is less complex.
                 // set up the VBOs which will be later updated when the mesh is generated.
                 auto vbo = new VBO(ARRAY_BUFFER, nullptr, 0);
-                auto data_size = 3 * sizeof(float) + 2 * sizeof(float);
+                auto data_size = 3 * sizeof(float) + 2 * sizeof(float) + 1 * sizeof(float);
                 chunk_vao->bindVBO(vbo, 0, 3, GL_FLOAT, (int)data_size, 0);
                 chunk_vao->bindVBO(vbo, 1, 2, GL_FLOAT, (int)data_size, 3 * sizeof(float), true);
+                chunk_vao->bindVBO(vbo, 2, 1, GL_FLOAT, (int)data_size, 3 * sizeof(float) + 2 * sizeof(float), true);
                 chunk_vao->bindElementVBO(new VBO(ELEMENT_BUFFER, nullptr, 0));
             }
             

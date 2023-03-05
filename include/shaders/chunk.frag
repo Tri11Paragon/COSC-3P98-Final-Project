@@ -7,6 +7,7 @@ precision mediump float;
 out vec4 FragColor;
 
 in vec2 uv;
+in float index;
 
 uniform mediump sampler2DArray texturep_palette;
 
@@ -15,7 +16,7 @@ void main() {
     FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);
 else
     discard;*/
-FragColor = texture(texturep_palette, vec3(uv, 0.0f));
+FragColor = texture(texturep_palette, vec3(uv, index));
 }
 
 ")";

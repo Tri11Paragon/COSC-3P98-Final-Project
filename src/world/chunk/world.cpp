@@ -14,21 +14,22 @@ void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
             for (int k = 0; k < CHUNK_SIZE; k++) {
-                auto block = chunk->storage->get({i, j, k});
+                auto& block = fp::registry::get(chunk->storage->get({i, j, k}));
+                auto texture_index = fp::registry::getTextureIndex(block.textureName);
                 // The main chunk mesh can handle opaque and transparent textures. (Transparency will be discarded)
-                if (fp::registry::get(block).visibility <= registry::TRANSPARENT_TEXTURE) {
+                if (block.visibility <= registry::TRANSPARENT_TEXTURE) {
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i - 1, j, k})).visibility && !outside)
-                        mesh->addFace(X_NEG, {i, j, k});
+                        mesh->addFace(X_NEG, {i, j, k}, texture_index);
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i + 1, j, k})).visibility && !outside)
-                        mesh->addFace(X_POS, {i, j, k});
+                        mesh->addFace(X_POS, {i, j, k}, texture_index);
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i, j - 1, k})).visibility && !outside)
-                        mesh->addFace(Y_NEG, {i, j, k});
+                        mesh->addFace(Y_NEG, {i, j, k}, texture_index);
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i, j + 1, k})).visibility && !outside)
-                        mesh->addFace(Y_POS, {i, j, k});
+                        mesh->addFace(Y_POS, {i, j, k}, texture_index);
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i, j, k - 1})).visibility && !outside)
-                        mesh->addFace(Z_NEG, {i, j, k});
+                        mesh->addFace(Z_NEG, {i, j, k}, texture_index);
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i, j, k + 1})).visibility && !outside)
-                        mesh->addFace(Z_POS, {i, j, k});
+                        mesh->addFace(Z_POS, {i, j, k}, texture_index);
                 }
             }
         }
@@ -41,10 +42,12 @@ void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
 inline void checkEdgeFaces(
         fp::mesh_storage* mesh, fp::chunk* chunk, fp::chunk* neighbour, fp::face face, const fp::block_pos& pos, const fp::block_pos& neighbour_pos
 ) {
-    auto block = chunk->storage->get(pos);
-    if (fp::registry::get(block).visibility <= fp::registry::TRANSPARENT_TEXTURE) {
+    auto& block = fp::registry::get(chunk->storage->get(pos));
+    auto texture_index = fp::registry::getTextureIndex(block.textureName);
+    
+    if (block.visibility <= fp::registry::TRANSPARENT_TEXTURE) {
         if (fp::registry::get(neighbour->storage->get(neighbour_pos)).visibility)
-            mesh->addFace(face, pos);
+            mesh->addFace(face, pos, texture_index);
     }
 }
 

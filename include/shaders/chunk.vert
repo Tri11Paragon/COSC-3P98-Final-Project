@@ -6,8 +6,10 @@ precision mediump float;
 
 layout (location = 0) in vec3 vertex;
 layout (location = 1) in vec2 texture_coord;
+layout (location = 2) in float texture_index;
 
 out vec2 uv;
+out float index;
 
 uniform mat4 translation;
 
@@ -22,6 +24,7 @@ layout (std140) uniform StandardMatrices
 };
 
 void main() {
+    index = texture_index;
     gl_Position = projection * view * translation * vec4(vertex.x, vertex.y, vertex.z, 1.0);
     uv = texture_coord;
 }

@@ -9,40 +9,46 @@
 constexpr float scale = 0.5f;
 
 const fp::vertex x_positive_vertices[VTX_ARR_SIZE] = {
-        {scale, scale,  scale, 1, 1},  // +x top right
-        {scale, scale,  -scale, 1, 0},  // +x bottom right
-        {scale, -scale, -scale, 0, 0},  // +x bottom left
-        {scale, -scale, scale, 0, 1}   // +x top left
+        // x,   y,      z,     u, v, index
+        {scale, scale,  scale, 1, 1, 0},  // +x top right
+        {scale, scale,  -scale, 1, 0, 0},  // +x bottom right
+        {scale, -scale, -scale, 0, 0, 0},  // +x bottom left
+        {scale, -scale, scale, 0, 1, 0}   // +x top left
 };
 const fp::vertex x_negative_vertices[VTX_ARR_SIZE] = {
-        {-scale, scale,  scale, 1, 1},  // -x top right
-        {-scale, scale,  -scale, 1, 0},  // -x bottom right
-        {-scale, -scale, -scale, 0, 0},  // -x bottom left
-        {-scale, -scale, scale, 0, 1}   // -x top left
+        // x,   y,      z,     u, v, index
+        {-scale, scale,  scale, 1, 1, 0},  // -x top right
+        {-scale, scale,  -scale, 1, 0, 0},  // -x bottom right
+        {-scale, -scale, -scale, 0, 0, 0},  // -x bottom left
+        {-scale, -scale, scale, 0, 1, 0}   // -x top left
 };
 const fp::vertex y_positive_vertices[VTX_ARR_SIZE] = {
-        {scale,  scale, scale, 1, 1},  // +y top right
-        {-scale, scale, scale, 1, 0},  // +y bottom right
-        {-scale, scale, -scale, 0, 0},  // +y bottom left
-        {scale,  scale, -scale, 0, 1},   // +y top left
+        // x,   y,      z,     u, v, index
+        {scale,  scale, scale, 1, 1, 0},  // +y top right
+        {-scale, scale, scale, 1, 0, 0},  // +y bottom right
+        {-scale, scale, -scale, 0, 0, 0},  // +y bottom left
+        {scale,  scale, -scale, 0, 1, 0},   // +y top left
 };
 const fp::vertex y_negative_vertices[VTX_ARR_SIZE] = {
-        {scale,  -scale, scale, 1, 1},  // -y top right
-        {-scale, -scale, scale, 1, 0},  // -y bottom right
-        {-scale, -scale, -scale, 0, 0},  // -y bottom left
-        {scale,  -scale, -scale, 0, 1},    // -y top left
+        // x,   y,      z,     u, v, index
+        {scale,  -scale, scale, 1, 1, 0},  // -y top right
+        {-scale, -scale, scale, 1, 0, 0},  // -y bottom right
+        {-scale, -scale, -scale, 0, 0, 0},  // -y bottom left
+        {scale,  -scale, -scale, 0, 1, 0},    // -y top left
 };
 const fp::vertex z_positive_vertices[VTX_ARR_SIZE] = {
-        {scale,  scale,  scale, 1, 1},  // +z top right
-        {scale,  -scale, scale, 1, 0},  // +z bottom right
-        {-scale, -scale, scale, 0, 0},  // +z bottom left
-        {-scale, scale,  scale, 0, 1},   // +z top left
+        // x,   y,      z,     u, v, index
+        {scale,  scale,  scale, 1, 1, 0},  // +z top right
+        {scale,  -scale, scale, 1, 0, 0},  // +z bottom right
+        {-scale, -scale, scale, 0, 0, 0},  // +z bottom left
+        {-scale, scale,  scale, 0, 1, 0},   // +z top left
 };
 const fp::vertex z_negative_vertices[VTX_ARR_SIZE] = {
-        {scale,  scale,  -scale, 1, 1},  // -z top right
-        {scale,  -scale, -scale, 1, 0},  // -z bottom right
-        {-scale, -scale, -scale, 0, 0},  // -z bottom left
-        {-scale, scale,  -scale, 0, 1},   // -z top left
+        // x,   y,      z,     u, v, index
+        {scale,  scale,  -scale, 1, 1, 0},  // -z top right
+        {scale,  -scale, -scale, 1, 0, 0},  // -z bottom right
+        {-scale, -scale, -scale, 0, 0, 0},  // -z bottom left
+        {-scale, scale,  -scale, 0, 1, 0},   // -z top left
 };
 
 // indices are the same on all axis but are flipped between negative / positive as a result of back-face culling.
@@ -65,7 +71,7 @@ const fp::vertex* face_decode[] = {
         z_negative_vertices
 };
 
-void fp::mesh_storage::addFace(fp::face face, const block_pos& pos) {
+void fp::mesh_storage::addFace(fp::face face, const block_pos& pos, unsigned char texture_index) {
     const auto* face_vertices = face_decode[face];
     // negatives are odd numbered, positives are even.
     const auto& face_indices = face % 2 == 0 ? positive_indices : negative_indices;
@@ -76,6 +82,7 @@ void fp::mesh_storage::addFace(fp::face face, const block_pos& pos) {
     for (int i = 0; i < VTX_ARR_SIZE; i++) {
         // first copy all the information over, since there is extra information we need to preserve like index and UV / normal
         translated_face_vertices[i] = face_vertices[i];
+        translated_face_vertices[i].index = (float) texture_index;
         // then we can apply the translation, since the face_vertex value is already there we can add the translation raw
         translated_face_vertices[i].x += (float) pos.x;
         translated_face_vertices[i].y += (float) pos.y;

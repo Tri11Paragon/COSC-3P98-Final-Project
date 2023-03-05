@@ -34,15 +34,17 @@ namespace fp::registry {
     struct block_properties {
         // how should we handle this block? Blocks with transparent textures can be added to OPAQUE blocks
         block_visibility visibility = OPAQUE;
-        // does this block produce light?
-        bool produces_light = false;
         // WebGL doesn't default to empty textures, use index 0 to store an empty texture
         std::string textureName = "Air";
-        
+        // does this block produce light?
+        bool produces_light = false;
     };
     
     constexpr block_type AIR = 0;
     constexpr block_type STONE = 1;
+    constexpr block_type DIRT = 2;
+    constexpr block_type COBBLE = 3;
+    constexpr block_type GRASS = 4;
     
     void registerBlock(block_type id, block_properties properties);
     void registerTexture(texture::file_texture* texture);
@@ -52,7 +54,7 @@ namespace fp::registry {
     void generateTexturePalette();
     void cleanup();
     
-    block_properties get(block_type id);
+    block_properties& get(block_type id);
     unsigned int getTextureID();
     texture::texture_index getTextureIndex(const std::string& name);
     
@@ -62,7 +64,9 @@ namespace fp::registry {
      */
     inline void registerDefaultBlocks(){
         registerBlock(AIR, {TRANSPARENT});
-        registerBlock(STONE, {});
+        registerBlock(STONE, {OPAQUE, "Stone"});
+        registerBlock(DIRT, {OPAQUE, "Dolph"});
+        registerBlock(COBBLE, {OPAQUE, "Sit"});
     }
     
     inline void registerDefaultTextures() {

@@ -61,12 +61,23 @@ int main() {
     for (int i = 1; i < CHUNK_SIZE; i++)
         for (int j = 0; j < 2; j++)
             for (int k = 5; k < CHUNK_SIZE; k++)
-                world->setBlock({i,j,k}, 1);
+                world->setBlock({i,j,k}, fp::registry::STONE);
+    
+    for (int i = 1; i < CHUNK_SIZE; i++)
+        for (int j = 10; j < 15; j++)
+            for (int k = 5; k < CHUNK_SIZE; k++)
+                world->setBlock({i,j,k}, fp::registry::DIRT);
+    
+    for (int i = 1; i < CHUNK_SIZE; i++)
+        for (int j = 24; j < 26; j++)
+            for (int k = 5; k < CHUNK_SIZE; k++)
+                world->setBlock({i,j,k}, fp::registry::COBBLE);
     world->setBlock({-2, 2, 2}, 1);
     world->setBlock({-2, 2, -2}, 1);
     world->setBlock({2, 2, -2}, 1);
     
     glEnable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
     glCullFace(GL_BACK);
 
 #ifdef __EMSCRIPTEN__
