@@ -15,8 +15,8 @@ void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
             for (int k = 0; k < CHUNK_SIZE; k++) {
                 auto block = chunk->storage->get({i, j, k});
-                // opaque visibility is always 0. Non-zero values (true) are what we care about since opaque blocks are completely hidden
-                if (!fp::registry::get(block).visibility) {
+                // The main chunk mesh can handle opaque and transparent textures. (Transparency will be discarded)
+                if (fp::registry::get(block).visibility <= registry::TRANSPARENT_TEXTURE) {
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i - 1, j, k})).visibility && !outside)
                         mesh->addFace(X_NEG, {i, j, k});
                     if (fp::registry::get(chunk->storage->getBounded(outside, {i + 1, j, k})).visibility && !outside)
@@ -42,7 +42,7 @@ inline void checkEdgeFaces(
         fp::mesh_storage* mesh, fp::chunk* chunk, fp::chunk* neighbour, fp::face face, const fp::block_pos& pos, const fp::block_pos& neighbour_pos
 ) {
     auto block = chunk->storage->get(pos);
-    if (!fp::registry::get(block).visibility) {
+    if (fp::registry::get(block).visibility <= fp::registry::TRANSPARENT_TEXTURE) {
         if (fp::registry::get(neighbour->storage->get(neighbour_pos)).visibility)
             mesh->addFace(face, pos);
     }
@@ -100,6 +100,9 @@ void fp::world::update() {
 
 void fp::world::render(fp::shader& shader) {
     shader.use();
+    
+    glActiveTexture(GL_TEXTURE0);
+    glBindTexture(GL_TEXTURE_2D_ARRAY, fp::registry::getTextureID());
     
     for (const auto& chunk_pair : chunk_storage) {
         auto chunk = chunk_pair.second;

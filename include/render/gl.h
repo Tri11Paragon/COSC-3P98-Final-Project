@@ -99,10 +99,12 @@ namespace fp {
              * @param attribute_number attribute position to bind
              * @param coordinate_size size of this attribute (1 for float, 2 for vec2...)
              * @param type type to store. Use GL_FLOAT mostly
-             * @param stride stride will automatically be calculated using coordinate size (4 bytes is assumed!)
+             * @param stride stride how many bytes the COMPLETE data takes in the VBO, 0 will automatically assume packed data.
              * @param offset offset into the data that this attribute is stored. Allows for weaving of data
+             * @param repeated used to specify that this is the second+ time we've used this VBO to point to data, as a result it will be not be added
+             *                 to the attribute update list and MUST be updated using the original attribute number
              */
-            void bindVBO(VBO* vbo, int attribute_number, int coordinate_size, GLenum type = GL_FLOAT, int stride = 0, long offset = 0);
+            void bindVBO(VBO* vbo, int attribute_number, int coordinate_size, GLenum type = GL_FLOAT, int stride = 0, long offset = 0, bool repeated = false);
             
             /**
              * Binds the VBO as if it was the element buffer (indices). Note: calling this more than once is not supported.

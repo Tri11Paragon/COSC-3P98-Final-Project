@@ -9,40 +9,40 @@
 constexpr float scale = 0.5f;
 
 const fp::vertex x_positive_vertices[VTX_ARR_SIZE] = {
-        {scale, scale,  scale},  // +x top right
-        {scale, scale,  -scale},  // +x bottom right
-        {scale, -scale, -scale},  // +x bottom left
-        {scale, -scale, scale}   // +x top left
+        {scale, scale,  scale, 1, 1},  // +x top right
+        {scale, scale,  -scale, 1, 0},  // +x bottom right
+        {scale, -scale, -scale, 0, 0},  // +x bottom left
+        {scale, -scale, scale, 0, 1}   // +x top left
 };
 const fp::vertex x_negative_vertices[VTX_ARR_SIZE] = {
-        {-scale, scale,  scale},  // -x top right
-        {-scale, scale,  -scale},  // -x bottom right
-        {-scale, -scale, -scale},  // -x bottom left
-        {-scale, -scale, scale}   // -x top left
+        {-scale, scale,  scale, 1, 1},  // -x top right
+        {-scale, scale,  -scale, 1, 0},  // -x bottom right
+        {-scale, -scale, -scale, 0, 0},  // -x bottom left
+        {-scale, -scale, scale, 0, 1}   // -x top left
 };
 const fp::vertex y_positive_vertices[VTX_ARR_SIZE] = {
-        {scale,  scale, scale},  // +y top right
-        {-scale, scale, scale},  // +y bottom right
-        {-scale, scale, -scale},  // +y bottom left
-        {scale,  scale, -scale},   // +y top left
+        {scale,  scale, scale, 1, 1},  // +y top right
+        {-scale, scale, scale, 1, 0},  // +y bottom right
+        {-scale, scale, -scale, 0, 0},  // +y bottom left
+        {scale,  scale, -scale, 0, 1},   // +y top left
 };
 const fp::vertex y_negative_vertices[VTX_ARR_SIZE] = {
-        {scale,  -scale, scale},  // -y top right
-        {-scale, -scale, scale},  // -y bottom right
-        {-scale, -scale, -scale},  // -y bottom left
-        {scale,  -scale, -scale},    // -y top left
+        {scale,  -scale, scale, 1, 1},  // -y top right
+        {-scale, -scale, scale, 1, 0},  // -y bottom right
+        {-scale, -scale, -scale, 0, 0},  // -y bottom left
+        {scale,  -scale, -scale, 0, 1},    // -y top left
 };
 const fp::vertex z_positive_vertices[VTX_ARR_SIZE] = {
-        {scale,  scale,  scale},  // +z top right
-        {scale,  -scale, scale},  // +z bottom right
-        {-scale, -scale, scale},  // +z bottom left
-        {-scale, scale,  scale},   // +z top left
+        {scale,  scale,  scale, 1, 1},  // +z top right
+        {scale,  -scale, scale, 1, 0},  // +z bottom right
+        {-scale, -scale, scale, 0, 0},  // +z bottom left
+        {-scale, scale,  scale, 0, 1},   // +z top left
 };
 const fp::vertex z_negative_vertices[VTX_ARR_SIZE] = {
-        {scale,  scale,  -scale},  // -z top right
-        {scale,  -scale, -scale},  // -z bottom right
-        {-scale, -scale, -scale},  // -z bottom left
-        {-scale, scale,  -scale},   // -z top left
+        {scale,  scale,  -scale, 1, 1},  // -z top right
+        {scale,  -scale, -scale, 1, 0},  // -z bottom right
+        {-scale, -scale, -scale, 0, 0},  // -z bottom left
+        {-scale, scale,  -scale, 0, 1},   // -z top left
 };
 
 // indices are the same on all axis but are flipped between negative / positive as a result of back-face culling.
@@ -74,9 +74,12 @@ void fp::mesh_storage::addFace(fp::face face, const block_pos& pos) {
     
     // generate translated vertices
     for (int i = 0; i < VTX_ARR_SIZE; i++) {
-        translated_face_vertices[i].x = face_vertices[i].x + (float) pos.x;
-        translated_face_vertices[i].y = face_vertices[i].y + (float) pos.y;
-        translated_face_vertices[i].z = face_vertices[i].z + (float) pos.z;
+        // first copy all the information over, since there is extra information we need to preserve like index and UV / normal
+        translated_face_vertices[i] = face_vertices[i];
+        // then we can apply the translation, since the face_vertex value is already there we can add the translation raw
+        translated_face_vertices[i].x += (float) pos.x;
+        translated_face_vertices[i].y += (float) pos.y;
+        translated_face_vertices[i].z += (float) pos.z;
     }
     
     for (unsigned int face_index : face_indices) {

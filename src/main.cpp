@@ -29,7 +29,7 @@ void loop(){
     world->update();
     world->render(*chunk_shader);
     
-    fp::text::drawText("Hello There", 0, 0, fp::text::FONT_18, {0,0,0, 1.0});
+    //fp::text::drawText("Hello There", 0, 0, fp::text::FONT_18, {0,0,0, 1.0});
     
     fp::camera::update();
     fp::debug::render();
@@ -82,11 +82,13 @@ int main() {
         loop();
 #endif
     
-    BLT_PRINT_ORDERED("Chunk Generator", blt::logging::TRACE, true, true);
+    BLT_PRINT_PROFILE("Chunk Generator", blt::logging::TRACE, true);
 
     delete(chunk_shader);
     delete(world);
     
+    /** !! MUST BE CALLED HERE OTHERWISE glDeleteTextures WILL BE CALLED AFTER THE GL CONTEXT IS DESTROYED! !! **/
+    fp::registry::cleanup();
     fp::text::destroy();
     fp::window::close();
     fp::settings::save("settings.txt");

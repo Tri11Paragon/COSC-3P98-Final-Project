@@ -50,9 +50,10 @@ namespace fp::registry {
     void textureInit();
     void setupTextureLoaderThreads(int count = 8);
     void generateTexturePalette();
+    void cleanup();
     
     block_properties get(block_type id);
-    unsigned int getTextureID(const std::string& name);
+    unsigned int getTextureID();
     texture::texture_index getTextureIndex(const std::string& name);
     
     

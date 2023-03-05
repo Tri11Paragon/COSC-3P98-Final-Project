@@ -10,11 +10,12 @@
 #include <string>
 #include <utility>
 #include <stb/stb_image.h>
-#include "stb/stb_image_resize.h"
 #include <util/settings.h>
 #include <unordered_map>
 #include <vector>
 #include <render/gl.h>
+#include "stb/stb_image_resize.h"
+
 
 namespace fp::texture {
     
@@ -29,24 +30,45 @@ namespace fp::texture {
              * @param path path to the texture file
              * @param name reference name for this texture. If empty the texture will use path as its identifier
              */
-            explicit file_texture(const std::string& path, const std::string& name = ""): m_Name(name.empty() ? path : name), m_Path(path) {}
+            explicit file_texture(const std::string& path, const std::string& name = ""):
+                    m_Name(name.empty() ? path : name), m_Path(path) {}
             
             static file_texture* load(file_texture*& texture) {
-                texture->m_Data = stbi_load(texture->m_Path.c_str(), &texture->width, &texture->height, &texture->channels, 0);
+                // we want to load every texture as if it has transparency,
+                // otherwise textures won't be correctly resized and loaded to the gpu
+                constexpr int channel_count = 4;
+                texture->m_Data = stbi_load(
+                        texture->m_Path.c_str(), &texture->width, &texture->height,
+                        &texture->channels, channel_count
+                );
+                texture->channels = channel_count;
                 return texture;
             }
             
-            static file_texture* resize(file_texture* texture, int target_width, int target_height) {
+            static file_texture* resize(
+                    file_texture* texture, int target_width, int target_height
+            ) {
                 if (target_width == texture->width && target_height == texture->height)
                     return texture;
-                // since stb is a c lib we must use malloc, otherwise we'd have to deal with using the right free on destruction
-                auto* output_Data = (unsigned char*) malloc(target_width * target_height * texture->channels);
-                
-                stbir_resize_uint8(
-                        texture->m_Data, texture->width, texture->height, texture->width * texture->channels, output_Data, target_width,
-                        target_height, target_width * texture->channels, texture->channels
+                // since we will be replacing the loaded data pointer, is it wise to use the allocator
+                // that matches with what stb image uses, which is malloc, since we unload with stbi_image_free -> (free)
+                auto* output_Data = (unsigned char*) malloc(
+                        target_width * target_height * texture->channels
                 );
                 
+                // resize the texture
+                if (stbir_resize_uint8(
+                        // input
+                        texture->m_Data, texture->width, texture->height, 0,
+                        // output
+                        output_Data, target_width, target_height, 0,
+                        // channels
+                        texture->channels
+                )) {
+                    BLT_WARN("Error resizing block texture image!");
+                }
+                
+                // free up the old data
                 stbi_image_free(texture->m_Data);
                 texture->m_Data = output_Data;
                 texture->width = target_width;
@@ -87,8 +109,12 @@ namespace fp::texture {
             GLint textureColorMode;
             int m_width, m_height;
             
-            gl_texture(int width, int height, GLint bind_type = GL_TEXTURE_2D, GLint color_mode = GL_RGBA):
-                    m_width(width), m_height(height), textureBindType(bind_type), textureColorMode(color_mode) {
+            gl_texture(
+                    int width, int height, GLint bind_type = GL_TEXTURE_2D,
+                    GLint color_mode = GL_RGBA
+            ):
+                    m_width(width), m_height(height), textureBindType(bind_type),
+                    textureColorMode(color_mode) {
                 glGenTextures(1, &textureID);
             }
         
@@ -122,20 +148,25 @@ namespace fp::texture {
                 return textureID;
             }
             
-            ~gl_texture() {
+            virtual ~gl_texture() {
                 glDeleteTextures(1, &textureID);
             }
     };
     
     struct gl_texture2D : public gl_texture {
         public:
-            gl_texture2D(int width, int height, GLint colorMode = GL_RGBA): gl_texture(width, height, GL_TEXTURE_2D, colorMode) {
+            gl_texture2D(int width, int height, GLint colorMode = GL_RGBA):
+                    gl_texture(width, height, GL_TEXTURE_2D, colorMode) {
                 bind();
-                glTexStorage2D(textureBindType, std::stoi(fp::settings::get("MIPMAP_LEVELS")), colorMode, width, height);
+                glTexStorage2D(
+                        textureBindType, std::stoi(fp::settings::get("MIPMAP_LEVELS")), colorMode,
+                        width, height
+                );
             }
             
             void upload(
-                    void* data, GLint dataColorMode = GL_RGBA, int level = 0, int x_offset = 0, int y_offset = 0, int sub_width = -1,
+                    void* data, GLint dataColorMode = GL_RGBA, int level = 0, int x_offset = 0,
+                    int y_offset = 0, int sub_width = -1,
                     int sub_height = -1
             ) const {
                 if (sub_width < 0)
@@ -143,7 +174,10 @@ namespace fp::texture {
                 if (sub_height < 0)
                     sub_height = m_height;
                 bind();
-                glTexSubImage2D(textureBindType, level, x_offset, y_offset, sub_width, sub_height, dataColorMode, GL_UNSIGNED_BYTE, data);
+                glTexSubImage2D(
+                        textureBindType, level, x_offset, y_offset, sub_width, sub_height,
+                        dataColorMode, GL_UNSIGNED_BYTE, data
+                );
                 unbind();
             }
             
@@ -156,15 +190,17 @@ namespace fp::texture {
         protected:
             int m_layers;
         public:
-            gl_texture2D_array(int width, int height, int layers, GLint colorMode = GL_RGBA):
+            gl_texture2D_array(int width, int height, int layers, GLint colorMode = GL_RGBA8):
                     gl_texture(width, height, GL_TEXTURE_2D_ARRAY, colorMode), m_layers(layers) {
                 bind();
-                glTexStorage3D(textureBindType, std::stoi(fp::settings::get("MIPMAP_LEVELS")), colorMode, width, height, layers);
+                // 3 mipmaps is about good since anything smaller is probably useless (32x32(0) -> 16x16(1) -> 8x8(2))
+                glTexStorage3D(textureBindType, 3, colorMode, width, height, layers);
                 BLT_DEBUG("Creating 2D Texture Array with ID: %d", textureID);
             }
             
             void upload(
-                    void* data, int index, GLint dataColorMode = GL_RGBA, int level = 0, int x_offset = 0, int y_offset = 0, int sub_width = -1,
+                    void* data, int index, GLint dataColorMode = GL_RGBA, int level = 0,
+                    int x_offset = 0, int y_offset = 0, int sub_width = -1,
                     int sub_height = -1
             ) const {
                 if (sub_width < 0)
@@ -172,7 +208,10 @@ namespace fp::texture {
                 if (sub_height < 0)
                     sub_height = m_height;
                 bind();
-                glTexSubImage3D(textureBindType, level, x_offset, y_offset, index, sub_width, sub_height, 1, dataColorMode, GL_UNSIGNED_BYTE, data);
+                glTexSubImage3D(
+                        textureBindType, level, x_offset, y_offset, index, sub_width, sub_height, 1,
+                        dataColorMode, GL_UNSIGNED_BYTE, data
+                );
                 unbind();
             }
     };
@@ -196,12 +235,15 @@ namespace fp::texture {
             palette() = default;
             
             void generateGLTexture() {
-                delete texture_array;
                 auto texture_size = std::stoi(fp::settings::get("TEXTURE_SIZE"));
-                texture_array = new gl_texture2D_array(texture_size, texture_size, (int) textures.size());
+                texture_array = new gl_texture2D_array(
+                        texture_size, texture_size, (int) textures.size());
                 texture_array->bind();
                 for (const auto t : textures) {
-                    texture_array->upload(t->data(), textureIndices[t->getName()].i, t->getChannels() == 4 ? GL_RGBA : GL_RGB);
+                    texture_array->upload(
+                            t->data(), textureIndices[t->getName()].i,
+                            t->getChannels() == 4 ? GL_RGBA : GL_RGB
+                    );
                     BLT_TRACE("Loaded texture %s", t->getName().c_str());
                 }
                 texture_array->setDefaults();
@@ -216,7 +258,7 @@ namespace fp::texture {
             bool hasTexture(const std::string& name) {
                 return textureIndices[name].i >= 0;
             }
-        
+            
             texture_index getTexture(const std::string& name) {
                 return textureIndices[name].i;
             }
@@ -226,6 +268,8 @@ namespace fp::texture {
             }
             
             ~palette() {
+                for (auto* t : textures)
+                    delete t;
                 delete texture_array;
             };
     };

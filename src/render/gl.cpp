@@ -72,7 +72,7 @@ namespace fp {
         glDeleteVertexArrays(1, &vaoID);
     }
     
-    void VAO::bindVBO(VBO* vbo, int attribute_number, int coordinate_size, GLenum type, int stride, long offset) {
+    void VAO::bindVBO(VBO* vbo, int attribute_number, int coordinate_size, GLenum type, int stride, long offset, bool repeated) {
         bind();
         vbo->bind();
         
@@ -82,7 +82,8 @@ namespace fp {
         glEnableVertexAttribArray(attribute_number);
         
         // since attribute number must be unique we can use it to reference the VBO if we need to update it.
-        VBOs.insert({attribute_number, vbo});
+        if (!repeated)
+            VBOs.insert({attribute_number, vbo});
     }
     
     void VAO::bindElementVBO(VBO* vbo) {
@@ -172,7 +173,7 @@ namespace fp {
         
             glGetProgramInfoLog(programID, log_length + 1, nullptr, infoLog.buffer);
             BLT_ERROR("--- --- --- --- --- --- --- --- ---");
-            BLT_ERROR("Unable to link program of ID: %", programID);
+            BLT_ERROR("Unable to link program of ID: %d", programID);
             BLT_ERROR(vertex_source);
             BLT_ERROR(fragment_source);
             BLT_ERROR(geometry_source);

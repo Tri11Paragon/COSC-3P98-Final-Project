@@ -13,7 +13,7 @@
 
 std::unordered_map<fp::block_type, fp::registry::block_properties> blocks;
 
-fp::texture::palette base_palette;
+fp::texture::palette* base_palette;
 
 std::mutex palette_mutex {};
 std::mutex main_mutex {};
@@ -41,12 +41,12 @@ void fp::registry::registerTexture(fp::texture::file_texture* texture) {
     BLT_TRACE("Queued texture %s", texture->getName().c_str());
 }
 
-unsigned int fp::registry::getTextureID(const std::string& name) {
-    return base_palette.getTextureID();
+unsigned int fp::registry::getTextureID() {
+    return base_palette->getTextureID();
 }
 
 fp::texture::texture_index fp::registry::getTextureIndex(const std::string& name) {
-    return base_palette.getTexture(name);
+    return base_palette->getTexture(name);
 }
 
 void fp::registry::generateTexturePalette() {
@@ -57,7 +57,7 @@ void fp::registry::generateTexturePalette() {
     BLT_INFO("Finished loading all textures!");
     delete texture_queue;
     delete[] texture_loader_threads;
-    base_palette.generateGLTexture();
+    base_palette->generateGLTexture();
     BLT_INFO("Palette generated!");
 }
 
@@ -80,7 +80,7 @@ void fp::registry::setupTextureLoaderThreads(int count) {
                 auto t = texture::file_texture::resize(texture::file_texture::load(top), texture_size, texture_size);
                 
                 std::scoped_lock<std::mutex> lock(palette_mutex);
-                base_palette.registerTexture(t);
+                base_palette->registerTexture(t);
                 BLT_TRACE("Loaded file %s", t->getName().c_str());
             }
             std::scoped_lock<std::mutex> lock{completion_mutex};
@@ -96,4 +96,9 @@ void fp::registry::setupTextureLoaderThreads(int count) {
 
 void fp::registry::textureInit() {
     texture_queue = new std::queue<fp::texture::file_texture*>();
+    base_palette = new texture::palette();
+}
+
+void fp::registry::cleanup() {
+    delete base_palette;
 }
