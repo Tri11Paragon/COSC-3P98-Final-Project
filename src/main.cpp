@@ -39,7 +39,7 @@ void loop(){
 }
 
 int main() {
-    auto logging_properties = blt::logging::LOG_PROPERTIES{true, true, true, "./"};
+    auto logging_properties = blt::logging::LOG_PROPERTIES{true, true, false, "./"};
     logging_properties.m_logFullPath = true;
     
 #ifdef __EMSCRIPTEN__
@@ -56,20 +56,6 @@ int main() {
     
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
     world = new fp::world();
-    
-    world->setBlock({0,0,0}, fp::registry::STONE);
-    
-    for (int i = 0; i < CHUNK_SIZE; i++) {
-        for (int j = 0; j < CHUNK_SIZE; j++) {
-            for (int k = 0; k < CHUNK_SIZE; k++) {
-                world->setBlock({i, j, k}, (int)(stb_perlin_fbm_noise3(i / 8.0, j / 8.0, k / 8.0, 2.0, 0.5, 6) > 0.5 ? fp::registry::STONE : fp::registry::AIR));
-            }
-        }
-    }
-    world->setBlock({-2, 2, 2}, fp::registry::STONE);
-    world->setBlock({-2, 2, -2}, fp::registry::STONE);
-    world->setBlock({-5, 6, -5}, fp::registry::COBBLE);
-    world->setBlock({2, 2, -2}, fp::registry::STONE);
     
     glEnable(GL_CULL_FACE);
     glEnable(GL_DEPTH_TEST);

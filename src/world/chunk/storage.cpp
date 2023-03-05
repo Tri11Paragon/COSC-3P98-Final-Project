@@ -80,7 +80,8 @@ void fp::mesh_storage::addFace(fp::face face, const block_pos& pos, unsigned cha
     
     // generate translated vertices
     for (int i = 0; i < VTX_ARR_SIZE; i++) {
-        // first copy all the information over, since there is extra information we need to preserve like index and UV / normal
+        // first copy all the default vertex information over,
+        // since there is extra information we need to preserve like UVs and normals
         translated_face_vertices[i] = face_vertices[i];
         translated_face_vertices[i].index = (float) texture_index;
         // then we can apply the translation, since the face_vertex value is already there we can add the translation raw
@@ -100,11 +101,15 @@ void fp::mesh_storage::addFace(fp::face face, const block_pos& pos, unsigned cha
             auto current_index_pos = vertices.size();
             vertices.push_back(index_vertex);
             // Since we are inserting using the order of the face_indices this will ensure that the triangle vertices are ordered correctly (outward facing)
-            created_vertices_index.insert({index_vertex, current_index_pos});
+            created_vertices_index[index_vertex] = current_index_pos;
             indices.push_back(current_index_pos);
         } else {
             // does exist in the face_vertices we can use that knowledge to reduce the total # of vertices
             indices.push_back(find_existing_vertex->second);
         }
     }
+}
+
+void fp::mesh_storage::optimizeFaces() {
+
 }

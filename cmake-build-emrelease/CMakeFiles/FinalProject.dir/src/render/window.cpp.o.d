@@ -27,7 +27,8 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__nullptr \
   /usr/share/emscripten/cache/sysroot/include/GL/gl.h \
   /usr/share/emscripten/cache/sysroot/include/GL/glext.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/math/math.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/math/vectors.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/initializer_list \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/cstddef \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/version \
@@ -43,6 +44,7 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/type_traits \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/limits \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__undef_macros \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/math/matrix.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/gl.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/vector \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__bit_reference \

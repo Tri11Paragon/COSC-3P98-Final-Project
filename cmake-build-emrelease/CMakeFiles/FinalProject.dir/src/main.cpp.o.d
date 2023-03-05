@@ -285,6 +285,30 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/math.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/__node_handle \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/optional \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/fstream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__locale \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/mutex \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__mutex_base \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/system_error \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__errc \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cerrno \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale.h \
+  /usr/share/emscripten/cache/sysroot/include/locale.h \
+  /usr/share/emscripten/cache/sysroot/include/compat/xlocale.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/istream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/ostream \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/bitset \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/ios \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/cstdarg \
+  /usr/share/emscripten/cache/sysroot/include/compat/stdarg.h \
+  /usr/lib/llvm-14/lib/clang/14.0.6/include/stdarg.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/filesystem \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/stack \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/deque \
+  /usr/share/emscripten/cache/sysroot/include/c++/v1/iomanip \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/window.h \
   /usr/share/emscripten/cache/sysroot/include/GLES2/gl2.h \
   /usr/share/emscripten/cache/sysroot/include/GLES2/gl2platform.h \
@@ -300,35 +324,25 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/GLFW/glfw3.h \
   /usr/share/emscripten/cache/sysroot/include/GL/gl.h \
   /usr/share/emscripten/cache/sysroot/include/GL/glext.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/math.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/math/math.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/math/vectors.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/math/matrix.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/gl.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/BLT/include/blt/std/string.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/iostream \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/ios \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__locale \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/mutex \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__mutex_base \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/system_error \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__errc \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/cerrno \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale.h \
-  /usr/share/emscripten/cache/sysroot/include/locale.h \
-  /usr/share/emscripten/cache/sysroot/include/compat/xlocale.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/istream \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/ostream \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/bitset \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/locale \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/cstdarg \
-  /usr/share/emscripten/cache/sysroot/include/compat/stdarg.h \
-  /usr/lib/llvm-14/lib/clang/14.0.6/include/stdarg.h \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/streambuf \
-  /usr/share/emscripten/cache/sysroot/include/c++/v1/__bsd_locale_fallbacks.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/sstream \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/ui/text.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/ui/debug.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/shaders/chunk.frag \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/shaders/chunk.vert \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/camera.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/chunk/world.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/chunk/storage.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/chunk/typedefs.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/registry.h
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/world/registry.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/render/textures.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/stb/stb_image.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/util/settings.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/stb/stb_image_resize.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/util/math.h \
+  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/stb/stb_perlin.h

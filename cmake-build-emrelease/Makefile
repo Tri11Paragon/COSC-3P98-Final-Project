@@ -295,6 +295,54 @@ src/render/gl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/gl.cpp.s
 .PHONY : src/render/gl.cpp.s
 
+src/render/textures.o: src/render/textures.cpp.o
+.PHONY : src/render/textures.o
+
+# target to build an object file
+src/render/textures.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/textures.cpp.o
+.PHONY : src/render/textures.cpp.o
+
+src/render/textures.i: src/render/textures.cpp.i
+.PHONY : src/render/textures.i
+
+# target to preprocess a source file
+src/render/textures.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/textures.cpp.i
+.PHONY : src/render/textures.cpp.i
+
+src/render/textures.s: src/render/textures.cpp.s
+.PHONY : src/render/textures.s
+
+# target to generate assembly for a file
+src/render/textures.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/textures.cpp.s
+.PHONY : src/render/textures.cpp.s
+
+src/render/ui/debug.o: src/render/ui/debug.cpp.o
+.PHONY : src/render/ui/debug.o
+
+# target to build an object file
+src/render/ui/debug.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o
+.PHONY : src/render/ui/debug.cpp.o
+
+src/render/ui/debug.i: src/render/ui/debug.cpp.i
+.PHONY : src/render/ui/debug.i
+
+# target to preprocess a source file
+src/render/ui/debug.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.i
+.PHONY : src/render/ui/debug.cpp.i
+
+src/render/ui/debug.s: src/render/ui/debug.cpp.s
+.PHONY : src/render/ui/debug.s
+
+# target to generate assembly for a file
+src/render/ui/debug.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.s
+.PHONY : src/render/ui/debug.cpp.s
+
 src/render/ui/text.o: src/render/ui/text.cpp.o
 .PHONY : src/render/ui/text.o
 
@@ -342,6 +390,54 @@ src/render/window.s: src/render/window.cpp.s
 src/render/window.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/render/window.cpp.s
 .PHONY : src/render/window.cpp.s
+
+src/util/math.o: src/util/math.cpp.o
+.PHONY : src/util/math.o
+
+# target to build an object file
+src/util/math.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/util/math.cpp.o
+.PHONY : src/util/math.cpp.o
+
+src/util/math.i: src/util/math.cpp.i
+.PHONY : src/util/math.i
+
+# target to preprocess a source file
+src/util/math.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/util/math.cpp.i
+.PHONY : src/util/math.cpp.i
+
+src/util/math.s: src/util/math.cpp.s
+.PHONY : src/util/math.s
+
+# target to generate assembly for a file
+src/util/math.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/util/math.cpp.s
+.PHONY : src/util/math.cpp.s
+
+src/util/settings.o: src/util/settings.cpp.o
+.PHONY : src/util/settings.o
+
+# target to build an object file
+src/util/settings.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/util/settings.cpp.o
+.PHONY : src/util/settings.cpp.o
+
+src/util/settings.i: src/util/settings.cpp.i
+.PHONY : src/util/settings.i
+
+# target to preprocess a source file
+src/util/settings.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/util/settings.cpp.i
+.PHONY : src/util/settings.cpp.i
+
+src/util/settings.s: src/util/settings.cpp.s
+.PHONY : src/util/settings.s
+
+# target to generate assembly for a file
+src/util/settings.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/util/settings.cpp.s
+.PHONY : src/util/settings.cpp.s
 
 src/world/chunk/storage.o: src/world/chunk/storage.cpp.o
 .PHONY : src/world/chunk/storage.o
@@ -441,12 +537,24 @@ help:
 	@echo "... src/render/gl.o"
 	@echo "... src/render/gl.i"
 	@echo "... src/render/gl.s"
+	@echo "... src/render/textures.o"
+	@echo "... src/render/textures.i"
+	@echo "... src/render/textures.s"
+	@echo "... src/render/ui/debug.o"
+	@echo "... src/render/ui/debug.i"
+	@echo "... src/render/ui/debug.s"
 	@echo "... src/render/ui/text.o"
 	@echo "... src/render/ui/text.i"
 	@echo "... src/render/ui/text.s"
 	@echo "... src/render/window.o"
 	@echo "... src/render/window.i"
 	@echo "... src/render/window.s"
+	@echo "... src/util/math.o"
+	@echo "... src/util/math.i"
+	@echo "... src/util/math.s"
+	@echo "... src/util/settings.o"
+	@echo "... src/util/settings.i"
+	@echo "... src/util/settings.s"
 	@echo "... src/world/chunk/storage.o"
 	@echo "... src/world/chunk/storage.i"
 	@echo "... src/world/chunk/storage.s"

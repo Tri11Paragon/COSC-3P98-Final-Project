@@ -62,6 +62,8 @@ namespace fp {
              */
             void addFace(face face, const block_pos& pos, unsigned char texture_index);
             
+            void optimizeFaces();
+            
             inline std::vector<vertex>& getVertices() {
                 return vertices;
             }

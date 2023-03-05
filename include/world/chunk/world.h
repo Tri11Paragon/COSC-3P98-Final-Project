@@ -26,7 +26,8 @@ namespace fp {
         }
         
         static inline block_pos world_to_internal(const block_pos& coord) {
-            return {world_to_internal(coord.x), world_to_internal(coord.y), world_to_internal(coord.z)};
+            return {world_to_internal(coord.x), world_to_internal(coord.y),
+                    world_to_internal(coord.z)};
         }
         
         /**
@@ -80,58 +81,19 @@ namespace fp {
                 chunk_vao = new VAO();
                 auto vbo = new VBO(ARRAY_BUFFER, nullptr, 0);
                 auto data_size = 3 * sizeof(float) + 3 * sizeof(float);
-                chunk_vao->bindVBO(vbo, 0, 3, GL_FLOAT, (int)data_size, 0);
-                chunk_vao->bindVBO(vbo, 1, 3, GL_FLOAT, (int)data_size, 3 * sizeof(float), true);
+                chunk_vao->bindVBO(vbo, 0, 3, GL_FLOAT, (int) data_size, 0);
+                chunk_vao->bindVBO(vbo, 1, 3, GL_FLOAT, (int) data_size, 3 * sizeof(float), true);
                 chunk_vao->bindElementVBO(new VBO(ELEMENT_BUFFER, nullptr, 0));
             }
             
-            inline void render(shader& shader){
-                if (render_size > 0) {
-                    blt::mat4x4 translation{};
-                    translation.translate((float) pos.x * CHUNK_SIZE,
-                                          (float) pos.y * CHUNK_SIZE,
-                                          (float) pos.z * CHUNK_SIZE
-                    );
-                    shader.setMatrix("translation", translation);
-                    // bind the chunk's VAO
-                    chunk_vao->bind();
-                    // despite binding the element buffer at creation time, this is required.
-                    chunk_vao->getVBO(-1)->bind();
-                    glEnableVertexAttribArray(0);
-                    glEnableVertexAttribArray(1);
-                    glEnableVertexAttribArray(2);
-                    glDrawElements(GL_TRIANGLES, (int) render_size, GL_UNSIGNED_INT, nullptr);
-                    glDisableVertexAttribArray(2);
-                    glDisableVertexAttribArray(1);
-                    glDisableVertexAttribArray(0);
-                }
-            }
-        
-            inline void updateChunkMesh(){
-                auto& vertices = mesh->getVertices();
-                auto& indices = mesh->getIndices();
-                
-                BLT_DEBUG(
-                        "Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%d, %d) bytes!",
-                        pos.x, pos.y, pos.z,
-                        vertices.size(), indices.size(), vertices.size() * sizeof(vertex),
-                        indices.size() * sizeof(unsigned int));
-                
-                // upload the new vertices to the GPU
-                chunk_vao->getVBO(0)->update(vertices);
-                chunk_vao->getVBO(-1)->update(indices);
-                render_size = indices.size();
+            void render(shader& shader);
             
-                // delete the local chunk mesh memory, since we no longer need to store it.
-                delete (mesh);
-                mesh = nullptr;
-                markDone();
-            }
+            void updateChunkMesh();
             
             /**
              * Mark the chunk as completely dirty and in need of a full check refresh
              */
-            inline void markDirty(){
+            inline void markDirty() {
                 dirtiness = FULL_MESH;
             }
             
@@ -146,39 +108,43 @@ namespace fp {
             /**
              * Full chunk mesh is now completely generated and waiting on uploading to the GPU
              */
-            inline void markComplete(){
+            inline void markComplete() {
                 dirtiness = REFRESH;
             }
             
             /**
              * Mesh uploading complete, chunk meshing is now done and inactive
              */
-            inline void markDone(){
+            inline void markDone() {
                 dirtiness = OKAY;
             }
-        
+            
             [[nodiscard]] inline block_storage*& getBlockStorage() {
                 return storage;
             }
-        
-            [[nodiscard]] inline mesh_storage*& getMeshStorage(){
+            
+            [[nodiscard]] inline mesh_storage*& getMeshStorage() {
                 return mesh;
             }
-        
-            [[nodiscard]] inline VAO*& getVAO(){
+            
+            [[nodiscard]] inline VAO*& getVAO() {
                 return chunk_vao;
             }
-        
+            
             [[nodiscard]] inline chunk_pos getPos() const {
                 return pos;
             }
-        
+            
             [[nodiscard]] inline chunk_mesh_status getDirtiness() const {
                 return dirtiness;
             }
-        
+            
             [[nodiscard]] inline chunk_update_status& getStatus() {
                 return status;
+            }
+            
+            inline void setStatus(const chunk_update_status& new_status) {
+                status = new_status;
             }
             
             ~chunk() {
@@ -206,7 +172,7 @@ namespace fp {
             
             void generateChunkMesh(chunk* chunk);
             
-            static chunk* generateChunk(const chunk_pos& pos);
+            chunk* generateChunk(const chunk_pos& pos);
             
             inline void getNeighbours(const chunk_pos& pos, chunk_neighbours& neighbours) {
                 neighbours[X_POS] = getChunk(chunk_pos{pos.x + 1, pos.y, pos.z});
@@ -218,18 +184,20 @@ namespace fp {
             }
             
             inline void insertChunk(chunk* chunk) {
+                if (chunk == nullptr)
+                    return;
                 chunk_storage.insert({chunk->getPos(), chunk});
                 
                 chunk_neighbours chunkNeighbours{};
                 getNeighbours(chunk->getPos(), chunkNeighbours);
                 
-                for (auto* p : chunkNeighbours.neighbours){
+                for (auto* p : chunkNeighbours.neighbours) {
                     if (p)
-                        p->getStatus() = NEIGHBOUR_CREATE;
+                        p->setStatus(NEIGHBOUR_CREATE);
                 }
             }
             
-            inline chunk* getChunk(const chunk_pos& pos){
+            inline chunk* getChunk(const chunk_pos& pos) {
                 const auto map_pos = chunk_storage.find(pos);
                 if (map_pos == chunk_storage.end())
                     return nullptr;

@@ -9,11 +9,10 @@
 #include <queue>
 #include <render/camera.h>
 #include "stb/stb_perlin.h"
+#include <blt/std/format.h>
 
 void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
     BLT_START_INTERVAL("Chunk Mesh", "Full Mesh");
-    // checks to outside the bounds of the chunk should not have faces added. this will be handled by the partial mesh!
-    bool outside = false;
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
@@ -109,7 +108,7 @@ void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
 
 void fp::world::generateChunkMesh(fp::chunk* chunk) {
     if (chunk->getMeshStorage() == nullptr)
-        chunk->getMeshStorage() = new mesh_storage;
+        chunk->getMeshStorage() = new mesh_storage();
     
     if (chunk->getDirtiness() == FULL_MESH) { // full chunk mesh
         generateFullMesh(chunk->getMeshStorage(), chunk);
@@ -181,6 +180,8 @@ void fp::world::render(fp::shader& shader) {
 }
 
 fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
+    if (this->getChunk(pos))
+        return nullptr;
     BLT_START_INTERVAL("Chunk Generate", "Instantiate");
     auto* c = new chunk(pos);
     block_storage*& storage = c->getBlockStorage();
@@ -205,4 +206,47 @@ fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
     BLT_END_INTERVAL("Chunk Generate", "Instantiate");
     
     return c;
+}
+
+void fp::chunk::render(fp::shader& shader) {
+    if (render_size > 0) {
+        blt::mat4x4 translation{};
+        translation.translate((float) pos.x * CHUNK_SIZE,
+                              (float) pos.y * CHUNK_SIZE,
+                              (float) pos.z * CHUNK_SIZE
+        );
+        shader.setMatrix("translation", translation);
+        // bind the chunk's VAO
+        chunk_vao->bind();
+        // despite binding the element buffer at creation time, this is required.
+        chunk_vao->getVBO(-1)->bind();
+        glEnableVertexAttribArray(0);
+        glEnableVertexAttribArray(1);
+        glEnableVertexAttribArray(2);
+        glDrawElements(GL_TRIANGLES, (int) render_size, GL_UNSIGNED_INT, nullptr);
+        glDisableVertexAttribArray(2);
+        glDisableVertexAttribArray(1);
+        glDisableVertexAttribArray(0);
+    }
+}
+
+void fp::chunk::updateChunkMesh() {
+    auto& vertices = mesh->getVertices();
+    auto& indices = mesh->getIndices();
+    
+    BLT_DEBUG(
+            "Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%s, %s) bytes!",
+            pos.x, pos.y, pos.z,
+            vertices.size(), indices.size(), blt::string::fromBytes(vertices.size() * sizeof(vertex)).c_str(),
+            blt::string::fromBytes(indices.size() * sizeof(unsigned int)).c_str());
+    
+    // upload the new vertices to the GPU
+    chunk_vao->getVBO(0)->update(vertices);
+    chunk_vao->getVBO(-1)->update(indices);
+    render_size = indices.size();
+    
+    // delete the local chunk mesh memory, since we no longer need to store it.
+    delete (mesh);
+    mesh = nullptr;
+    markDone();
 }

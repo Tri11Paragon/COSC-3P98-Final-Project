@@ -117,11 +117,41 @@ CMakeFiles/FinalProject.dir/src/render/gl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/render/gl.cpp.s"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/gl.cpp" -o CMakeFiles/FinalProject.dir/src/render/gl.cpp.s
 
+CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
+CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/textures.cpp
+CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProject.dir/src/render/textures.cpp.o"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/render/textures.cpp.o -MF CMakeFiles/FinalProject.dir/src/render/textures.cpp.o.d -o CMakeFiles/FinalProject.dir/src/render/textures.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/textures.cpp"
+
+CMakeFiles/FinalProject.dir/src/render/textures.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/render/textures.cpp.i"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/textures.cpp" > CMakeFiles/FinalProject.dir/src/render/textures.cpp.i
+
+CMakeFiles/FinalProject.dir/src/render/textures.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/render/textures.cpp.s"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/textures.cpp" -o CMakeFiles/FinalProject.dir/src/render/textures.cpp.s
+
+CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
+CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/ui/debug.cpp
+CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o -MF CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o.d -o CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/ui/debug.cpp"
+
+CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.i"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/ui/debug.cpp" > CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.i
+
+CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.s"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/ui/debug.cpp" -o CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.s
+
 CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/ui/text.cpp
 CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o -MF CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o.d -o CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/ui/text.cpp"
 
 CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.i: cmake_force
@@ -136,7 +166,7 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CMakeFiles/FinalProject.dir
 CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/render/window.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/render/window.cpp
 CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FinalProject.dir/src/render/window.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FinalProject.dir/src/render/window.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/render/window.cpp.o -MF CMakeFiles/FinalProject.dir/src/render/window.cpp.o.d -o CMakeFiles/FinalProject.dir/src/render/window.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/window.cpp"
 
 CMakeFiles/FinalProject.dir/src/render/window.cpp.i: cmake_force
@@ -147,11 +177,41 @@ CMakeFiles/FinalProject.dir/src/render/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/render/window.cpp.s"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/render/window.cpp" -o CMakeFiles/FinalProject.dir/src/render/window.cpp.s
 
+CMakeFiles/FinalProject.dir/src/util/math.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/util/math.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
+CMakeFiles/FinalProject.dir/src/util/math.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/util/math.cpp
+CMakeFiles/FinalProject.dir/src/util/math.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FinalProject.dir/src/util/math.cpp.o"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/util/math.cpp.o -MF CMakeFiles/FinalProject.dir/src/util/math.cpp.o.d -o CMakeFiles/FinalProject.dir/src/util/math.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/util/math.cpp"
+
+CMakeFiles/FinalProject.dir/src/util/math.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/util/math.cpp.i"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/src/util/math.cpp" > CMakeFiles/FinalProject.dir/src/util/math.cpp.i
+
+CMakeFiles/FinalProject.dir/src/util/math.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/util/math.cpp.s"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/util/math.cpp" -o CMakeFiles/FinalProject.dir/src/util/math.cpp.s
+
+CMakeFiles/FinalProject.dir/src/util/settings.cpp.o: CMakeFiles/FinalProject.dir/flags.make
+CMakeFiles/FinalProject.dir/src/util/settings.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
+CMakeFiles/FinalProject.dir/src/util/settings.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/util/settings.cpp
+CMakeFiles/FinalProject.dir/src/util/settings.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/FinalProject.dir/src/util/settings.cpp.o"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/util/settings.cpp.o -MF CMakeFiles/FinalProject.dir/src/util/settings.cpp.o.d -o CMakeFiles/FinalProject.dir/src/util/settings.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/util/settings.cpp"
+
+CMakeFiles/FinalProject.dir/src/util/settings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/FinalProject.dir/src/util/settings.cpp.i"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/brett/Documents/Brock/CS 3P98/Final Project/src/util/settings.cpp" > CMakeFiles/FinalProject.dir/src/util/settings.cpp.i
+
+CMakeFiles/FinalProject.dir/src/util/settings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/FinalProject.dir/src/util/settings.cpp.s"
+	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/brett/Documents/Brock/CS 3P98/Final Project/src/util/settings.cpp" -o CMakeFiles/FinalProject.dir/src/util/settings.cpp.s
+
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CMakeFiles/FinalProject.dir/flags.make
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/world/chunk/storage.cpp
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o -MF CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o.d -o CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/storage.cpp"
 
 CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.i: cmake_force
@@ -166,7 +226,7 @@ CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CMakeFiles/FinalProject
 CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/world/chunk/world.cpp
 CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o -MF CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o.d -o CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/chunk/world.cpp"
 
 CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.i: cmake_force
@@ -181,7 +241,7 @@ CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CMakeFiles/FinalProject.di
 CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CMakeFiles/FinalProject.dir/includes_CXX.rsp
 CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/src/world/registry.cpp
 CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CMakeFiles/FinalProject.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FinalProject.dir/src/world/registry.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/FinalProject.dir/src/world/registry.cpp.o"
 	/usr/bin/em++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FinalProject.dir/src/world/registry.cpp.o -MF CMakeFiles/FinalProject.dir/src/world/registry.cpp.o.d -o CMakeFiles/FinalProject.dir/src/world/registry.cpp.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/src/world/registry.cpp"
 
 CMakeFiles/FinalProject.dir/src/world/registry.cpp.i: cmake_force
@@ -197,8 +257,12 @@ FinalProject_OBJECTS = \
 "CMakeFiles/FinalProject.dir/src/main.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/camera.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/gl.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/render/textures.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/render/window.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/util/math.cpp.o" \
+"CMakeFiles/FinalProject.dir/src/util/settings.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o" \
 "CMakeFiles/FinalProject.dir/src/world/registry.cpp.o"
@@ -209,18 +273,22 @@ FinalProject_EXTERNAL_OBJECTS =
 FinalProject.js: CMakeFiles/FinalProject.dir/src/main.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/camera.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/gl.cpp.o
+FinalProject.js: CMakeFiles/FinalProject.dir/src/render/textures.cpp.o
+FinalProject.js: CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/render/window.cpp.o
+FinalProject.js: CMakeFiles/FinalProject.dir/src/util/math.cpp.o
+FinalProject.js: CMakeFiles/FinalProject.dir/src/util/settings.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/world/registry.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/build.make
 FinalProject.js: libraries/BLT/libBLT.a
-FinalProject.js: libraries/freetype-2.13.0/libfreetyped.a
+FinalProject.js: libraries/freetype-2.13.0/libfreetype.a
 FinalProject.js: CMakeFiles/FinalProject.dir/linkLibs.rsp
 FinalProject.js: CMakeFiles/FinalProject.dir/objects1
 FinalProject.js: CMakeFiles/FinalProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable FinalProject.js"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable FinalProject.js"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FinalProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
