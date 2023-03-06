@@ -11,41 +11,6 @@
 #include "stb/stb_perlin.h"
 #include <blt/std/format.h>
 
-void fp::world::generateFullMesh(mesh_storage* mesh, fp::chunk* chunk) {
-    BLT_START_INTERVAL("Chunk Mesh", "Full Mesh");
-    
-    for (int i = 0; i < CHUNK_SIZE; i++) {
-        for (int j = 0; j < CHUNK_SIZE; j++) {
-            for (int k = 0; k < CHUNK_SIZE; k++) {
-                auto*& storage = chunk->getBlockStorage();
-                
-                auto& block = fp::registry::get(storage->get({i, j, k}));
-                
-                auto texture_index = fp::registry::getTextureIndex(block.textureName);
-                
-                // The main chunk mesh can handle opaque and transparent textures. (Transparency will be discarded)
-                if (block.visibility <= registry::TRANSPARENT_TEXTURE) {
-                    if (!storage->checkBlockVisibility({i - 1, j, k}))
-                        mesh->addFace(X_NEG, {i, j, k}, texture_index);
-                    if (!storage->checkBlockVisibility({i + 1, j, k}))
-                        mesh->addFace(X_POS, {i, j, k}, texture_index);
-                    if (!storage->checkBlockVisibility({i, j - 1, k}))
-                        mesh->addFace(Y_NEG, {i, j, k}, texture_index);
-                    if (!storage->checkBlockVisibility({i, j + 1, k}))
-                        mesh->addFace(Y_POS, {i, j, k}, texture_index);
-                    if (!storage->checkBlockVisibility({i, j, k - 1}))
-                        mesh->addFace(Z_NEG, {i, j, k}, texture_index);
-                    if (!storage->checkBlockVisibility({i, j, k + 1}))
-                        mesh->addFace(Z_POS, {i, j, k}, texture_index);
-                }
-            }
-        }
-    }
-    
-    chunk->markPartialComplete();
-    BLT_END_INTERVAL("Chunk Mesh", "Full Mesh");
-}
-
 inline void checkEdgeFaces(
         fp::mesh_storage* mesh, fp::chunk* chunk, fp::chunk* neighbour, fp::face face,
         const fp::block_pos& pos, const fp::block_pos& neighbour_pos
@@ -60,20 +25,53 @@ inline void checkEdgeFaces(
     }
 }
 
-void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
-    BLT_START_INTERVAL("Chunk Mesh", "Edge Mesh");
-    // don't try to regen the chunk mesh unless there is a chance all neighbours are not null
+void fp::world::generateChunkMesh(chunk* chunk) {
+    // don't re-mesh unless requested
+    if (chunk->getDirtiness() != DIRTY)
+        return;
+    // don't try to re-mesh the chunk unless there is a chance all neighbours are not null
     if (chunk->getStatus() != chunk_update_status::NEIGHBOUR_CREATE)
         return;
     
     chunk_neighbours neighbours{};
     getNeighbours(chunk->getPos(), neighbours);
     
-    
     // if none of the neighbours exist we cannot continue!
     for (auto* neighbour : neighbours.neighbours) {
         if (!neighbour)
             return;
+    }
+    
+    auto* mesh = new mesh_storage();
+    
+    BLT_START_INTERVAL("Chunk", "Mesh");
+    
+    auto*& block_storage = chunk->getBlockStorage();
+    
+    for (int i = 0; i < CHUNK_SIZE; i++) {
+        for (int j = 0; j < CHUNK_SIZE; j++) {
+            for (int k = 0; k < CHUNK_SIZE; k++) {
+                auto& block = fp::registry::get(block_storage->get({i, j, k}));
+                
+                auto texture_index = fp::registry::getTextureIndex(block.textureName);
+                
+                // The main chunk mesh can handle opaque and transparent textures. (Transparency will be discarded)
+                if (block.visibility <= registry::TRANSPARENT_TEXTURE) {
+                    if (block_storage->checkBlockVisibility({i - 1, j, k}))
+                        mesh->addFace(X_NEG, {i, j, k}, texture_index);
+                    if (block_storage->checkBlockVisibility({i + 1, j, k}))
+                        mesh->addFace(X_POS, {i, j, k}, texture_index);
+                    if (block_storage->checkBlockVisibility({i, j - 1, k}))
+                        mesh->addFace(Y_NEG, {i, j, k}, texture_index);
+                    if (block_storage->checkBlockVisibility({i, j + 1, k}))
+                        mesh->addFace(Y_POS, {i, j, k}, texture_index);
+                    if (block_storage->checkBlockVisibility({i, j, k - 1}))
+                        mesh->addFace(Z_NEG, {i, j, k}, texture_index);
+                    if (block_storage->checkBlockVisibility({i, j, k + 1}))
+                        mesh->addFace(Z_POS, {i, j, k}, texture_index);
+                }
+            }
+        }
     }
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
@@ -101,21 +99,11 @@ void fp::world::generateEdgeMesh(mesh_storage* mesh, fp::chunk* chunk) {
         }
     }
     
+    chunk->getMeshStorage() = mesh;
     chunk->getStatus() = NONE;
-    chunk->markComplete();
-    BLT_END_INTERVAL("Chunk Mesh", "Edge Mesh");
-}
-
-void fp::world::generateChunkMesh(fp::chunk* chunk) {
-    if (chunk->getMeshStorage() == nullptr)
-        chunk->getMeshStorage() = new mesh_storage();
+    chunk->markRefresh();
     
-    if (chunk->getDirtiness() == FULL_MESH) { // full chunk mesh
-        generateFullMesh(chunk->getMeshStorage(), chunk);
-    }
-    if (chunk->getDirtiness() == PARTIAL_MESH) { // partial chunk mesh (had null neighbours)
-        generateEdgeMesh(chunk->getMeshStorage(), chunk);
-    }
+    BLT_END_INTERVAL("Chunk", "Mesh");
 }
 
 std::queue<fp::chunk_pos> chunks_to_generate{};
@@ -248,5 +236,5 @@ void fp::chunk::updateChunkMesh() {
     // delete the local chunk mesh memory, since we no longer need to store it.
     delete (mesh);
     mesh = nullptr;
-    markDone();
+    dirtiness = OKAY;
 }

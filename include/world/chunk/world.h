@@ -92,32 +92,17 @@ namespace fp {
             void updateChunkMesh();
             
             /**
-             * Mark the chunk as completely dirty and in need of a full check refresh
+             * Mark the chunk as completely dirty and in need of a full chunk refresh
              */
             inline void markDirty() {
-                dirtiness = FULL_MESH;
-            }
-            
-            /**
-             * Partial mesh update has been completed, we are now waiting on the edge chunks to be
-             * generated before continuing to generate the chunk edge mesh
-             */
-            inline void markPartialComplete() {
-                dirtiness = PARTIAL_MESH;
+                dirtiness = DIRTY;
             }
             
             /**
              * Full chunk mesh is now completely generated and waiting on uploading to the GPU
              */
-            inline void markComplete() {
+            inline void markRefresh() {
                 dirtiness = REFRESH;
-            }
-            
-            /**
-             * Mesh uploading complete, chunk meshing is now done and inactive
-             */
-            inline void markDone() {
-                dirtiness = OKAY;
             }
             
             [[nodiscard]] inline block_storage*& getBlockStorage() {
@@ -167,10 +152,6 @@ namespace fp {
         private:
             std::unordered_map<chunk_pos, chunk*, _static::chunk_pos_hash, _static::chunk_pos_equality> chunk_storage;
         protected:
-            static void generateFullMesh(mesh_storage* mesh, chunk* chunk);
-            
-            void generateEdgeMesh(mesh_storage* mesh, chunk* chunk);
-            
             void generateChunkMesh(chunk* chunk);
             
             chunk* generateChunk(const chunk_pos& pos);
@@ -234,8 +215,7 @@ namespace fp {
             }
             
             ~world() {
-                BLT_PRINT_PROFILE("Chunk Mesh", blt::logging::TRACE, true);
-                BLT_PRINT_PROFILE("Chunk Generate", blt::logging::TRACE, true);
+                BLT_PRINT_PROFILE("Chunk", blt::logging::TRACE, true);
                 for (auto& chunk : chunk_storage)
                     delete (chunk.second);
             }

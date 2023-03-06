@@ -5,13 +5,18 @@
  */
 #include <world/registry.h>
 #include <unordered_map>
+#include <phmap.h>
 #include <utility>
 #include <thread>
 #include <mutex>
 #include <queue>
 #include <condition_variable>
 
+#ifdef __EMSCRIPTEN__
 std::unordered_map<fp::block_type, fp::registry::block_properties> blocks;
+#else
+phmap::flat_hash_map<fp::block_type, fp::registry::block_properties> blocks;
+#endif
 
 fp::texture::palette* base_palette;
 

@@ -40,10 +40,11 @@ namespace fp {
             }
             
             [[nodiscard]] inline bool checkBlockVisibility(const block_pos& pos) const {
+                // blocks outside the check are always not visible to us. This requires special logic
                 if (pos.x < 0 || pos.x >= CHUNK_SIZE || pos.y < 0 || pos.y >= CHUNK_SIZE || pos.z < 0 || pos.z >= CHUNK_SIZE) {
                     return false;
                 }
-                return fp::registry::get(get(pos)).visibility <= fp::registry::TRANSPARENT_TEXTURE;
+                return fp::registry::get(get(pos)).visibility >= fp::registry::TRANSPARENT_TEXTURE;
             }
             
             inline void set(const block_pos& pos, block_type blockID) {

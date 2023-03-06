@@ -31,10 +31,8 @@ namespace fp {
         OKAY = 0,
         // chunk needs its VAO updated with the newest mesh
         REFRESH = 1,
-        // chunk needs its edges re-meshed because it was created with null neighbours
-        PARTIAL_MESH = 2,
         // chunk needs a complete re-mesh.
-        FULL_MESH = 3
+        DIRTY = 2
     };
     
     enum chunk_update_status {
