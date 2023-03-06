@@ -4,46 +4,59 @@
  * See LICENSE file for license detail
  */
 #include <world/chunk/storage.h>
-#include <unordered_map>
+
+//volatile size_t total = 0;
+//
+//void* operator new(size_t size){
+//    std::cout << "Creating new of size " << size << " bytes, total (" << total << ")\n" ;
+//    total += size;
+//    return malloc(size);
+//}
+//
+//void operator delete(void* mem, size_t size){
+//    std::cout << "Deleting " << size << " bytes, total (" << total << ")\n";
+//    total -= size;
+//    free(mem);
+//}
 
 constexpr float scale = 0.5f;
 
-const fp::vertex x_positive_vertices[VTX_ARR_SIZE] = {
+const fp::unpacked_vertex x_positive_vertices[VTX_ARR_SIZE] = {
         // x,   y,      z,     u, v, index
         {scale, scale,  scale, 1, 1, 0},  // +x top right
         {scale, scale,  -scale, 1, 0, 0},  // +x bottom right
         {scale, -scale, -scale, 0, 0, 0},  // +x bottom left
         {scale, -scale, scale, 0, 1, 0}   // +x top left
 };
-const fp::vertex x_negative_vertices[VTX_ARR_SIZE] = {
+const fp::unpacked_vertex x_negative_vertices[VTX_ARR_SIZE] = {
         // x,   y,      z,     u, v, index
         {-scale, scale,  scale, 1, 1, 0},  // -x top right
         {-scale, scale,  -scale, 1, 0, 0},  // -x bottom right
         {-scale, -scale, -scale, 0, 0, 0},  // -x bottom left
         {-scale, -scale, scale, 0, 1, 0}   // -x top left
 };
-const fp::vertex y_positive_vertices[VTX_ARR_SIZE] = {
+const fp::unpacked_vertex y_positive_vertices[VTX_ARR_SIZE] = {
         // x,   y,      z,     u, v, index
         {scale,  scale, scale, 1, 1, 0},  // +y top right
         {-scale, scale, scale, 1, 0, 0},  // +y bottom right
         {-scale, scale, -scale, 0, 0, 0},  // +y bottom left
         {scale,  scale, -scale, 0, 1, 0},   // +y top left
 };
-const fp::vertex y_negative_vertices[VTX_ARR_SIZE] = {
+const fp::unpacked_vertex y_negative_vertices[VTX_ARR_SIZE] = {
         // x,   y,      z,     u, v, index
         {scale,  -scale, scale, 1, 1, 0},  // -y top right
         {-scale, -scale, scale, 1, 0, 0},  // -y bottom right
         {-scale, -scale, -scale, 0, 0, 0},  // -y bottom left
         {scale,  -scale, -scale, 0, 1, 0},    // -y top left
 };
-const fp::vertex z_positive_vertices[VTX_ARR_SIZE] = {
+const fp::unpacked_vertex z_positive_vertices[VTX_ARR_SIZE] = {
         // x,   y,      z,     u, v, index
         {scale,  scale,  scale, 1, 1, 0},  // +z top right
         {scale,  -scale, scale, 1, 0, 0},  // +z bottom right
         {-scale, -scale, scale, 0, 0, 0},  // +z bottom left
         {-scale, scale,  scale, 0, 1, 0},   // +z top left
 };
-const fp::vertex z_negative_vertices[VTX_ARR_SIZE] = {
+const fp::unpacked_vertex z_negative_vertices[VTX_ARR_SIZE] = {
         // x,   y,      z,     u, v, index
         {scale,  scale,  -scale, 1, 1, 0},  // -z top right
         {scale,  -scale, -scale, 1, 0, 0},  // -z bottom right
@@ -62,7 +75,7 @@ const std::vector<unsigned int> positive_indices = {
 };
 
 // always ordered the same as the enum!
-const fp::vertex* face_decode[] = {
+const fp::unpacked_vertex* face_decode[] = {
         x_positive_vertices,
         x_negative_vertices,
         y_positive_vertices,
@@ -72,6 +85,12 @@ const fp::vertex* face_decode[] = {
 };
 
 void fp::mesh_storage::addFace(fp::face face, const block_pos& pos, unsigned char texture_index) {
+    constexpr int texture_index_loc = 32 - 8;
+    constexpr int uv_index_loc = texture_index_loc - 2;
+    constexpr int x_coord_loc = uv_index_loc - 6;
+    constexpr int y_coord_loc = x_coord_loc - 6;
+    constexpr int z_coord_loc = y_coord_loc - 6;
+    
     const auto* face_vertices = face_decode[face];
     // negatives are odd numbered, positives are even.
     const auto& face_indices = face % 2 == 0 ? positive_indices : negative_indices;
@@ -80,14 +99,19 @@ void fp::mesh_storage::addFace(fp::face face, const block_pos& pos, unsigned cha
     
     // generate translated vertices
     for (int i = 0; i < VTX_ARR_SIZE; i++) {
-        // first copy all the default vertex information over,
-        // since there is extra information we need to preserve like UVs and normals
-        translated_face_vertices[i] = face_vertices[i];
-        translated_face_vertices[i].index = (float) texture_index;
-        // then we can apply the translation, since the face_vertex value is already there we can add the translation raw
-        translated_face_vertices[i].x += (float) pos.x;
-        translated_face_vertices[i].y += (float) pos.y;
-        translated_face_vertices[i].z += (float) pos.z;
+        // convert from 2d uv coord to 1d index, based on the uv itself to itself!!
+        int uv_index = (int)(face_vertices[i].u + face_vertices[i].v * 2);
+        
+        int data = 0;
+        data = data | (texture_index << texture_index_loc);
+        
+        data = data | (uv_index << uv_index_loc);
+        data = data | ((pos.x + (face_vertices[i].x > 0 ? 1 : 0)) << x_coord_loc);
+        data = data | ((pos.y + (face_vertices[i].y > 0 ? 1 : 0)) << y_coord_loc);
+        data = data | ((pos.z + (face_vertices[i].z > 0 ? 1 : 0)) << z_coord_loc);
+        
+        // the famous evil bit hack to convert types while maintaining the bits
+        translated_face_vertices[i].data = *reinterpret_cast<float*>(&data);
     }
     
     for (unsigned int face_index : face_indices) {
@@ -108,8 +132,4 @@ void fp::mesh_storage::addFace(fp::face face, const block_pos& pos, unsigned cha
             indices.push_back(find_existing_vertex->second);
         }
     }
-}
-
-void fp::mesh_storage::optimizeFaces() {
-
 }

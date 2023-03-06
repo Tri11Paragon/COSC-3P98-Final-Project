@@ -10,9 +10,12 @@
 #include <blt/math/math.h>
 #include <vector>
 #include "blt/std/logging.h"
+#include "blt/std/format.h"
 #include <world/chunk/typedefs.h>
 #include <world/registry.h>
 #include <unordered_map>
+#include <phmap.h>
+#include <spp.h>
 
 // contains storage classes for block IDs inside chunks plus eventual lookup of block states
 
@@ -50,7 +53,7 @@ namespace fp {
     
     class mesh_storage {
         private:
-            std::unordered_map<vertex, unsigned int, _static::vertex_hash, _static::vertex_equality> created_vertices_index;
+            spp::sparse_hash_map<vertex, unsigned int, _static::vertex_hash, _static::vertex_equality> created_vertices_index;
             std::vector<vertex> vertices;
             std::vector<unsigned int> indices;
         public:
@@ -61,8 +64,6 @@ namespace fp {
              * @param pos position of the face
              */
             void addFace(face face, const block_pos& pos, unsigned char texture_index);
-            
-            void optimizeFaces();
             
             inline std::vector<vertex>& getVertices() {
                 return vertices;

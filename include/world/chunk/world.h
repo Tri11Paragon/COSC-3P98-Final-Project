@@ -80,9 +80,10 @@ namespace fp {
                 storage = new block_storage();
                 chunk_vao = new VAO();
                 auto vbo = new VBO(ARRAY_BUFFER, nullptr, 0);
-                auto data_size = 3 * sizeof(float) + 3 * sizeof(float);
-                chunk_vao->bindVBO(vbo, 0, 3, GL_FLOAT, (int) data_size, 0);
-                chunk_vao->bindVBO(vbo, 1, 3, GL_FLOAT, (int) data_size, 3 * sizeof(float), true);
+                //auto data_size = 3 * sizeof(float) + 3 * sizeof(float);
+                //chunk_vao->bindVBO(vbo, 0, 3, GL_FLOAT, (int) data_size, 0);
+                //chunk_vao->bindVBO(vbo, 1, 3, GL_FLOAT, (int) data_size, 3 * sizeof(float), true);
+                chunk_vao->bindVBO(vbo, 0, 1, GL_FLOAT, sizeof(float), 0);
                 chunk_vao->bindElementVBO(new VBO(ELEMENT_BUFFER, nullptr, 0));
             }
             

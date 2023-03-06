@@ -32,7 +32,8 @@ else()
 
 endif()
 
-
+include_directories(libraries/sparsepp/sparsepp)
+include_directories(libraries/parallel-hashmap/parallel_hashmap)
 
 # My Stuff
 file(GLOB_RECURSE CPP_FILES "src/*.cpp")

@@ -52,84 +52,84 @@ build cmake_object_order_depends_target_FinalProject: phony || cmake_object_orde
 build CMakeFiles/FinalProject.dir/src/main.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/main.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/main.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src
 
 build CMakeFiles/FinalProject.dir/src/render/camera.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/camera.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/camera.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
 
 build CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/gl.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/gl.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
 
 build CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/textures.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/textures.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
 
 build CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/ui/debug.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render/ui
 
 build CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/ui/text.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render/ui
 
 build CMakeFiles/FinalProject.dir/src/render/window.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/window.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/window.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
 
 build CMakeFiles/FinalProject.dir/src/util/math.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/util/math.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/util/math.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/util
 
 build CMakeFiles/FinalProject.dir/src/util/settings.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/util/settings.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/util/settings.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/util
 
 build CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/chunk/storage.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
 
 build CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/chunk/world.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
 
 build CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/registry.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/world/registry.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world
 
@@ -625,56 +625,56 @@ build cmake_object_order_depends_target_BLT: phony || libraries/BLT/CMakeFiles/B
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/filesystem.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/filesystem.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/format.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/format.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/loader.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/loader.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/logging.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/logging.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/std/system.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std/system.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/std
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/profiling/profiler.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling/profiler.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/profiling
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/nbt/nbt.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt
 
 build libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o: CXX_COMPILER__BLT_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/libraries/BLT/src/blt/nbt/nbt_block.cpp || cmake_object_order_depends_target_BLT
   DEP_FILE = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt/nbt_block.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config"
   OBJECT_DIR = libraries/BLT/CMakeFiles/BLT.dir
   OBJECT_FILE_DIR = libraries/BLT/CMakeFiles/BLT.dir/src/blt/nbt
 
@@ -801,7 +801,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/autofit/autofit.c.o:
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/autofit/autofit.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/autofit
 
@@ -809,7 +809,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbase.c.o: C_C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbase.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -817,7 +817,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbbox.c.o: C_C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbbox.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -825,7 +825,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbdf.c.o: C_CO
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbdf.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -833,7 +833,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftbitmap.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -841,7 +841,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftcid.c.o: C_CO
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftcid.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -849,7 +849,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftfstype.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftfstype.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -857,7 +857,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgasp.c.o: C_C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgasp.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -865,7 +865,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftglyph.c.o: C_
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftglyph.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -873,7 +873,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgxval.c.o: C_
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftgxval.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -881,7 +881,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftinit.c.o: C_C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftinit.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -889,7 +889,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftmm.c.o: C_COM
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftmm.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -897,7 +897,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftotval.c.o: C_
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftotval.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -905,7 +905,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpatent.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpatent.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -913,7 +913,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpfr.c.o: C_CO
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftpfr.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -921,7 +921,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftstroke.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftstroke.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -929,7 +929,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftsynth.c.o: C_
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftsynth.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -937,7 +937,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/fttype1.c.o: C_
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/fttype1.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -945,7 +945,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftwinfnt.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 
@@ -953,7 +953,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bdf/bdf.c.o: C_COMPI
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bdf/bdf.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bdf
 
@@ -961,7 +961,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bzip2/ftbzip2.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/bzip2
 
@@ -969,7 +969,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cache/ftcache.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cache/ftcache.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cache
 
@@ -977,7 +977,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cff/cff.c.o: C_COMPI
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cff/cff.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cff
 
@@ -985,7 +985,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cid/type1cid.c.o: C_
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cid/type1cid.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/cid
 
@@ -993,7 +993,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o: C_C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/gzip/ftgzip.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/gzip
 
@@ -1001,7 +1001,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o: C_COM
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/lzw/ftlzw.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/lzw
 
@@ -1009,7 +1009,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pcf/pcf.c.o: C_COMPI
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pcf/pcf.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pcf
 
@@ -1017,7 +1017,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pfr/pfr.c.o: C_COMPI
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pfr/pfr.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pfr
 
@@ -1025,7 +1025,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psaux/psaux.c.o: C_C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psaux/psaux.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psaux
 
@@ -1033,7 +1033,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pshinter/pshinter.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/pshinter
 
@@ -1041,7 +1041,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psnames/psnames.c.o:
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psnames/psnames.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/psnames
 
@@ -1049,7 +1049,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/raster/raster.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/raster/raster.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/raster
 
@@ -1057,7 +1057,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sdf/sdf.c.o: C_COMPI
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sdf/sdf.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sdf
 
@@ -1065,7 +1065,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o: C_COM
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sfnt/sfnt.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/sfnt
 
@@ -1073,7 +1073,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/smooth/smooth.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/smooth/smooth.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/smooth
 
@@ -1081,7 +1081,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/svg/svg.c.o: C_COMPI
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/svg/svg.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/svg
 
@@ -1089,7 +1089,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/truetype/truetype.c.
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/truetype/truetype.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/truetype
 
@@ -1097,7 +1097,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type1/type1.c.o: C_C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type1/type1.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type1
 
@@ -1105,7 +1105,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type42/type42.c.o: C
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type42/type42.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/type42
 
@@ -1113,7 +1113,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o:
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/winfonts/winfnt.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/winfonts
 
@@ -1121,7 +1121,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/builds/unix/ftsystem.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/builds/unix
 
@@ -1129,7 +1129,7 @@ build libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftdebug.c.o: C_
   DEFINES = -DFT2_BUILD_LIBRARY
   DEP_FILE = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base/ftdebug.c.o.d
   FLAGS = -O3 -DNDEBUG -fvisibility=hidden -fdiagnostics-color=always
-  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include/freetype/config" -I/usr/include/harfbuzz
   OBJECT_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir
   OBJECT_FILE_DIR = libraries/freetype-2.13.0/CMakeFiles/freetype.dir/src/base
 

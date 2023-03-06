@@ -58,10 +58,19 @@ namespace fp {
     // instead of sending arrays for the positions, UVs, normals, etc.
     // since OpenGL allows us to specify attributes based on offsets from the same VBO.
     typedef struct {
+        // since opaque textures only use 4 possible coords in our basic engine
+        // UVs can be stored on the gpu as a const array, using 2 bits we can index into them
+        // texture arrays store 256 max possible textures, so 1 byte can store that.
+        // position can be stored using 33 values or 6 bits each, taking 18 bits total.
+        // leaving us with 4 bits currently unused in the float.
+        float data;
+    } vertex;
+    
+    typedef struct {
         float x, y, z;
         float u, v;
-        float index;
-    } vertex;
+        float texture_index;
+    } unpacked_vertex;
     
     namespace _static {
         
@@ -77,10 +86,11 @@ namespace fp {
         
         struct vertex_hash {
             inline size_t operator()(const vertex& pos) const {
-                size_t p1 = std::hash<float>()(pos.x);
-                size_t p2 = std::hash<float>()(pos.y);
-                size_t p3 = std::hash<float>()(pos.z);
-                return (p1 ^ (p2 << 1)) ^ p3;
+//                size_t p1 = std::hash<float>()(pos.x);
+//                size_t p2 = std::hash<float>()(pos.y);
+//                size_t p3 = std::hash<float>()(pos.z);
+//                return (p1 ^ (p2 << 1)) ^ p3;
+                return std::hash<float>()(pos.data);
             }
         };
         
@@ -95,9 +105,11 @@ namespace fp {
         }
         
         struct vertex_equality {
-            inline bool operator()(const vertex& p1, const vertex& p2) const {
-                return f_equal(p1.x, p2.x) && f_equal(p1.y, p2.y) && f_equal(p1.z, p2.z) &&
-                       f_equal(p1.u, p2.u) && f_equal(p1.v, p2.v) && p1.index == p2.index;
+            inline bool operator()(vertex p1, vertex p2) const {
+//                return f_equal(p1.x, p2.x) && f_equal(p1.y, p2.y) && f_equal(p1.z, p2.z) &&
+//                       f_equal(p1.u, p2.u) && f_equal(p1.v, p2.v) && p1.index == p2.index;
+                // comparison is now only a single value that is directly comparable! (since data is stored at the bit level)
+                return p1.data == p2.data;
             }
         };
         
