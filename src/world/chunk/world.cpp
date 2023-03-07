@@ -11,17 +11,17 @@
 #include "stb/stb_perlin.h"
 #include <blt/std/format.h>
 
-inline void checkEdgeFaces(
-        fp::mesh_storage* mesh, fp::chunk* chunk, fp::chunk* neighbour, fp::face face,
+inline void checkEdgeFace(
+        fp::block_storage* local, fp::block_storage* neighbour,
+        fp::mesh_storage* mesh, fp::face face,
         const fp::block_pos& pos, const fp::block_pos& neighbour_pos
 ) {
-    auto* storage = chunk->getBlockStorage();
-    auto& block = fp::registry::get(storage->get(pos));
-    auto texture_index = fp::registry::getTextureIndex(block.textureName);
+    auto& block = fp::registry::get(local->get(pos));
     
     if (block.visibility == fp::registry::OPAQUE) {
-        if (fp::registry::get(storage->get(neighbour_pos)).visibility > fp::registry::OPAQUE)
-            mesh->addFace(face, pos, texture_index);
+        if (fp::registry::get(neighbour->get(neighbour_pos)).visibility > fp::registry::OPAQUE) {
+            mesh->addFace(face, pos, fp::registry::getTextureIndex(block.textureName));
+        }
     }
 }
 
@@ -42,11 +42,16 @@ void fp::world::generateChunkMesh(chunk* chunk) {
             return;
     }
     
-    auto* mesh = new mesh_storage();
-    
     BLT_START_INTERVAL("Chunk", "Mesh");
     
+    auto* mesh = new mesh_storage();
     auto* block_storage = chunk->getBlockStorage();
+    auto* x_neg_storage = neighbours[X_NEG]->getBlockStorage();
+    auto* x_pos_storage = neighbours[X_POS]->getBlockStorage();
+    auto* y_neg_storage = neighbours[Y_NEG]->getBlockStorage();
+    auto* y_pos_storage = neighbours[Y_POS]->getBlockStorage();
+    auto* z_neg_storage = neighbours[Z_NEG]->getBlockStorage();
+    auto* z_pos_storage = neighbours[Z_POS]->getBlockStorage();
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
@@ -76,25 +81,25 @@ void fp::world::generateChunkMesh(chunk* chunk) {
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
-            checkEdgeFaces(
-                    mesh, chunk, neighbours[X_NEG], X_NEG, {0, i, j}, {CHUNK_SIZE - 1, i, j}
+            checkEdgeFace(
+                    block_storage, x_neg_storage, mesh, X_NEG, {0, i, j}, {CHUNK_SIZE - 1, i, j}
             );
-            checkEdgeFaces(
-                    mesh, chunk, neighbours[X_POS], X_POS, {CHUNK_SIZE - 1, i, j}, {0, i, j}
-            );
-            
-            checkEdgeFaces(
-                    mesh, chunk, neighbours[Y_NEG], Y_NEG, {i, 0, j}, {i, CHUNK_SIZE - 1, j}
-            );
-            checkEdgeFaces(
-                    mesh, chunk, neighbours[Y_POS], Y_POS, {i, CHUNK_SIZE - 1, j}, {i, 0, j}
+            checkEdgeFace(
+                    block_storage, x_pos_storage, mesh, X_POS, {CHUNK_SIZE - 1, i, j}, {0, i, j}
             );
             
-            checkEdgeFaces(
-                    mesh, chunk, neighbours[Z_NEG], Z_NEG, {i, j, 0}, {i, j, CHUNK_SIZE - 1}
+            checkEdgeFace(
+                    block_storage, y_neg_storage, mesh, Y_NEG, {i, 0, j}, {i, CHUNK_SIZE - 1, j}
             );
-            checkEdgeFaces(
-                    mesh, chunk, neighbours[Z_POS], Z_POS, {i, j, CHUNK_SIZE - 1}, {i, j, 0}
+            checkEdgeFace(
+                    block_storage, y_pos_storage, mesh, Y_POS, {i, CHUNK_SIZE - 1, j}, {i, 0, j}
+            );
+    
+            checkEdgeFace(
+                    block_storage, z_neg_storage, mesh, Z_NEG, {i, j, 0}, {i, j, CHUNK_SIZE - 1}
+            );
+            checkEdgeFace(
+                    block_storage, z_pos_storage, mesh, Z_POS, {i, j, CHUNK_SIZE - 1}, {i, j, 0}
             );
         }
     }

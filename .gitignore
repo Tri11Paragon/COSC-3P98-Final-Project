@@ -1,3 +1,7 @@
+cmake-build-debug/
+cmake-build-emrelease/
+cmake-build-release/
+cmake-build-relwithdebinfo/
 ### C++ template
 # Prerequisites
 *.d

@@ -14,9 +14,6 @@ namespace fp::debug {
     
     bool enabled = false;
     
-    // Yes. I made this only for this.
-    blt::averagizer_o_matic<double, 16> fps_average{60.0};
-    
     void drawAndIncrement(const std::string& text, float x, float& pos, text::font_size size = fp::text::FONT_14) {
         auto text_size = fp::text::getTextSize(text, size);
         fp::text::drawText(text, x, pos, size, {0.0, 0.0, 0.0, 1.0});
@@ -47,10 +44,9 @@ namespace fp::debug {
         float x_offset = 10;
         
         drawAndIncrement("Untitled Application", x_offset, left_y_pos, fp::text::FONT_22);
-        fps_average.insert(1.0 / fp::window::getFrameDelta());
         
         std::string fps = "FPS: ";
-        fps += std::to_string(fps_average.average());
+        fps += std::to_string(1.0 / fp::window::getFrameDelta());
         fps += " (";
         fps += std::to_string((double) fp::window::getFrameDeltaRaw() / 1000000.0);
         fps += "ms)";
