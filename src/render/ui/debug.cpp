@@ -7,6 +7,7 @@
 #include <render/ui/text.h>
 #include <render/window.h>
 #include <blt/math/averages.h>
+#include "render/camera.h"
 
 namespace fp::debug {
     const float spacing = 5;
@@ -54,5 +55,15 @@ namespace fp::debug {
         fps += std::to_string((double) fp::window::getFrameDeltaRaw() / 1000000.0);
         fps += "ms)";
         drawAndIncrement(fps, x_offset * 2, left_y_pos);
+        
+        auto& camera_pos = fp::camera::getPosition();
+        std::string pos = "Position: ";
+        pos += std::to_string(camera_pos.x());
+        pos += " ";
+        pos += std::to_string(camera_pos.y());
+        pos += " ";
+        pos += std::to_string(camera_pos.z());
+    
+        drawAndIncrement(pos, x_offset * 2, left_y_pos);
     }
 }

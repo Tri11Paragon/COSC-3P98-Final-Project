@@ -356,10 +356,5 @@ CMakeFiles/FinalProject.dir/src/main.cpp.o: \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/any \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/parallel-hashmap/parallel_hashmap/phmap_base.h \
   /usr/share/emscripten/cache/sysroot/include/c++/v1/shared_mutex \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/sparsepp/sparsepp/spp.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/sparsepp/sparsepp/spp_stdint.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/sparsepp/sparsepp/spp_config.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/sparsepp/sparsepp/spp_traits.h \
-  /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/libraries/sparsepp/sparsepp/spp_utils.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/util/math.h \
   /home/brett/Documents/Brock/CS\ 3P98/Final\ Project/include/stb/stb_perlin.h

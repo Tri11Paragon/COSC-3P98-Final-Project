@@ -52,10 +52,10 @@ file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/assets DESTINATION ${CMAKE_CURRENT_BINARY_
 if (USE_EXTRAS)
     #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file ${CMAKE_SOURCE_DIR}/assets --bind")
     #set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-s DEMANGLE_SUPPORT=1 --preload-file 'assets' --bind")
-    set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-sMAX_WEBGL_VERSION=2 -s ASSERTIONS=1 -sUSE_GLFW=3 --preload-file 'assets'")
+    set_target_properties(FinalProject PROPERTIES LINK_FLAGS "-sMAX_WEBGL_VERSION=2 -sASSERTIONS=1 -pthread -sPTHREAD_POOL_SIZE=8 -s INITIAL_MEMORY=134217728 -sUSE_GLFW=3 --preload-file 'assets'")
     # these flags will be set by cmake automatically based on build type
     #set_target_properties(FinalProject PROPERTIES COMPILE_FLAGS "-O3")
-    #set_target_properties(FinalProject PROPERTIES COMPILE_FLAGS "-g")
+    set_target_properties(FinalProject PROPERTIES COMPILE_FLAGS "-pthread")
 else()
     target_link_libraries(FinalProject PRIVATE glfw)
 endif()

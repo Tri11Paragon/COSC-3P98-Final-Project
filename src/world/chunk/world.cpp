@@ -15,12 +15,12 @@ inline void checkEdgeFaces(
         fp::mesh_storage* mesh, fp::chunk* chunk, fp::chunk* neighbour, fp::face face,
         const fp::block_pos& pos, const fp::block_pos& neighbour_pos
 ) {
-    auto*& storage = chunk->getBlockStorage();
+    auto* storage = chunk->getBlockStorage();
     auto& block = fp::registry::get(storage->get(pos));
     auto texture_index = fp::registry::getTextureIndex(block.textureName);
     
-    if (block.visibility <= fp::registry::TRANSPARENT_TEXTURE) {
-        if (fp::registry::get(storage->get(neighbour_pos)).visibility)
+    if (block.visibility == fp::registry::OPAQUE) {
+        if (fp::registry::get(storage->get(neighbour_pos)).visibility > fp::registry::OPAQUE)
             mesh->addFace(face, pos, texture_index);
     }
 }
@@ -46,7 +46,7 @@ void fp::world::generateChunkMesh(chunk* chunk) {
     
     BLT_START_INTERVAL("Chunk", "Mesh");
     
-    auto*& block_storage = chunk->getBlockStorage();
+    auto* block_storage = chunk->getBlockStorage();
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
@@ -55,8 +55,8 @@ void fp::world::generateChunkMesh(chunk* chunk) {
                 
                 auto texture_index = fp::registry::getTextureIndex(block.textureName);
                 
-                // The main chunk mesh can handle opaque and transparent textures. (Transparency will be discarded)
-                if (block.visibility <= registry::TRANSPARENT_TEXTURE) {
+                // The main chunk mesh can handle opaque textures.
+                if (block.visibility == registry::OPAQUE) {
                     if (block_storage->checkBlockVisibility({i - 1, j, k}))
                         mesh->addFace(X_NEG, {i, j, k}, texture_index);
                     if (block_storage->checkBlockVisibility({i + 1, j, k}))
@@ -172,19 +172,21 @@ fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
         return nullptr;
     BLT_START_INTERVAL("Chunk Generate", "Instantiate");
     auto* c = new chunk(pos);
-    block_storage*& storage = c->getBlockStorage();
+    block_storage* storage = c->getBlockStorage();
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
-        for (int j = 0; j < CHUNK_SIZE; j++) {
-            for (int k = 0; k < CHUNK_SIZE; k++) {
-                auto block_x = pos.x + i;
-                auto block_y = pos.y + j;
-                auto block_z = pos.z + k;
-                storage->set(
-                        {i, j, k},
-                        (int) (stb_perlin_fbm_noise3(block_x / 8.0, block_y / 8.0,
-                                                     block_z / 8.0, 2.0, 0.5, 6
-                        ) > 0.5 ? fp::registry::STONE : fp::registry::AIR));
+        auto block_x = float(pos.x * CHUNK_SIZE + i);
+        for (int k = 0; k < CHUNK_SIZE; k++) {
+            auto block_z = float(pos.z * CHUNK_SIZE + k);
+            auto world_height = stb_perlin_ridge_noise3(block_x / 128.0f,
+                                                      8.1539123f,
+                                                      block_z / 128.0f, 2.0f, 0.5f, 1.0, 12.0f) * 128 + 64;
+            
+            for (int j = 0; j < CHUNK_SIZE; j++) {
+                auto block_y = float(pos.y * CHUNK_SIZE + j);
+                
+                if (block_y < world_height)
+                    storage->set({i, j, k}, fp::registry::STONE);
             }
         }
     }

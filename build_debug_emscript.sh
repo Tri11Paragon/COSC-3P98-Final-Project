@@ -8,3 +8,4 @@ emmake make -j 16
 cp FinalProject.js /var/www/html/emscript/
 cp FinalProject.data /var/www/html/emscript/
 cp FinalProject.wasm /var/www/html/emscript/
+cp FinalProject.worker.js /var/www/html/emscript/

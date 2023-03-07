@@ -1,30 +1,30 @@
 The target system is: Emscripten - 1 - x86
 The host system is: Linux - 6.1.0-5-amd64 - x86_64
 Determining if the include file unistd.h exists passed with the following output:
-Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-nkD9HZ
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-sKGnp4
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_964c5/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_964c5.dir/build.make CMakeFiles/cmTC_964c5.dir/build
-gmake[1]: Entering directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-nkD9HZ'
-Building C object CMakeFiles/cmTC_964c5.dir/CheckIncludeFile.c.o
-/usr/bin/emcc    -MD -MT CMakeFiles/cmTC_964c5.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_964c5.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_964c5.dir/CheckIncludeFile.c.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-nkD9HZ/CheckIncludeFile.c"
-Linking C executable cmTC_964c5.js
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_964c5.dir/link.txt --verbose=1
-/usr/bin/emcc @CMakeFiles/cmTC_964c5.dir/objects1 -o cmTC_964c5.js 
-gmake[1]: Leaving directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-nkD9HZ'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_d6074/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d6074.dir/build.make CMakeFiles/cmTC_d6074.dir/build
+gmake[1]: Entering directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-sKGnp4'
+Building C object CMakeFiles/cmTC_d6074.dir/CheckIncludeFile.c.o
+/usr/bin/emcc    -MD -MT CMakeFiles/cmTC_d6074.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_d6074.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_d6074.dir/CheckIncludeFile.c.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-sKGnp4/CheckIncludeFile.c"
+Linking C executable cmTC_d6074.js
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d6074.dir/link.txt --verbose=1
+/usr/bin/emcc @CMakeFiles/cmTC_d6074.dir/objects1 -o cmTC_d6074.js 
+gmake[1]: Leaving directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-sKGnp4'
 
 
 
 Determining if the include file fcntl.h exists passed with the following output:
-Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-s1aY2P
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-NhkJcD
 
-Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_90857/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_90857.dir/build.make CMakeFiles/cmTC_90857.dir/build
-gmake[1]: Entering directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-s1aY2P'
-Building C object CMakeFiles/cmTC_90857.dir/CheckIncludeFile.c.o
-/usr/bin/emcc    -MD -MT CMakeFiles/cmTC_90857.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_90857.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_90857.dir/CheckIncludeFile.c.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-s1aY2P/CheckIncludeFile.c"
-Linking C executable cmTC_90857.js
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90857.dir/link.txt --verbose=1
-/usr/bin/emcc @CMakeFiles/cmTC_90857.dir/objects1 -o cmTC_90857.js 
-gmake[1]: Leaving directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-s1aY2P'
+Run Build Command(s):/usr/bin/gmake -f Makefile cmTC_51a42/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_51a42.dir/build.make CMakeFiles/cmTC_51a42.dir/build
+gmake[1]: Entering directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-NhkJcD'
+Building C object CMakeFiles/cmTC_51a42.dir/CheckIncludeFile.c.o
+/usr/bin/emcc    -MD -MT CMakeFiles/cmTC_51a42.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_51a42.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_51a42.dir/CheckIncludeFile.c.o -c "/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-NhkJcD/CheckIncludeFile.c"
+Linking C executable cmTC_51a42.js
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51a42.dir/link.txt --verbose=1
+/usr/bin/emcc @CMakeFiles/cmTC_51a42.dir/objects1 -o cmTC_51a42.js 
+gmake[1]: Leaving directory '/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-emrelease/CMakeFiles/CMakeScratch/TryCompile-NhkJcD'
 
 
 

@@ -105,7 +105,7 @@ namespace fp {
                 dirtiness = REFRESH;
             }
             
-            [[nodiscard]] inline block_storage*& getBlockStorage() {
+            [[nodiscard]] inline block_storage* getBlockStorage() {
                 return storage;
             }
             

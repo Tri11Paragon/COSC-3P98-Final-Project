@@ -20,6 +20,10 @@ void write_default_values(){
 
 void fp::settings::load(const std::string& file) {
     write_default_values();
+
+#ifdef __EMSCRIPTEN__
+    return;
+#endif
     
     BLT_INFO("Loading settings file %s!", file.c_str());
     
@@ -48,6 +52,9 @@ void fp::settings::load(const std::string& file) {
 }
 
 void fp::settings::save(const std::string& file) {
+#ifdef __EMSCRIPTEN__
+    return;
+#endif
     std::ofstream output {file};
     output.exceptions(std::ios::failbit | std::ios::badbit);
     for (const auto& property : properties){

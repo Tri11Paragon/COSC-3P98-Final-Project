@@ -284,7 +284,7 @@ FinalProject.js: CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/src/world/registry.cpp.o
 FinalProject.js: CMakeFiles/FinalProject.dir/build.make
 FinalProject.js: libraries/BLT/libBLT.a
-FinalProject.js: libraries/freetype-2.13.0/libfreetype.a
+FinalProject.js: libraries/freetype-2.13.0/libfreetyped.a
 FinalProject.js: CMakeFiles/FinalProject.dir/linkLibs.rsp
 FinalProject.js: CMakeFiles/FinalProject.dir/objects1
 FinalProject.js: CMakeFiles/FinalProject.dir/link.txt

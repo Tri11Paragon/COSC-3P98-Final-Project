@@ -14,8 +14,11 @@
 #include <world/chunk/typedefs.h>
 #include <world/registry.h>
 #include <unordered_map>
+#ifdef __EMSCRIPTEN__
 #include <phmap.h>
+#else
 #include <spp.h>
+#endif
 
 // contains storage classes for block IDs inside chunks plus eventual lookup of block states
 
@@ -44,7 +47,7 @@ namespace fp {
                 if (pos.x < 0 || pos.x >= CHUNK_SIZE || pos.y < 0 || pos.y >= CHUNK_SIZE || pos.z < 0 || pos.z >= CHUNK_SIZE) {
                     return false;
                 }
-                return fp::registry::get(get(pos)).visibility >= fp::registry::TRANSPARENT_TEXTURE;
+                return fp::registry::get(get(pos)).visibility > fp::registry::OPAQUE;
             }
             
             inline void set(const block_pos& pos, block_type blockID) {
@@ -54,7 +57,13 @@ namespace fp {
     
     class mesh_storage {
         private:
+            // spp doesn't support emscripten, but phmap does work
+            // slightly more memory consumption but still much lower than std::unordered_map (plus much faster access)
+#ifdef __EMSCRIPTEN__
+            phmap::flat_hash_map<vertex, unsigned int, _static::vertex_hash, _static::vertex_equality> created_vertices_index;
+#else
             spp::sparse_hash_map<vertex, unsigned int, _static::vertex_hash, _static::vertex_equality> created_vertices_index;
+#endif
             std::vector<vertex> vertices;
             std::vector<unsigned int> indices;
         public:
