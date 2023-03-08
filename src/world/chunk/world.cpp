@@ -10,6 +10,7 @@
 #include <render/camera.h>
 #include "stb/stb_perlin.h"
 #include <blt/std/format.h>
+#include <blt/math/math.h>
 #include <fstream>
 #include <ios>
 
@@ -190,17 +191,29 @@ fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
         auto block_x = float(pos.x * CHUNK_SIZE + i);
         for (int k = 0; k < CHUNK_SIZE; k++) {
             auto block_z = float(pos.z * CHUNK_SIZE + k);
-            auto world_height = stb_perlin_ridge_noise3(
+            
+            auto noise1 = stb_perlin_ridge_noise3(
                     block_x / 128.0f,
                     8.1539123f,
                     block_z / 128.0f, 2.0f, 0.5f, 1.0, 12.0f
-            ) * 128 + 64;
+            );
+            
+            float noise_total = 1;
+            
+            for (int i = 1; i <= 8; i++)
+                noise_total += stb_perlin_noise3(block_x / 256.0f, block_z / 256.0f, i * 5.213953, 0, 0, 0) * (float)(i);
+            
+            noise_total /= 8;
+            
+            auto world_height = noise1 * noise_total * 128 + 64;
             
             for (int j = 0; j < CHUNK_SIZE; j++) {
                 auto block_y = float(pos.y * CHUNK_SIZE + j);
                 
-                if (block_y < world_height)
-                    storage->set({i, j, k}, fp::registry::STONE);
+                float noise2 = stb_perlin_fbm_noise3(block_x / 32.0f, block_y / 32.0f, block_z / 32.0f, 2.0, 0.5, 5) + 0.75f;
+                
+                if (block_y < world_height && noise2 > 0)
+                    storage->set({i, j, k}, noise2 > 1 ? fp::registry::GRASS : fp::registry::STONE);
             }
         }
     }

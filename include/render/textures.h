@@ -137,7 +137,7 @@ namespace fp::texture {
                 // Anisotropy helps preserve textures at oblique angles
                 float a = 0;
                 glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &a);
-                glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, a);
+                glTexParameterf(textureBindType, GL_TEXTURE_MAX_ANISOTROPY_EXT, a);
                 unbind();
             }
             
