@@ -10,6 +10,8 @@
 #include <render/camera.h>
 #include "stb/stb_perlin.h"
 #include <blt/std/format.h>
+#include <fstream>
+#include <ios>
 
 inline void checkEdgeFace(
         fp::block_storage* local, fp::block_storage* neighbour,
@@ -20,7 +22,7 @@ inline void checkEdgeFace(
     
     if (block.visibility == fp::registry::OPAQUE) {
         if (fp::registry::get(neighbour->get(neighbour_pos)).visibility > fp::registry::OPAQUE) {
-            mesh->addFace(face, pos, fp::registry::getTextureIndex(block.textureName));
+            mesh->addFace(face, pos, block.textureIndex);
         }
     }
 }
@@ -42,10 +44,10 @@ void fp::world::generateChunkMesh(chunk* chunk) {
             return;
     }
     
-    BLT_START_INTERVAL("Chunk", "Mesh");
+    BLT_START_INTERVAL("Chunk Mesh", "Storage");
     
     auto* mesh = new mesh_storage();
-    auto* block_storage = chunk->getBlockStorage();
+    auto* local_storage = chunk->getBlockStorage();
     auto* x_neg_storage = neighbours[X_NEG]->getBlockStorage();
     auto* x_pos_storage = neighbours[X_POS]->getBlockStorage();
     auto* y_neg_storage = neighbours[Y_NEG]->getBlockStorage();
@@ -53,62 +55,69 @@ void fp::world::generateChunkMesh(chunk* chunk) {
     auto* z_neg_storage = neighbours[Z_NEG]->getBlockStorage();
     auto* z_pos_storage = neighbours[Z_POS]->getBlockStorage();
     
+    BLT_END_INTERVAL("Chunk Mesh", "Storage");
+    BLT_START_INTERVAL("Chunk Mesh", "Internal");
+    
+    
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
             for (int k = 0; k < CHUNK_SIZE; k++) {
-                auto& block = fp::registry::get(block_storage->get({i, j, k}));
+                auto& block = fp::registry::get(local_storage->get({i, j, k}));
                 
-                auto texture_index = fp::registry::getTextureIndex(block.textureName);
+                auto texture_index = block.textureIndex;
                 
                 // The main chunk mesh can handle opaque textures.
                 if (block.visibility == registry::OPAQUE) {
-                    if (block_storage->checkBlockVisibility({i - 1, j, k}))
+                    if (local_storage->checkBlockVisibility({i - 1, j, k}))
                         mesh->addFace(X_NEG, {i, j, k}, texture_index);
-                    if (block_storage->checkBlockVisibility({i + 1, j, k}))
+                    if (local_storage->checkBlockVisibility({i + 1, j, k}))
                         mesh->addFace(X_POS, {i, j, k}, texture_index);
-                    if (block_storage->checkBlockVisibility({i, j - 1, k}))
+                    if (local_storage->checkBlockVisibility({i, j - 1, k}))
                         mesh->addFace(Y_NEG, {i, j, k}, texture_index);
-                    if (block_storage->checkBlockVisibility({i, j + 1, k}))
+                    if (local_storage->checkBlockVisibility({i, j + 1, k}))
                         mesh->addFace(Y_POS, {i, j, k}, texture_index);
-                    if (block_storage->checkBlockVisibility({i, j, k - 1}))
+                    if (local_storage->checkBlockVisibility({i, j, k - 1}))
                         mesh->addFace(Z_NEG, {i, j, k}, texture_index);
-                    if (block_storage->checkBlockVisibility({i, j, k + 1}))
+                    if (local_storage->checkBlockVisibility({i, j, k + 1}))
                         mesh->addFace(Z_POS, {i, j, k}, texture_index);
                 }
             }
         }
     }
+    BLT_END_INTERVAL("Chunk Mesh", "Internal");
+    BLT_START_INTERVAL("Chunk Mesh", "Partial");
     
     for (int i = 0; i < CHUNK_SIZE; i++) {
         for (int j = 0; j < CHUNK_SIZE; j++) {
             checkEdgeFace(
-                    block_storage, x_neg_storage, mesh, X_NEG, {0, i, j}, {CHUNK_SIZE - 1, i, j}
+                    local_storage, x_neg_storage, mesh, X_NEG, {0, i, j}, {CHUNK_SIZE - 1, i, j}
             );
             checkEdgeFace(
-                    block_storage, x_pos_storage, mesh, X_POS, {CHUNK_SIZE - 1, i, j}, {0, i, j}
+                    local_storage, x_pos_storage, mesh, X_POS, {CHUNK_SIZE - 1, i, j}, {0, i, j}
             );
             
             checkEdgeFace(
-                    block_storage, y_neg_storage, mesh, Y_NEG, {i, 0, j}, {i, CHUNK_SIZE - 1, j}
+                    local_storage, y_neg_storage, mesh, Y_NEG, {i, 0, j}, {i, CHUNK_SIZE - 1, j}
             );
             checkEdgeFace(
-                    block_storage, y_pos_storage, mesh, Y_POS, {i, CHUNK_SIZE - 1, j}, {i, 0, j}
+                    local_storage, y_pos_storage, mesh, Y_POS, {i, CHUNK_SIZE - 1, j}, {i, 0, j}
             );
-    
+            
             checkEdgeFace(
-                    block_storage, z_neg_storage, mesh, Z_NEG, {i, j, 0}, {i, j, CHUNK_SIZE - 1}
+                    local_storage, z_neg_storage, mesh, Z_NEG, {i, j, 0}, {i, j, CHUNK_SIZE - 1}
             );
             checkEdgeFace(
-                    block_storage, z_pos_storage, mesh, Z_POS, {i, j, CHUNK_SIZE - 1}, {i, j, 0}
+                    local_storage, z_pos_storage, mesh, Z_POS, {i, j, CHUNK_SIZE - 1}, {i, j, 0}
             );
         }
     }
+    BLT_END_INTERVAL("Chunk Mesh", "Partial");
     
     chunk->getMeshStorage() = mesh;
     chunk->getStatus() = NONE;
     chunk->markRefresh();
     
-    BLT_END_INTERVAL("Chunk", "Mesh");
+    
 }
 
 std::queue<fp::chunk_pos> chunks_to_generate{};
@@ -154,18 +163,16 @@ void fp::world::render(fp::shader& shader) {
                     chunks_to_generate.push(adjusted_chunk_pos);
                     continue;
                 }
-    
+                
                 // check for mesh updates
                 if (chunk->getDirtiness() > REFRESH) {
-                    BLT_START_INTERVAL("Chunk Mesh", "Mesh");
                     generateChunkMesh(chunk);
-                    BLT_END_INTERVAL("Chunk Mesh", "Mesh");
                 } else if (chunk->getDirtiness() == REFRESH) {
                     // 11436 vert, 137,232 bytes
                     // 1908 vert, 11436 indices, 22896 + 45744 = 68,640 bytes
                     chunk->updateChunkMesh();
                 }
-    
+                
                 chunk->render(shader);
             }
         }
@@ -183,9 +190,11 @@ fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
         auto block_x = float(pos.x * CHUNK_SIZE + i);
         for (int k = 0; k < CHUNK_SIZE; k++) {
             auto block_z = float(pos.z * CHUNK_SIZE + k);
-            auto world_height = stb_perlin_ridge_noise3(block_x / 128.0f,
-                                                      8.1539123f,
-                                                      block_z / 128.0f, 2.0f, 0.5f, 1.0, 12.0f) * 128 + 64;
+            auto world_height = stb_perlin_ridge_noise3(
+                    block_x / 128.0f,
+                    8.1539123f,
+                    block_z / 128.0f, 2.0f, 0.5f, 1.0, 12.0f
+            ) * 128 + 64;
             
             for (int j = 0; j < CHUNK_SIZE; j++) {
                 auto block_y = float(pos.y * CHUNK_SIZE + j);
@@ -201,6 +210,14 @@ fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
     BLT_END_INTERVAL("Chunk Generate", "Instantiate");
     
     return c;
+}
+
+fp::world::~world() {
+    BLT_PRINT_PROFILE("Chunk Mesh", blt::logging::TRACE, true);
+    std::ofstream profile{"decomposition_chunk.csv"};
+    BLT_WRITE_PROFILE(profile, "Chunk Mesh");
+    for (auto& chunk : chunk_storage)
+        delete (chunk.second);
 }
 
 void fp::chunk::render(fp::shader& shader) {
@@ -232,7 +249,8 @@ void fp::chunk::updateChunkMesh() {
     BLT_DEBUG(
             "Chunk [%d, %d, %d] mesh updated with %d vertices and %d indices taking (%s, %s) bytes!",
             pos.x, pos.y, pos.z,
-            vertices.size(), indices.size(), blt::string::fromBytes(vertices.size() * sizeof(vertex)).c_str(),
+            vertices.size(), indices.size(),
+            blt::string::fromBytes(vertices.size() * sizeof(vertex)).c_str(),
             blt::string::fromBytes(indices.size() * sizeof(unsigned int)).c_str());
     
     // upload the new vertices to the GPU

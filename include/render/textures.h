@@ -11,7 +11,7 @@
 #include <utility>
 #include <stb/stb_image.h>
 #include <util/settings.h>
-#include <unordered_map>
+#include <phmap.h>
 #include <vector>
 #include <render/gl.h>
 #include "stb/stb_image_resize.h"
@@ -132,8 +132,12 @@ namespace fp::texture {
                 glTexParameteri(textureBindType, GL_TEXTURE_WRAP_S, GL_REPEAT);
                 glTexParameteri(textureBindType, GL_TEXTURE_WRAP_T, GL_REPEAT);
                 // nearest preserves the pixely look
-                glTexParameteri(textureBindType, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-                glTexParameteri(textureBindType, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+                glTexParameteri(textureBindType, GL_TEXTURE_MIN_FILTER, GL_NEAREST_MIPMAP_LINEAR);
+                glTexParameteri(textureBindType, GL_TEXTURE_MAG_FILTER, GL_NEAREST_MIPMAP_LINEAR);
+                // Anisotropy helps preserve textures at oblique angles
+                float a = 0;
+                glGetFloatv(GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT, &a);
+                glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAX_ANISOTROPY_EXT, a);
                 unbind();
             }
             
@@ -193,8 +197,8 @@ namespace fp::texture {
             gl_texture2D_array(int width, int height, int layers, GLint colorMode = GL_RGBA8):
                     gl_texture(width, height, GL_TEXTURE_2D_ARRAY, colorMode), m_layers(layers) {
                 bind();
-                // 3 mipmaps is about good since anything smaller is probably useless (32x32(0) -> 16x16(1) -> 8x8(2))
-                glTexStorage3D(textureBindType, 3, colorMode, width, height, layers);
+                // 6+ mipmaps is about where I stop noticing any difference (size is 4x4 pixels, so that makes sense)
+                glTexStorage3D(textureBindType, 6, colorMode, width, height, layers);
                 BLT_DEBUG("Creating 2D Texture Array with ID: %d", textureID);
             }
             
@@ -227,8 +231,8 @@ namespace fp::texture {
             static constexpr int MAX_ARRAY_LAYERS = 256;
             
             gl_texture2D_array* texture_array = nullptr;
-            
-            std::unordered_map<std::string, negDInt> textureIndices;
+        
+            phmap::flat_hash_map<std::string, negDInt> textureIndices;
             std::vector<file_texture*> textures;
         
         public:

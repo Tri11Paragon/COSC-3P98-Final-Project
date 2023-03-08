@@ -51,8 +51,9 @@ int main() {
     
     fp::window::init();
     fp::text::init();
-    fp::registry::registerDefaultBlocks();
+    // textures must come first as blocks will require the IDs
     fp::registry::registerDefaultTextures();
+    fp::registry::registerDefaultBlocks();
     
     chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
     world = new fp::world();

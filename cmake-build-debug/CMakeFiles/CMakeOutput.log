@@ -523,3 +523,262 @@ Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/nin
 
 
 
+Determining if the function shm_open exists in the rt passed with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_fef76 && [1/2] Building C object CMakeFiles/cmTC_fef76.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_fef76
+
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WALL succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_66e53 && [1/2] Building CXX object CMakeFiles/cmTC_66e53.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_66e53
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WEXTRA succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_b6ce5 && [1/2] Building CXX object CMakeFiles/cmTC_b6ce5.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_b6ce5
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHADOW succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_4e0c2 && [1/2] Building CXX object CMakeFiles/cmTC_4e0c2.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_4e0c2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WFLOAT_EQUAL succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_c43d3 && [1/2] Building CXX object CMakeFiles/cmTC_c43d3.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_c43d3
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WERROR succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_608cb && [1/2] Building CXX object CMakeFiles/cmTC_608cb.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_608cb
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_PEDANTIC succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_1f95c && [1/2] Building CXX object CMakeFiles/cmTC_1f95c.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_1f95c
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_PEDANTIC_ERRORS succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_d45e2 && [1/2] Building CXX object CMakeFiles/cmTC_d45e2.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_d45e2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_FSTRICT_ALIASING succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_2ff4f && [1/2] Building CXX object CMakeFiles/cmTC_2ff4f.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_2ff4f
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_453e6 && [1/2] Building CXX object CMakeFiles/cmTC_453e6.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_453e6
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_df30b && [1/2] Building CXX object CMakeFiles/cmTC_df30b.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_df30b
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSTRICT_ALIASING succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_69e67 && [1/2] Building CXX object CMakeFiles/cmTC_69e67.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_69e67
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_COVERAGE succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_940e4 && [1/2] Building CXX object CMakeFiles/cmTC_940e4.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_940e4
+
+
+Source file was:
+int main() { return 0; }
+Determining if the function shm_open exists in the rt passed with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_a57c2 && [1/2] Building C object CMakeFiles/cmTC_a57c2.dir/CheckFunctionExists.c.o
+[2/2] Linking C executable cmTC_a57c2
+
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WALL succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_875f0 && [1/2] Building CXX object CMakeFiles/cmTC_875f0.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_875f0
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WEXTRA succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_ab281 && [1/2] Building CXX object CMakeFiles/cmTC_ab281.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_ab281
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHADOW succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_5170e && [1/2] Building CXX object CMakeFiles/cmTC_5170e.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_5170e
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WFLOAT_EQUAL succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_455f0 && [1/2] Building CXX object CMakeFiles/cmTC_455f0.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_455f0
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WERROR succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_70796 && [1/2] Building CXX object CMakeFiles/cmTC_70796.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_70796
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_PEDANTIC succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_4f7cb && [1/2] Building CXX object CMakeFiles/cmTC_4f7cb.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_4f7cb
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_PEDANTIC_ERRORS succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_4158f && [1/2] Building CXX object CMakeFiles/cmTC_4158f.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_4158f
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_FSTRICT_ALIASING succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_a5462 && [1/2] Building CXX object CMakeFiles/cmTC_a5462.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_a5462
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED_DECLARATIONS succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_248d6 && [1/2] Building CXX object CMakeFiles/cmTC_248d6.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_248d6
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WNO_DEPRECATED succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_56fb4 && [1/2] Building CXX object CMakeFiles/cmTC_56fb4.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_56fb4
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSTRICT_ALIASING succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_c3665 && [1/2] Building CXX object CMakeFiles/cmTC_c3665.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_c3665
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_COVERAGE succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_82f5b && [1/2] Building CXX object CMakeFiles/cmTC_82f5b.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_82f5b
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_O3_FLAG succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_f4906 && [1/2] Building CXX object CMakeFiles/cmTC_f4906.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_f4906
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_WNO_ODR succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_262b6 && [1/2] Building CXX object CMakeFiles/cmTC_262b6.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_262b6
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test BENCHMARK_HAS_WNO_LTO_TYPE_MISMATCH succeeded with the following output:
+Change Dir: /home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/opt/netbrains/clion/clion-2022.1.3/bin/ninja/linux/x64/ninja cmTC_929c5 && [1/2] Building CXX object CMakeFiles/cmTC_929c5.dir/src.cxx.o
+[2/2] Linking CXX executable cmTC_929c5
+
+
+Source file was:
+int main() { return 0; }

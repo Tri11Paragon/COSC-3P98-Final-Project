@@ -9,7 +9,7 @@
 
 #include <world/chunk/storage.h>
 #include <render/gl.h>
-#include <unordered_map>
+#include <phmap.h>
 #include "blt/profiling/profiler.h"
 
 namespace fp {
@@ -150,7 +150,7 @@ namespace fp {
     
     class world {
         private:
-            std::unordered_map<chunk_pos, chunk*, _static::chunk_pos_hash, _static::chunk_pos_equality> chunk_storage;
+            phmap::flat_hash_map<chunk_pos, chunk*, _static::chunk_pos_hash, _static::chunk_pos_equality> chunk_storage;
         protected:
             void generateChunkMesh(chunk* chunk);
             
@@ -214,11 +214,7 @@ namespace fp {
                 return c->getBlockStorage()->get(_static::world_to_internal(pos));
             }
             
-            ~world() {
-                BLT_PRINT_PROFILE("Chunk", blt::logging::TRACE, true);
-                for (auto& chunk : chunk_storage)
-                    delete (chunk.second);
-            }
+            ~world();
     };
     
 }

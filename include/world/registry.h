@@ -33,11 +33,18 @@ namespace fp::registry {
     
     struct block_properties {
         // how should we handle this block? Blocks with transparent textures can be added to OPAQUE blocks
-        block_visibility visibility = OPAQUE;
+        block_visibility visibility;
         // WebGL doesn't default to empty textures, use index 0 to store an empty texture
-        std::string textureName = "Air";
+        std::string textureName;
+        // this significantly improves performance (halved chunk mesh gen time, see doc for more info)
+        texture::texture_index textureIndex = 0;
         // does this block produce light?
         bool produces_light = false;
+    
+        block_properties(block_visibility blockVisibility = OPAQUE, const std::string& textureName = "Air") {
+           this->visibility = blockVisibility;
+           this->textureName = textureName;
+        }
     };
     
     constexpr block_type AIR = 0;
@@ -51,6 +58,7 @@ namespace fp::registry {
     void registerTexture(texture::file_texture* texture);
     
     void textureInit();
+    void blockInit();
     
     void setupTextureLoaderThreads(int count = 8);
     
@@ -69,6 +77,10 @@ namespace fp::registry {
      * Registers all the default blocks used by the engine
      */
     inline void registerDefaultBlocks() {
+        // create the internal array which backs the block properties
+        blockInit();
+        
+        // registration can be in any order as long as the ID is unique!
         registerBlock(AIR, {TRANSPARENT});
         registerBlock(STONE, {OPAQUE, "Stone"});
         registerBlock(DIRT, {OPAQUE, "Dolph"});

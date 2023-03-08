@@ -12,11 +12,7 @@
 #include <queue>
 #include <condition_variable>
 
-#ifdef __EMSCRIPTEN__
-std::unordered_map<fp::block_type, fp::registry::block_properties> blocks;
-#else
-phmap::flat_hash_map<fp::block_type, fp::registry::block_properties> blocks;
-#endif
+fp::registry::block_properties* blocks;
 
 fp::texture::palette* base_palette;
 
@@ -33,12 +29,8 @@ std::thread** texture_loader_threads;
 
 int thread_count = 0;
 
-void fp::registry::registerBlock(fp::block_type id, fp::registry::block_properties properties) {
-    blocks[id] = std::move(properties);
-}
-
 fp::registry::block_properties& fp::registry::get(fp::block_type id) {
-    return blocks.at(id);
+    return blocks[id];
 }
 
 void fp::registry::registerTexture(fp::texture::file_texture* texture) {
@@ -52,6 +44,12 @@ unsigned int fp::registry::getTextureID() {
 
 fp::texture::texture_index fp::registry::getTextureIndex(const std::string& name) {
     return base_palette->getTexture(name);
+}
+
+void fp::registry::registerBlock(fp::block_type id, fp::registry::block_properties properties) {
+    blocks[id] = std::move(properties);
+    // since this information doesn't change at runtime it can be safely stored
+    blocks[id].textureIndex = getTextureIndex(blocks[id].textureName);
 }
 
 void fp::registry::generateTexturePalette() {
@@ -106,4 +104,10 @@ void fp::registry::textureInit() {
 
 void fp::registry::cleanup() {
     delete base_palette;
+    delete[] blocks;
+}
+
+void fp::registry::blockInit() {
+    //blocks = new phmap::flat_hash_map<fp::block_type, fp::registry::block_properties>();
+    blocks = new fp::registry::block_properties[256];
 }
