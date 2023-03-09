@@ -19,10 +19,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/FinalProject.dir/src/util/settings.cpp.o.d"
   "CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o"
   "CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o.d"
-  "CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o"
-  "CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o.d"
   "CMakeFiles/FinalProject.dir/src/world/registry.cpp.o"
   "CMakeFiles/FinalProject.dir/src/world/registry.cpp.o.d"
+  "CMakeFiles/FinalProject.dir/src/world/world.cpp.o"
+  "CMakeFiles/FinalProject.dir/src/world/world.cpp.o.d"
   "FinalProject.js"
   "FinalProject.pdb"
 )

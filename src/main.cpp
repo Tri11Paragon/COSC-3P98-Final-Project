@@ -9,7 +9,7 @@
 #include <shaders/chunk.frag>
 #include <shaders/chunk.vert>
 #include "render/camera.h"
-#include "world/chunk/world.h"
+#include "world/world.h"
 #include "util/settings.h"
 #include <util/math.h>
 

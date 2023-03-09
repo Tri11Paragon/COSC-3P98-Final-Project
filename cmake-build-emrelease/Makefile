@@ -463,30 +463,6 @@ src/world/chunk/storage.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.s
 .PHONY : src/world/chunk/storage.cpp.s
 
-src/world/chunk/world.o: src/world/chunk/world.cpp.o
-.PHONY : src/world/chunk/world.o
-
-# target to build an object file
-src/world/chunk/world.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o
-.PHONY : src/world/chunk/world.cpp.o
-
-src/world/chunk/world.i: src/world/chunk/world.cpp.i
-.PHONY : src/world/chunk/world.i
-
-# target to preprocess a source file
-src/world/chunk/world.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.i
-.PHONY : src/world/chunk/world.cpp.i
-
-src/world/chunk/world.s: src/world/chunk/world.cpp.s
-.PHONY : src/world/chunk/world.s
-
-# target to generate assembly for a file
-src/world/chunk/world.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.s
-.PHONY : src/world/chunk/world.cpp.s
-
 src/world/registry.o: src/world/registry.cpp.o
 .PHONY : src/world/registry.o
 
@@ -510,6 +486,30 @@ src/world/registry.s: src/world/registry.cpp.s
 src/world/registry.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/registry.cpp.s
 .PHONY : src/world/registry.cpp.s
+
+src/world/world.o: src/world/world.cpp.o
+.PHONY : src/world/world.o
+
+# target to build an object file
+src/world/world.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/world.cpp.o
+.PHONY : src/world/world.cpp.o
+
+src/world/world.i: src/world/world.cpp.i
+.PHONY : src/world/world.i
+
+# target to preprocess a source file
+src/world/world.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/world.cpp.i
+.PHONY : src/world/world.cpp.i
+
+src/world/world.s: src/world/world.cpp.s
+.PHONY : src/world/world.s
+
+# target to generate assembly for a file
+src/world/world.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FinalProject.dir/build.make CMakeFiles/FinalProject.dir/src/world/world.cpp.s
+.PHONY : src/world/world.cpp.s
 
 # Help Target
 help:
@@ -558,12 +558,12 @@ help:
 	@echo "... src/world/chunk/storage.o"
 	@echo "... src/world/chunk/storage.i"
 	@echo "... src/world/chunk/storage.s"
-	@echo "... src/world/chunk/world.o"
-	@echo "... src/world/chunk/world.i"
-	@echo "... src/world/chunk/world.s"
 	@echo "... src/world/registry.o"
 	@echo "... src/world/registry.i"
 	@echo "... src/world/registry.s"
+	@echo "... src/world/world.o"
+	@echo "... src/world/world.i"
+	@echo "... src/world/world.s"
 .PHONY : help
 
 

@@ -70,6 +70,13 @@ build CMakeFiles/FinalProject.dir/src/render/gl.cpp.o: CXX_COMPILER__FinalProjec
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render
 
+build CMakeFiles/FinalProject.dir/src/render/lighting/deferred_renderer.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/lighting/deferred_renderer.cpp || cmake_object_order_depends_target_FinalProject
+  DEP_FILE = CMakeFiles/FinalProject.dir/src/render/lighting/deferred_renderer.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
+  INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
+  OBJECT_DIR = CMakeFiles/FinalProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/render/lighting
+
 build CMakeFiles/FinalProject.dir/src/render/textures.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/render/textures.cpp || cmake_object_order_depends_target_FinalProject
   DEP_FILE = CMakeFiles/FinalProject.dir/src/render/textures.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
@@ -119,15 +126,15 @@ build CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o: CXX_COMPILER__F
   OBJECT_DIR = CMakeFiles/FinalProject.dir
   OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
 
-build CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/chunk/world.cpp || cmake_object_order_depends_target_FinalProject
-  DEP_FILE = CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o.d
+build CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/registry.cpp || cmake_object_order_depends_target_FinalProject
+  DEP_FILE = CMakeFiles/FinalProject.dir/src/world/registry.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
-  OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world/chunk
+  OBJECT_FILE_DIR = CMakeFiles/FinalProject.dir/src/world
 
-build CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/registry.cpp || cmake_object_order_depends_target_FinalProject
-  DEP_FILE = CMakeFiles/FinalProject.dir/src/world/registry.cpp.o.d
+build CMakeFiles/FinalProject.dir/src/world/world.cpp.o: CXX_COMPILER__FinalProject_Release /home/brett/Documents/Brock/CS$ 3P98/Final$ Project/src/world/world.cpp || cmake_object_order_depends_target_FinalProject
+  DEP_FILE = CMakeFiles/FinalProject.dir/src/world/world.cpp.o.d
   FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always -std=gnu++17
   INCLUDES = -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/sparsepp/sparsepp" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/parallel-hashmap/parallel_hashmap" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/BLT/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/BLT/config" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/cmake-build-release/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/freetype-2.13.0/include" -I"/home/brett/Documents/Brock/CS 3P98/Final Project/libraries/glfw-3.3.8/include"
   OBJECT_DIR = CMakeFiles/FinalProject.dir
@@ -141,7 +148,7 @@ build CMakeFiles/FinalProject.dir/src/world/registry.cpp.o: CXX_COMPILER__FinalP
 #############################################
 # Link the executable FinalProject
 
-build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Release CMakeFiles/FinalProject.dir/src/main.cpp.o CMakeFiles/FinalProject.dir/src/render/camera.cpp.o CMakeFiles/FinalProject.dir/src/render/gl.cpp.o CMakeFiles/FinalProject.dir/src/render/textures.cpp.o CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o CMakeFiles/FinalProject.dir/src/render/window.cpp.o CMakeFiles/FinalProject.dir/src/util/math.cpp.o CMakeFiles/FinalProject.dir/src/util/settings.cpp.o CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o CMakeFiles/FinalProject.dir/src/world/chunk/world.cpp.o CMakeFiles/FinalProject.dir/src/world/registry.cpp.o | libraries/BLT/libBLT.a libraries/freetype-2.13.0/libfreetype.a libraries/glfw-3.3.8/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libbrotlidec.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/BLT/libBLT.a libraries/freetype-2.13.0/libfreetype.a libraries/glfw-3.3.8/src/libglfw3.a
+build FinalProject: CXX_EXECUTABLE_LINKER__FinalProject_Release CMakeFiles/FinalProject.dir/src/main.cpp.o CMakeFiles/FinalProject.dir/src/render/camera.cpp.o CMakeFiles/FinalProject.dir/src/render/gl.cpp.o CMakeFiles/FinalProject.dir/src/render/lighting/deferred_renderer.cpp.o CMakeFiles/FinalProject.dir/src/render/textures.cpp.o CMakeFiles/FinalProject.dir/src/render/ui/debug.cpp.o CMakeFiles/FinalProject.dir/src/render/ui/text.cpp.o CMakeFiles/FinalProject.dir/src/render/window.cpp.o CMakeFiles/FinalProject.dir/src/util/math.cpp.o CMakeFiles/FinalProject.dir/src/util/settings.cpp.o CMakeFiles/FinalProject.dir/src/world/chunk/storage.cpp.o CMakeFiles/FinalProject.dir/src/world/registry.cpp.o CMakeFiles/FinalProject.dir/src/world/world.cpp.o | libraries/BLT/libBLT.a libraries/freetype-2.13.0/libfreetype.a libraries/glfw-3.3.8/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libz.so /usr/lib/x86_64-linux-gnu/libpng.so /usr/lib/x86_64-linux-gnu/libharfbuzz.so /usr/lib/x86_64-linux-gnu/libbrotlidec.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so /usr/lib/x86_64-linux-gnu/libX11.so || libraries/BLT/libBLT.a libraries/freetype-2.13.0/libfreetype.a libraries/glfw-3.3.8/src/libglfw3.a
   FLAGS = -O3 -DNDEBUG
   LINK_FLAGS = -rdynamic
   LINK_LIBRARIES = libraries/BLT/libBLT.a  libraries/freetype-2.13.0/libfreetype.a  libraries/glfw-3.3.8/src/libglfw3.a  /usr/lib/x86_64-linux-gnu/libz.so  -lz  -lpng  -lz  -lpng  -lharfbuzz  -lbrotlidec  -Wl,-Bstatic  -lrt  -Wl,-Bdynamic  -lm  -ldl  -lX11

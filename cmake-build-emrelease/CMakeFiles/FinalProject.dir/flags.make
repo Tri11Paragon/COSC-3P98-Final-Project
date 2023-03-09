@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = @CMakeFiles/FinalProject.dir/includes_CXX.rsp
 
-CXX_FLAGS = -g -pthread -std=gnu++17
+CXX_FLAGS = -O3 -DNDEBUG -pthread -std=gnu++17
 

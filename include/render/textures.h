@@ -119,11 +119,11 @@ namespace fp::texture {
             }
         
         public:
-            void bind() const {
+            inline void bind() const {
                 glBindTexture(textureBindType, textureID);
             }
             
-            void unbind() const {
+            inline void unbind() const {
                 glBindTexture(textureBindType, 0);
             }
             
@@ -141,14 +141,14 @@ namespace fp::texture {
                 unbind();
             }
             
-            void generateMipmaps() const {
+            inline void generateMipmaps() const {
                 // it's a little inefficient binding and unbinding for these small calls, they really should be done in the constructor or data upload
                 bind();
                 glGenerateMipmap(textureBindType);
                 unbind();
             }
             
-            [[nodiscard]] unsigned int getTextureID() const {
+            [[nodiscard]] inline unsigned int getTextureID() const {
                 return textureID;
             }
             
@@ -188,6 +188,17 @@ namespace fp::texture {
             void upload(file_texture* texture) const {
                 upload(texture->data(), texture->getChannels() == 4 ? GL_RGBA : GL_RGB);
             }
+            
+            /**
+             * Resizes the internal memory for the texture but does NOT resize the texture image stored
+             */
+            inline void resize(int width, int height) {
+                m_width = width;
+                m_height = height;
+                bind();
+                glTexStorage2D(textureBindType, 0, textureColorMode, m_width, m_height);
+                unbind();
+            }
     };
     
     struct gl_texture2D_array : public gl_texture {
@@ -220,6 +231,29 @@ namespace fp::texture {
             }
     };
     
+    class gl_buffer_texture : public gl_texture2D {
+        private:
+        
+        public:
+            // make sure a framebuffer is bound before constructing!
+            gl_buffer_texture(
+                    int width, int height, GLint format = GL_RGB32F,
+                    GLint colorAttachment = GL_COLOR_ATTACHMENT0
+            ): gl_texture2D(width, height, format) {
+                bind();
+                // no mipmaping and no interpolation to position textures!
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+                glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+                //
+                glFramebufferTexture2D(
+                        GL_FRAMEBUFFER, colorAttachment, GL_TEXTURE_2D, this->textureID, 0
+                );
+                
+            }
+        
+        
+    };
+    
     typedef int texture_index;
     
     class palette {
@@ -231,7 +265,7 @@ namespace fp::texture {
             static constexpr int MAX_ARRAY_LAYERS = 256;
             
             gl_texture2D_array* texture_array = nullptr;
-        
+            
             phmap::flat_hash_map<std::string, negDInt> textureIndices;
             std::vector<file_texture*> textures;
         

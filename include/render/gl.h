@@ -227,6 +227,10 @@ namespace fp {
             
             ~shader();
     };
+    
+    const blt::mat4x4& getViewMatrix();
+    const blt::mat4x4& getProjectionMatrix();
+    const blt::mat4x4& getOrthographicMatrix();
 }
 
 

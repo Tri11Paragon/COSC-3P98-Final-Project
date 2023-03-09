@@ -61,6 +61,18 @@ namespace fp::_static {
     }
 }
 
+const blt::mat4x4& fp::getViewMatrix() {
+    return _static::projectionMatrix;
+}
+
+const blt::mat4x4& fp::getProjectionMatrix() {
+    return _static::orthographicMatrix;
+}
+
+const blt::mat4x4& fp::getOrthographicMatrix() {
+    return _static::viewMatrix;
+}
+
 namespace fp {
     VAO::VAO() {
         glGenVertexArrays(1, &vaoID);
