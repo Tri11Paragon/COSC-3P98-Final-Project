@@ -62,15 +62,15 @@ namespace fp::_static {
 }
 
 const blt::mat4x4& fp::getViewMatrix() {
-    return _static::projectionMatrix;
+    return _static::viewMatrix;
 }
 
 const blt::mat4x4& fp::getProjectionMatrix() {
-    return _static::orthographicMatrix;
+    return _static::projectionMatrix;
 }
 
 const blt::mat4x4& fp::getOrthographicMatrix() {
-    return _static::viewMatrix;
+    return _static::orthographicMatrix;
 }
 
 namespace fp {

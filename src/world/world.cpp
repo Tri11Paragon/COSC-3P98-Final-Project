@@ -174,12 +174,16 @@ void fp::world::render(fp::shader& shader) {
                 }
                 
                 auto cp = blt::vec3{(float)adjusted_chunk_pos.x, (float)adjusted_chunk_pos.y, (float)adjusted_chunk_pos.z};
-                auto cp2 = cp + blt::vec3{CHUNK_SIZE, CHUNK_SIZE, CHUNK_SIZE};
-                if (view_frustum.cubeInside(cp, cp2))
+                auto cp2 = cp + blt::vec3{CHUNK_SIZE, 0, 0};
+                auto cp3 = cp + blt::vec3{0, CHUNK_SIZE, 0};
+                auto cp4 = cp + blt::vec3{0, 0, CHUNK_SIZE};
+                auto cp5 = cp + blt::vec3{CHUNK_SIZE, CHUNK_SIZE, CHUNK_SIZE};
+                if (view_frustum.pointInside(cp) || view_frustum.pointInside(cp2) || view_frustum.pointInside(cp3) || view_frustum.pointInside(cp4) || view_frustum.pointInside(cp5))
                     chunk->render(shader);
             }
         }
     }
+    //std::cout << "0,0,0 in frustum? " << view_frustum.pointInside(blt::vec3{0,0,0}) << "\n";
 }
 
 fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {

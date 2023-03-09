@@ -34,7 +34,8 @@ class frustum {
                 }
                 
                 [[nodiscard]] inline float distance(const blt::vec3& point) const {
-                    return m_A * point.x() + m_B * point.y() + m_C * point.z() + m_D;
+                    auto dist = m_A * point.x() + m_B * point.y() + m_C * point.z() + m_D;
+                    return dist;
                 }
                 
                 [[nodiscard]] inline float A() const { return m_A; }
@@ -111,8 +112,9 @@ class frustum {
             // std::all_of ??
             for (auto plane : planes){
                 // point is outside plane
-                if (plane.distance(point) < 0)
+                if (plane.distance(point) < 0) {
                     return false;
+                }
             }
             return true;
         }
