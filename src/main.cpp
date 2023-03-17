@@ -2,7 +2,7 @@
 #include <blt/profiling/profiler.h>
 #include <render/window.h>
 #include <render/gl.h>
-#include <render/ui/text.h>
+#include <render/ui/graphics.h>
 #include <render/ui/debug.h>
 #include <memory>
 
@@ -22,6 +22,7 @@
 
 fp::shader* chunk_shader;
 fp::world* world;
+fp::renderer* renderer;
 
 void loop(){
     glClearColor(1.0, 1.0, 1.0, 1.0);
@@ -34,7 +35,7 @@ void loop(){
     
     fp::camera::update();
     fp::debug::render();
-    fp::text::render();
+    fp::graphics::render();
     fp::window::update();
 }
 
@@ -50,12 +51,14 @@ int main() {
     fp::settings::load("settings.txt");
     
     fp::window::init();
-    fp::text::init();
+    
+    renderer = new fp::renderer();
+    fp::graphics::init(*renderer);
     // textures must come first as blocks will require the IDs
     fp::registry::registerDefaultTextures();
     fp::registry::registerDefaultBlocks();
     
-    chunk_shader = new fp::shader(shader_chunk_vert, shader_chunk_frag);
+    chunk_shader = renderer->createShader(fp::shader(shader_chunk_vert, shader_chunk_frag));
     world = new fp::world();
     
     glEnable(GL_CULL_FACE);
@@ -74,13 +77,13 @@ int main() {
     while(!fp::window::isCloseRequested())
         loop();
 #endif
-
-    delete(chunk_shader);
+    
     delete(world);
+    delete(renderer);
     
     /** !! MUST BE CALLED HERE OTHERWISE glDeleteTextures WILL BE CALLED AFTER THE GL CONTEXT IS DESTROYED! !! **/
     fp::registry::cleanup();
-    fp::text::destroy();
+    fp::graphics::cleanup();
     fp::window::close();
     fp::settings::save("settings.txt");
     

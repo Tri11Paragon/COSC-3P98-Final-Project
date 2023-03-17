@@ -13,8 +13,6 @@ const int CHUNK_SHIFT = (int) (log(CHUNK_SIZE) / log(2));
 // size that the base vertex arrays are assumed to be (per face)
 constexpr int VTX_ARR_SIZE = 4;
 
-constexpr float EPSILON = 0.0001f;
-
 namespace fp {
     
     enum face {
@@ -97,10 +95,6 @@ namespace fp {
                 return p1.x == p2.x && p1.y == p2.y && p1.z == p2.z;
             }
         };
-        
-        static inline bool f_equal(float v1, float v2) {
-            return v1 >= v2 - EPSILON && v1 <= v2 + EPSILON;
-        }
         
         struct vertex_equality {
             inline bool operator()(vertex p1, vertex p2) const {

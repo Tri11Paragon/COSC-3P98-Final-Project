@@ -9,6 +9,8 @@
 
 #include <blt/math/math.h>
 #include <render/gl.h>
+#include <render/camera.h>
+#include <render/ui/graphics.h>
 
 // based on
 // http://www.lighthouse3d.com/tutorials/view-frustum-culling/clip-space-approach-extracting-the-planes/
@@ -62,7 +64,7 @@ class frustum {
         frustum() = default;
         
         void update() {
-            PM = fp::getProjectionMatrix() * fp::getViewMatrix();
+            PM = fp::window::getPerspectiveMatrix() * fp::camera::getViewMatrix();
             
             planes[LEFT] = plane{
                     PM.m(0, 0) + PM.m(3, 0),
@@ -106,6 +108,10 @@ class frustum {
                     -PM.m(2, 3) + PM.m(3, 3)
             };
             
+            fp::graphics::drawPlane(blt::vec4{planes[TOP].A(), planes[TOP].B(), planes[TOP].C(), planes[TOP].D()}, blt::vec3{1.0, 0.0, 0.0});
+            fp::graphics::drawPlane(blt::vec4{planes[BOTTOM].A(), planes[BOTTOM].B(), planes[BOTTOM].C(), planes[BOTTOM].D()}, blt::vec3{1.0, 0.0, 0.0});
+            //fp::graphics::drawPlane(blt::vec4{1.0, 1.0, 1.0, 0}, blt::vec3{1.0, 0.0, 0.0});
+            
         }
         
         bool pointInside(const blt::vec3& point){
@@ -121,6 +127,16 @@ class frustum {
         
         bool cubeInside(const blt::vec3& start, const blt::vec3& end) {
             return pointInside(start) || pointInside(end);
+        }
+        
+        static bool isInsideFrustum(const blt::mat4x4& pvm, const blt::vec3& point) {
+            auto v = pvm * point;
+            v = v / v.w();
+            //blt::logging::trace << v.x() << " " << v.y() << " " << v.z() << "\n";
+            //return v.x() <= 1 && v.x() >= -1 && v.y() <= 1 && v.y() >= -1 && v.z() <= 1 && v.z() >= -1;
+            //return (v.x() < -1 || v.x() > 1) && (v.y() < -1 || v.y() > 1) && (v.z() < -1 || v.z() > 1);
+            // TODO
+            return true;
         }
 };
 

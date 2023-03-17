@@ -18,6 +18,7 @@ namespace fp::_static {
     blt::mat4x4 projectionMatrix {};
     blt::mat4x4 orthographicMatrix {};
     blt::mat4x4 viewMatrix {};
+    blt::mat4x4 pvm {};
     
     inline void createMatricesUBO(){
         if (matricesUBOCreated)
@@ -25,7 +26,7 @@ namespace fp::_static {
         glGenBuffers(1, &matricesUBO);
         glBindBuffer(GL_UNIFORM_BUFFER, matricesUBO);
         // 3 matrices stored [Perspective (64), View (64), pvm (64), ortho(64)]
-        glBufferData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4) * 4, nullptr, GL_STATIC_DRAW);
+        glBufferData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4) * 4, nullptr, GL_DYNAMIC_READ);
         glBindBuffer(GL_UNIFORM_BUFFER, 0);
     
         // set the main matrices UBO to be in position 0. This will always be reserved for this purpose.
@@ -43,7 +44,7 @@ namespace fp::_static {
     inline void updateViewUBO(){
         // the UBO will have been created by now since the perspective matrix is updated on window creation.
         glBindBuffer(GL_UNIFORM_BUFFER, matricesUBO);
-        auto pvm = projectionMatrix * viewMatrix;
+        pvm = projectionMatrix * viewMatrix;
         // by writing as offsets into one single buffer we can avoid overwriting the perspective matrix, and save us two more buffers
         // since writing both at the same time is faster than binding a whole separate buffer. (Remember this gets ran once per frame!)
         glBufferSubData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4), sizeof(blt::mat4x4), viewMatrix.ptr());
@@ -59,18 +60,6 @@ namespace fp::_static {
         glBufferSubData(GL_UNIFORM_BUFFER, sizeof(blt::mat4x4) * 3, sizeof(blt::mat4x4), orthographicMatrix.ptr());
         glBindBuffer(GL_UNIFORM_BUFFER, 0);
     }
-}
-
-const blt::mat4x4& fp::getViewMatrix() {
-    return _static::viewMatrix;
-}
-
-const blt::mat4x4& fp::getProjectionMatrix() {
-    return _static::projectionMatrix;
-}
-
-const blt::mat4x4& fp::getOrthographicMatrix() {
-    return _static::orthographicMatrix;
 }
 
 namespace fp {
@@ -213,6 +202,9 @@ namespace fp {
     
     shader::~shader() {
         glUseProgram(0);
+        // shader was moved
+        if (programID <= 0)
+            return;
         // remove all the shaders from the program
         glDetachShader(programID, vertexShaderID);
         if (geometryShaderID)
@@ -246,5 +238,22 @@ namespace fp {
     void shader::updateOrthographicMatrix(const blt::mat4x4& orthoMatrix) {
         fp::_static::orthographicMatrix = orthoMatrix;
         fp::_static::updateOrthoUBO();
+    }
+    
+    const blt::mat4x4& shader::getPVM() {
+        return _static::pvm;
+    }
+    
+    shader::shader(shader&& move) noexcept {
+        // the move constructor doesn't need to construct a new shader but it does need to ensure all old variables are moved over
+        programID = move.programID;
+        vertexShaderID = move.vertexShaderID;
+        fragmentShaderID = move.fragmentShaderID;
+        geometryShaderID = move.geometryShaderID;
+        tessellationShaderID = move.tessellationShaderID;
+        for (const auto& pair : move.uniformVars)
+            uniformVars.insert(pair);
+        // by setting the program ID to -1 we tell the shader it has been moved.
+        move.programID = -1;
     }
 }

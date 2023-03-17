@@ -9,6 +9,8 @@
 #include <cmath>
 #include "util/math.h"
 
+blt::mat4x4 frozenViewMatrix;
+blt::mat4x4 frozenPVMMatrix;
 blt::vec3 position;
 blt::vec3 rotation;
 
@@ -17,6 +19,8 @@ const float DEFAULT_SPEED = 50;
 float speed = 0;
 
 float rotation_speed = 3;
+
+bool frozen = false;
 
 void updateCursorGrabbedState(){
 #ifndef __EMSCRIPTEN__
@@ -78,6 +82,9 @@ void updateViewMatrix(){
     viewMatrix.m23(-float(blt::vec<float, 4>::dot(z, blt::vec<float, 4>{position.x(), position.y(), position.z(), 0})));
     viewMatrix.m33(1);
     
+    if (!frozen)
+        frozenViewMatrix = viewMatrix;
+    
     fp::shader::updateViewMatrix(viewMatrix);
 }
 
@@ -127,6 +134,8 @@ void fp::camera::update() {
 //    BLT_TRACE("Pos: %f, %f, %f", position[0], position[1], position[2]);
     
     updateViewMatrix();
+    if (!frozen)
+        frozenPVMMatrix = shader::getPVM();
 }
 
 const blt::vec3& fp::camera::getPosition() {
@@ -135,4 +144,24 @@ const blt::vec3& fp::camera::getPosition() {
 
 const blt::vec3& fp::camera::getRotation() {
     return rotation;
+}
+
+void fp::camera::freeze() {
+    frozen = true;
+}
+
+void fp::camera::unfreeze() {
+    frozen = false;
+}
+
+const blt::mat4x4& fp::camera::getViewMatrix() {
+    return frozenViewMatrix;
+}
+
+const blt::mat4x4& fp::camera::getPVM() {
+    return frozenPVMMatrix;
+}
+
+bool fp::camera::isFrozen() {
+    return frozen;
 }

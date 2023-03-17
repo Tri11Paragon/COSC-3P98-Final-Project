@@ -54,11 +54,11 @@ namespace fp {
         inline void update(void* new_data, int data_size) {
             bind();
             // optimization technique is to not reallocate the memory on the GPU if the new buffer size is not larger than our current buffer
-            //if (data_size <= size){
-                // we can do this as long as we overwrite from the beginning. Since the new draw call will only use of to size of the allocated buffer
-                // to do all its drawing, the extra space unused can be ignored and saved for future use.
-            //    glBufferSubData(type, 0, data_size, new_data);
-            //} else
+            if (data_size <= size){
+//                 we can do this as long as we overwrite from the beginning. Since the new draw call will only use of to size of the allocated buffer
+//                 to do all its drawing, the extra space unused can be ignored and saved for future use.
+                glBufferSubData(type, 0, data_size, new_data);
+            } else
                 glBufferData(type, data_size, new_data, mem_type);
             size = data_size;
             glBindBuffer(type, 0);
@@ -67,6 +67,11 @@ namespace fp {
         template<typename T>
         inline void update(std::vector<T>& new_data) {
             update(new_data.data(), new_data.size() * sizeof(T));
+        }
+        
+        template<typename T, size_t size>
+        inline void update(std::array<T, size>& new_data){
+            update(new_data.data(), size * sizeof(T));
         }
         
         inline void bind() const {
@@ -173,6 +178,8 @@ namespace fp {
              */
             shader(const std::string &vertex, const std::string &fragment, const std::string &geometry = "", bool load_as_string = true);
             
+            shader(shader&& move) noexcept;
+            
             // used to set the location of VAOs to the in variables in opengl shaders.
             void bindAttribute(int attribute, const std::string &name) const;
             
@@ -196,7 +203,7 @@ namespace fp {
                 glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, matrix.ptr());
             }
             
-            inline void setVec3(const std::string &name, const blt::vec4 &vec) {
+            inline void setVec3(const std::string &name, const blt::vec3 &vec) {
                 glUniform3f(getUniformLocation(name), vec.x(), vec.y(), vec.z());
             }
             
@@ -224,13 +231,11 @@ namespace fp {
             static void updateProjectionMatrix(const blt::mat4x4& projectionMatrix);
             static void updateOrthographicMatrix(const blt::mat4x4& orthoMatrix);
             static void updateViewMatrix(const blt::mat4x4& viewMatrix);
+            // returns the perspective view matrix which is calculated per frame. (This is for optimization)
+            static const blt::mat4x4& getPVM();
             
             ~shader();
     };
-    
-    const blt::mat4x4& getViewMatrix();
-    const blt::mat4x4& getProjectionMatrix();
-    const blt::mat4x4& getOrthographicMatrix();
 }
 
 

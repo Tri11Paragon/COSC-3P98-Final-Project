@@ -10,7 +10,7 @@
 #include <blt/math/math.h>
 #include <string>
 
-namespace fp::text {
+namespace fp::graphics {
     
     struct text_size {
         int w,h;
@@ -27,18 +27,12 @@ namespace fp::text {
         FONT_72 = 72
     };
     
-    void init();
-    
-    void render();
-    
     void drawText(
             const std::string& text, float x, float y, font_size size, const blt::vec4& color = {1.0, 1.0, 1.0, 1.0},
             const blt::vec4& backgroundColor = {0.0, 0.0, 0.0, 0.0}, float scale = 1
     );
     
     text_size getTextSize(const std::string& text, font_size size, float scale = 1.0);
-    
-    void destroy();
 }
 
 #endif //FINALPROJECT_TEXT_H

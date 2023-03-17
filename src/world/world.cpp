@@ -11,6 +11,7 @@
 #include "stb/stb_perlin.h"
 #include <blt/std/format.h>
 #include <blt/math/math.h>
+#include <blt/math/log_util.h>
 
 inline void checkEdgeFace(
         fp::block_storage* local, fp::block_storage* neighbour,
@@ -138,12 +139,13 @@ void fp::world::update() {
 void fp::world::render(fp::shader& shader) {
     shader.use();
     
+    if (fp::window::isKeyPressed(GLFW_KEY_F) && fp::window::keyState())
+        fp::camera::isFrozen() ? fp::camera::unfreeze() : fp::camera::freeze();
+    
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D_ARRAY, fp::registry::getTextureID());
     
     auto view_distance = std::stoi(fp::settings::get("VIEW_DISTANCE")) / 2;
-    
-    view_frustum.update();
     
     for (int i = -view_distance; i <= view_distance; i++) {
         for (int j = -view_distance; j <= view_distance; j++) {
@@ -154,9 +156,9 @@ void fp::world::render(fp::shader& shader) {
                 int y = (int) pos.y();
                 int z = (int) pos.z();
                 auto camera_chunk_pos = fp::_static::world_to_chunk({x, y, z});
-                auto adjusted_chunk_pos = chunk_pos{camera_chunk_pos.x + i, // chunk x
-                                                    camera_chunk_pos.y + j, // chunk y
-                                                    camera_chunk_pos.z + k}; // chunk z
+                chunk_pos adjusted_chunk_pos {camera_chunk_pos.x + i, // chunk x
+                                              camera_chunk_pos.y + j, // chunk y
+                                              camera_chunk_pos.z + k}; // chunk z
                 // generate chunk if it doesn't exist
                 auto* chunk = this->getChunk(adjusted_chunk_pos);
                 if (!chunk) {
@@ -173,12 +175,12 @@ void fp::world::render(fp::shader& shader) {
                     chunk->updateChunkMesh();
                 }
                 
-                auto cp = blt::vec3{(float)adjusted_chunk_pos.x, (float)adjusted_chunk_pos.y, (float)adjusted_chunk_pos.z};
-                auto cp2 = cp + blt::vec3{CHUNK_SIZE, 0, 0};
-                auto cp3 = cp + blt::vec3{0, CHUNK_SIZE, 0};
-                auto cp4 = cp + blt::vec3{0, 0, CHUNK_SIZE};
-                auto cp5 = cp + blt::vec3{CHUNK_SIZE, CHUNK_SIZE, CHUNK_SIZE};
-                if (view_frustum.pointInside(cp) || view_frustum.pointInside(cp2) || view_frustum.pointInside(cp3) || view_frustum.pointInside(cp4) || view_frustum.pointInside(cp5))
+                const auto p_min = blt::vec3{(float)i * CHUNK_SIZE, (float)j * CHUNK_SIZE, (float)k * CHUNK_SIZE};
+                const auto p_max = p_min + blt::vec3{CHUNK_SIZE, CHUNK_SIZE, CHUNK_SIZE};
+                
+                const auto& m = camera::getPVM();
+                
+                if (frustum::isInsideFrustum(m, p_min))
                     chunk->render(shader);
             }
         }
@@ -206,8 +208,8 @@ fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
             
             float noise_total = 1;
             
-            for (int i = 1; i <= 8; i++)
-                noise_total += stb_perlin_noise3(block_x / 256.0f, block_z / 256.0f, i * 5.213953, 0, 0, 0) * (float)(i);
+            for (int j = 1; j <= 8; j++)
+                noise_total += stb_perlin_noise3(block_x / 256.0f, block_z / 256.0f, (float)j * 5.213953f, 0, 0, 0) * (float)(j);
             
             noise_total /= 8;
             
@@ -247,6 +249,7 @@ void fp::chunk::render(fp::shader& shader) {
                               (float) pos.z * CHUNK_SIZE
         );
         shader.setMatrix("translation", translation);
+        //blt::logging::trace << v << "\n";
         // bind the chunk's VAO
         chunk_vao->bind();
         // despite binding the element buffer at creation time, this is required.

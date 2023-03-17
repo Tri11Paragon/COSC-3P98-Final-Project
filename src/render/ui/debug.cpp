@@ -14,9 +14,9 @@ namespace fp::debug {
     
     bool enabled = false;
     
-    void drawAndIncrement(const std::string& text, float x, float& pos, text::font_size size = fp::text::FONT_14) {
-        auto text_size = fp::text::getTextSize(text, size);
-        fp::text::drawText(text, x, pos, size, {0.0, 0.0, 0.0, 1.0});
+    void drawAndIncrement(const std::string& text, float x, float& pos, graphics::font_size size = fp::graphics::FONT_14) {
+        auto text_size = fp::graphics::getTextSize(text, size);
+        fp::graphics::drawText(text, x, pos, size, {0.0, 0.0, 0.0, 1.0});
         pos += spacing + (float) text_size.h;
     }
     
@@ -43,7 +43,7 @@ namespace fp::debug {
         
         float x_offset = 10;
         
-        drawAndIncrement("Untitled Application", x_offset, left_y_pos, fp::text::FONT_22);
+        drawAndIncrement("Untitled Application", x_offset, left_y_pos, fp::graphics::FONT_22);
         
         std::string fps = "FPS: ";
         fps += std::to_string(1.0 / fp::window::getFrameDelta());
