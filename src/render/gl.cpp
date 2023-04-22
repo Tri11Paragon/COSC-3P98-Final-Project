@@ -4,13 +4,15 @@
  * See LICENSE file for license detail
  */
 #ifndef __EMSCRIPTEN__
-#define GLAD_GLES2_IMPLEMENTATION
+//#define GLAD_GLES2_IMPLEMENTATION
+#define GLAD_GL_IMPLEMENTATION
 #endif
 
 #include <render/gl.h>
 #include <blt/std/logging.h>
 #include <blt/std/memory.h>
 #include <blt/std/loader.h>
+#include <render/textures.h>
 
 namespace fp::_static {
     bool matricesUBOCreated = false;
@@ -169,7 +171,7 @@ namespace fp {
             int log_length = 0;
             glGetProgramiv(programID, GL_INFO_LOG_LENGTH, &log_length);
         
-            // scoped buffers will delete their memory when they go out of scope. A benefit of using BLT
+            // scoped buffers will delete their memory when they go out of scope.
             blt::scoped_buffer<GLchar> infoLog{static_cast<unsigned long>(log_length + 1)};
         
             glGetProgramInfoLog(programID, log_length + 1, nullptr, infoLog.buffer);

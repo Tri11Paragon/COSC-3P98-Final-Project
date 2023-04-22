@@ -16,7 +16,6 @@
 #include <render/gl.h>
 #include "stb/stb_image_resize.h"
 
-
 namespace fp::texture {
     
     class file_texture {
@@ -267,7 +266,7 @@ namespace fp::texture {
             gl_texture2D_array* texture_array = nullptr;
             
             phmap::flat_hash_map<std::string, negDInt> textureIndices;
-            std::vector<file_texture*> textures;
+            std::vector<file_texture*> textures {};
         
         public:
             palette() = default;

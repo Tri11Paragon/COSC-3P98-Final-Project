@@ -70,9 +70,10 @@ inline void initGLFW() {
  * Setup window context. To enable emscriptem / webgl support GL3.0 (GLES 3.0) is preferred.
  */
 inline void createContextHints() {
-    glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_ES_API) ;
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
+    glfwWindowHint(GLFW_CLIENT_API, GLFW_OPENGL_API) ;
+    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE) ;
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
 }
 
 /**
@@ -134,7 +135,8 @@ void fp::window::init(int width, int height) {
     installCallbacks();
 
 #ifndef __EMSCRIPTEN__
-    int version = gladLoadGLES2(glfwGetProcAddress);
+    //int version = gladLoadGLES2(glfwGetProcAddress);
+    int version = gladLoadGL(glfwGetProcAddress);
     BLT_INFO("Using GLAD GL %d.%d\n", GLAD_VERSION_MAJOR(version), GLAD_VERSION_MINOR(version));
 #else
     emscripten_set_pointerlockchange_callback(EMSCRIPTEN_EVENT_TARGET_WINDOW, NULL, 0, on_pointerlockchange);

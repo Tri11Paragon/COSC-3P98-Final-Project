@@ -159,7 +159,7 @@ void fp::world::render(fp::shader& shader) {
                 chunk_pos adjusted_chunk_pos {camera_chunk_pos.x + i, // chunk x
                                               camera_chunk_pos.y + j, // chunk y
                                               camera_chunk_pos.z + k}; // chunk z
-                // generate chunk if it doesn't exist
+                // queue a chunk for generation if it doesn't exist. A separate thread should handle the generation.
                 auto* chunk = this->getChunk(adjusted_chunk_pos);
                 if (!chunk) {
                     chunks_to_generate.push(adjusted_chunk_pos);
@@ -234,7 +234,7 @@ fp::chunk* fp::world::generateChunk(const fp::chunk_pos& pos) {
 }
 
 fp::world::~world() {
-    BLT_PRINT_PROFILE("Chunk Mesh", blt::logging::TRACE, true);
+    BLT_PRINT_PROFILE("Chunk Mesh", blt::logging::BLT_TRACE, true);
     std::ofstream profile{"decomposition_chunk.csv"};
     BLT_WRITE_PROFILE(profile, "Chunk Mesh");
     for (auto& chunk : chunk_storage)

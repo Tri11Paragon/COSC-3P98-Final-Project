@@ -13,7 +13,7 @@
 
 // emscripten provides its own gl bindings.
 #ifndef __EMSCRIPTEN__
-    #include <glad/gles2.h>
+    #include <glad/gl.h>
 #else
     #include <GLES2/gl2.h>
     #include <emscripten.h>

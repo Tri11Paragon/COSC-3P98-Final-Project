@@ -126,6 +126,63 @@ namespace fp {
             ~VAO();
     };
     
+    class shader_base {
+        protected:
+            struct IntDefaultedToMinusOne {
+                GLint i = -1;
+            };
+            std::unordered_map<std::string, IntDefaultedToMinusOne> uniformVars;
+            GLuint programID = 0;
+            
+            inline GLint getUniformLocation(const std::string &name) {
+                if (uniformVars[name].i != -1)
+                    return uniformVars[name].i;
+                int loc = glGetUniformLocation(programID, name.c_str());
+                uniformVars[name].i = loc;
+                return loc;
+            }
+        public:
+            inline void bind() const {
+                glUseProgram(programID);
+            }
+            
+            inline void setBool(const std::string &name, bool value) {
+                glUniform1i(getUniformLocation(name), (int) value);
+            }
+            
+            inline void setInt(const std::string &name, int value) {
+                glUniform1i(getUniformLocation(name), value);
+            }
+            
+            inline void setFloat(const std::string &name, float value) {
+                glUniform1f(getUniformLocation(name), value);
+            }
+            
+            inline void setMatrix(const std::string &name, blt::mat4x4 &matrix) {
+                glUniformMatrix4fv(getUniformLocation(name), 1, GL_FALSE, matrix.ptr());
+            }
+            
+            inline void setVec3(const std::string &name, const blt::vec3 &vec) {
+                glUniform3f(getUniformLocation(name), vec.x(), vec.y(), vec.z());
+            }
+            
+            inline void setVec4(const std::string &name, const blt::vec4 &vec) {
+                glUniform4f(getUniformLocation(name), vec.x(), vec.y(), vec.z(), vec.w());
+            }
+            
+            inline void setVec2(const std::string &name, float x, float y) {
+                glUniform2f(getUniformLocation(name), x, y);
+            }
+            
+            inline void setVec3(const std::string &name, float x, float y, float z) {
+                glUniform3f(getUniformLocation(name), x, y, z);
+            }
+            
+            inline void setVec4(const std::string &name, float x, float y, float z, float w) {
+                glUniform4f(getUniformLocation(name), x, y, z, w);
+            }
+    };
+    
     class shader {
         private:
             struct IntDefaultedToMinusOne {

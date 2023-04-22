@@ -130,7 +130,7 @@ class frustum {
         }
         
         static bool isInsideFrustum(const blt::mat4x4& pvm, const blt::vec3& point) {
-            auto v = pvm * point;
+            auto v = pvm * blt::vec4(point);
             v = v / v.w();
             //blt::logging::trace << v.x() << " " << v.y() << " " << v.z() << "\n";
             //return v.x() <= 1 && v.x() >= -1 && v.y() <= 1 && v.y() >= -1 && v.z() <= 1 && v.z() >= -1;
